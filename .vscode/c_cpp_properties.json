@@ -1,0 +1,20 @@
+{
+    "env": {
+        "myDefaultIncludePath": ["${workspaceFolder}/inc"]
+    },
+    "configurations": [
+        {
+        "name": "Linux",
+        "intelliSenseMode": "gcc-x64",
+        "includePath": ["${myDefaultIncludePath}", "/usr/include/**", "/usr/local/include/**"],
+        "compilerArgs": ["-Wall", "-pedantic"],
+        "cppStandard": "c++14",
+        "browse": {
+            "path": ["${workspaceFolder}"],
+            "limitSymbolsToIncludedHeaders": true,
+            "databaseFilename": ""
+        }
+        }
+    ],
+    "version": 4
+}

@@ -35,6 +35,10 @@ public:
 
     MacierzKw<double, 3> WspolnaOrientacja() const;
 
+    const Wektor3D & ZwrocPozycje() const;
+
+    const vector<Wektor3D> & ZwrocWierzcholki() const;
+
     friend std::ostream & operator<<(std::ostream &Strm, const Obiekt3D &O);
 };
 

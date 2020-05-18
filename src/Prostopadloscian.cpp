@@ -31,15 +31,33 @@ Prostopadloscian::Prostopadloscian(double dl_x, double dl_y, double dl_z)
     m_wierzcholki = temp;
 }
 
-int Prostopadloscian::Rysuj(const std::shared_ptr<drawNS::Draw3DAPI> &api, const std::string & kolor) const
+vector<Point3D> Prostopadloscian::ZbudujGora() const
 {
-    vector<Point3D> t, b;
+    vector<Point3D> t;
 
     for(int i = 0; i < 4; ++i)
-    {
         t.push_back(Point3D(WspolnaOrientacja() * m_wierzcholki[i] + m_srodek));
-        b.push_back(Point3D(WspolnaOrientacja() * m_wierzcholki[i + 4] + m_srodek));
-    }
 
-    return api->draw_polyhedron(vector<vector<Point3D>>{t,b}, kolor);
+    return t;
+}
+
+vector<Point3D> Prostopadloscian::ZbudujDol() const
+{
+    vector<Point3D> b;
+
+    for(int i = 0; i < 4; ++i)
+        b.push_back(Point3D(WspolnaOrientacja() * m_wierzcholki[i + 4] + m_srodek));
+
+    return b;
+}
+
+
+int Prostopadloscian::Rysuj(const std::shared_ptr<drawNS::Draw3DAPI> &api, const std::string & kolor) const
+{
+    return api->draw_polyhedron(vector<vector<Point3D>>{ZbudujGora(), ZbudujDol()}, kolor);
+}
+
+int Prostopadloscian::Rysuj(const std::shared_ptr<drawNS::Draw3DAPI> &api, const std::string & kolor, const vector<Point3D> &gora, const vector<Point3D> &dol) const
+{
+    return api->draw_polyhedron(vector<vector<Point3D>>{gora, dol}, kolor);
 }

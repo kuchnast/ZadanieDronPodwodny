@@ -24,7 +24,13 @@ public:
 
     Graniastoslup6(double dl_r, double dl_z);
 
+    vector<Point3D> ZbudujGora() const;
+
+    vector<Point3D> ZbudujDol() const;
+
     int Rysuj(const std::shared_ptr<drawNS::Draw3DAPI> &api, const std::string & kolor) const override;
+
+    int Rysuj(const std::shared_ptr<drawNS::Draw3DAPI> &api, const std::string & kolor, const vector<Point3D> &gora, const vector<Point3D> &dol) const;
 };
 
 

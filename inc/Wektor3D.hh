@@ -1,6 +1,8 @@
 #ifndef WEKTOR_3D_HH
 #define WEKTOR_3D_HH
 
+#include <iostream>
+
 #include "Wektor.hh"
 
 /**

@@ -31,6 +31,16 @@ MacierzKw<double, 3> Obiekt3D::WspolnaOrientacja() const
     return m_orientacja_z * m_orientacja_y * m_orientacja_x;
 }
 
+const Wektor3D & Obiekt3D::ZwrocPozycje() const
+{
+    return m_srodek;
+}
+
+const vector<Wektor3D> & Obiekt3D::ZwrocWierzcholki() const
+{
+    return m_wierzcholki;
+}
+
 std::ostream & operator<<(std::ostream &Strm, const Obiekt3D &O)
 {
     Strm << "===Obiekt3D===\n" <<

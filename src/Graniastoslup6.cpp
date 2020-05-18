@@ -40,15 +40,32 @@ Graniastoslup6::Graniastoslup6(double dl_r, double dl_z)
     m_wierzcholki = temp;
 }
 
-int Graniastoslup6::Rysuj(const std::shared_ptr<drawNS::Draw3DAPI> &api, const std::string & kolor) const
+vector<Point3D> Graniastoslup6::ZbudujGora() const
 {
-    vector<Point3D> t, b;
+    vector<Point3D> t;
 
     for(int i = 0; i < 6; ++i)
-    {
         t.push_back(Point3D(WspolnaOrientacja() * m_wierzcholki[i] + m_srodek));
-        b.push_back(Point3D(WspolnaOrientacja() * m_wierzcholki[i + 6] + m_srodek));
-    }
 
-    return api->draw_polyhedron(vector<vector<Point3D>>{t,b}, kolor);
+    return t;
+}
+
+vector<Point3D> Graniastoslup6::ZbudujDol() const
+{
+    vector<Point3D> b;
+
+    for(int i = 0; i < 6; ++i)
+        b.push_back(Point3D(WspolnaOrientacja() * m_wierzcholki[i + 6] + m_srodek));
+
+    return b;
+}
+
+int Graniastoslup6::Rysuj(const std::shared_ptr<drawNS::Draw3DAPI> &api, const std::string & kolor) const
+{
+   return api->draw_polyhedron(vector<vector<Point3D>>{ZbudujGora(), ZbudujDol()}, kolor);
+}
+
+int Graniastoslup6::Rysuj(const std::shared_ptr<drawNS::Draw3DAPI> &api, const std::string & kolor, const vector<Point3D> &gora, const vector<Point3D> &dol) const
+{
+    return api->draw_polyhedron(vector<vector<Point3D>>{gora, dol}, kolor);
 }

@@ -7,18 +7,24 @@
 #include "Prostopadloscian.hh"
 #include "Graniastoslup6.hh"
 #include "Wektor3D.hh"
+#include "MacierzOb.hh"
 #include "Sruba.hh"
+#include "Obiekt3D.hh"
 
 using drawNS::Point3D;
 using drawNS::APIGnuPlot3D;
 
 
-class Dron {
+class Dron{
 
 protected:
     Prostopadloscian m_kadlub;
     Sruba m_p_sruba;
     Sruba m_l_sruba;
+
+    Wektor3D m_srodek;
+    MacierzOb m_orientacja = MacierzOb('z');
+
     std::string m_kolor;
 
 public:

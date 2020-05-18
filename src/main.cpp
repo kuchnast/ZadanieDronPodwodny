@@ -23,25 +23,71 @@ using std::cin;
 using std::cout;
 using std::endl;
 
-void wait4key() {
-  do {
-    std::cout << "\n Press a key to continue... ";
-  } while(std::cin.get() != '\n');
+void WyswietlMenu()
+{
+    cout << "=============MENU=============" << endl;
+    cout << "r - zadaj ruch na wprost" << endl;
+    cout << "o - zadaj zmiane orientacji" << endl;
+    cout << "m - wyswietl menu" << endl << endl;
+    cout << "k - koniec dzialania programu" << endl;
 }
 
 int main()
 {
+  WyswietlMenu();
+
  std::shared_ptr<drawNS::Draw3DAPI> api(new APIGnuPlot3D(-100,100,-100,100,-100,100,-1)); //włacza gnuplota, pojawia się scena [-5,5] x [-5,5] x [-5,5] odświeżana co 1000 ms
- 
- Dron xd(20, Wektor3D(0,0,0), "blue");
+ Dron dron(20, Wektor3D(0,0,0), "blue");
+ char znak;
 
- xd.AnimujObrot(180, api);
+ do
+ {
+   cout << "Podaj opcje: ";
+   cin >> znak;
+   switch (znak)
+   {
+    case 'r':{
+      double odleglosc;
+      cout << "\tPodaj odległość: ";
+      cin >> odleglosc;
+      if(!cin.good()){
+        cin.clear();
+        cin.ignore(1000,'\n');
+        cout << "Podano błędną wartość odległości!\n";
+      }
+      
+      dron.AnimujRuchWPrzod(odleglosc, api);
+      break;
+    }
+    case 'o':{
+      double kat;
+      cout << "\tPodaj kąt obrotu: ";
+      cin >> kat;
+      if(!cin.good()){
+        cin.clear();
+        cin.ignore(1000,'\n');
+        cout << "Podano błędną wartość kąta!\n";
+      }
 
- wait4key(); 
+      dron.AnimujObrot(kat, api);
 
- xd.AnimujRuchWPrzod(20, api);
-
- wait4key();
+      break;
+    }
+    case 'm':{
+      WyswietlMenu();
+      break;
+    }
+    case 'k': {
+      cout << "Kończenie pracy programu.\n";
+      break;
+    }
+    default: {
+      cout << "Nieznana opcja.\n";
+      break;
+    }
+   }
+ }
+ while(znak != 'k');
 
  return 0;
 }

@@ -15,7 +15,7 @@ using std::vector;
 using drawNS::Point3D;
 using drawNS::APIGnuPlot3D;
 
-Dron::Dron(double rozmiar, Wektor3D srodek, const std::string & kolor)
+Dron::Dron(double rozmiar, Wektor3D polozenie, const std::string & kolor)
 {
     if(rozmiar <= 0)
         throw(std::invalid_argument("Podano błędny rozmiar drona."));
@@ -28,15 +28,43 @@ Dron::Dron(double rozmiar, Wektor3D srodek, const std::string & kolor)
     m_l_sruba.ZmienPozycje(Wektor3D(-rozmiar / 2, -1.125 * rozmiar, 0));
 
     m_kolor = kolor;
+    m_srodek = polozenie;
 }
 
 std::array<int, 3> Dron::Rysuj(const std::shared_ptr<drawNS::Draw3DAPI> &api) const
 {
     std::array<int, 3> indeksy;
+    std::vector<Point3D> temp_dol, temp_gora;
 
-    indeksy[0] = m_kadlub.Rysuj(api, m_kolor);
-    indeksy[1] = m_l_sruba.Rysuj(api, m_kolor);
-    indeksy[2] = m_p_sruba.Rysuj(api, m_kolor);
+    temp_dol = m_kadlub.ZbudujDol();
+    for(auto & punkt : temp_dol)
+        punkt = Point3D(m_orientacja * Wektor3D(punkt[0], punkt[1], punkt[2]) + m_srodek);
+
+    temp_gora = m_kadlub.ZbudujGora();
+    for(auto & punkt : temp_gora)
+        punkt = Point3D(m_orientacja * Wektor3D(punkt[0], punkt[1], punkt[2]) + m_srodek);
+
+    indeksy[0] = m_kadlub.Rysuj(api, m_kolor, temp_gora, temp_dol);
+
+    temp_dol = m_l_sruba.ZbudujDol();
+    for(auto & punkt : temp_dol)
+        punkt = Point3D(m_orientacja * Wektor3D(punkt[0], punkt[1], punkt[2]) + m_srodek);
+
+    temp_gora = m_l_sruba.ZbudujGora();
+    for(auto & punkt : temp_gora)
+        punkt = Point3D(m_orientacja * Wektor3D(punkt[0], punkt[1], punkt[2]) + m_srodek);
+
+    indeksy[1] = m_l_sruba.Rysuj(api, m_kolor, temp_gora, temp_dol);
+    
+    temp_dol = m_p_sruba.ZbudujDol();
+    for(auto & punkt : temp_dol)
+        punkt = Point3D(m_orientacja * Wektor3D(punkt[0], punkt[1], punkt[2]) + m_srodek);
+
+    temp_gora = m_p_sruba.ZbudujGora();
+    for(auto & punkt : temp_gora)
+        punkt = Point3D(m_orientacja * Wektor3D(punkt[0], punkt[1], punkt[2]) + m_srodek);
+
+    indeksy[2] = m_p_sruba.Rysuj(api, m_kolor, temp_gora, temp_dol);
 
     return indeksy;
 }
@@ -49,16 +77,12 @@ void Dron::Kasuj(const std::shared_ptr<drawNS::Draw3DAPI> &api, const std::array
 
  void Dron::ZmienPozycje(const Wektor3D &wektor_przesuniecia)
  {
-    m_kadlub.ZmienPozycje(wektor_przesuniecia);
-    m_l_sruba.ZmienPozycje(wektor_przesuniecia);
-    m_p_sruba.ZmienPozycje(wektor_przesuniecia);
+    m_srodek += wektor_przesuniecia;
  }
 
 void Dron::Obrot(double kat)
 {
-    m_kadlub.ZmienOrientacjeZ(kat);
-    m_l_sruba.ZmienOrientacjeZ(kat);
-    m_p_sruba.ZmienOrientacjeZ(kat);
+    m_orientacja.Obrot(kat);
 }
 
 void Dron::AnimujRuchWPrzod(double odleglosc, const std::shared_ptr<drawNS::Draw3DAPI> &api)
@@ -68,7 +92,7 @@ void Dron::AnimujRuchWPrzod(double odleglosc, const std::shared_ptr<drawNS::Draw
     if(odleglosc <= 0)
         throw(std::invalid_argument("Podano błędną wartość odległości."));
 
-    Wektor3D przemieszczenie = m_kadlub.WspolnaOrientacja() * Wektor3D(0, odleglosc, 0);
+    Wektor3D przemieszczenie = m_orientacja * Wektor3D(0, odleglosc, 0);
 
     for(double i = 0; i < odleglosc; i += odleglosc/1000)
     {
@@ -95,7 +119,7 @@ void Dron::AnimujObrot(double kat, const std::shared_ptr<drawNS::Draw3DAPI> &api
         Obrot(kat/1000);
         obiekty = Rysuj(api);
         api->redraw();
-        std::this_thread::sleep_for(std::chrono::milliseconds(10));
+        std::this_thread::sleep_for(std::chrono::milliseconds(1));
         Kasuj(api, obiekty);
         m_l_sruba.ObrotSrubyPrawo();
         m_p_sruba.ObrotSrubyLewo();

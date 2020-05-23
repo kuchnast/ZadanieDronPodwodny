@@ -15,7 +15,7 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
 #include <string>
 #include <iostream>
 
-#include "Wektor3D.hh"
+#include "Wektor.hh"
 /*!
  * \file Draw3D_api_interface.hh
  * File contains abstract interface for drawing in 3D.
@@ -50,10 +50,12 @@ namespace drawNS {
      * \param y - y coord.
      * \param z - z coord.
      */
-
-    explicit Point3D(const Wektor3D &W) : data{W[0], W[1], W[2]} {}
-
     Point3D(double x, double y, double z) : data{x,y,z} {}
+    /*!
+     * \brief Constructor
+     * \param W - 3D vector
+     */
+    explicit Point3D(const Wektor<double, 3> &W) : data{W[0], W[1], W[2]} {}
     /*!
      * \brief Acess operator
      * \param ind - 0 for x coord, 1 for y, 2 for z.

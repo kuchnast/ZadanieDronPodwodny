@@ -64,7 +64,7 @@ APIGnuPlot3D::APIGnuPlot3D(double minX, double maxX, double minY, double maxY, d
 }
 
 void APIGnuPlot3D::send2gnuplot(const string & command_arg){
-  //std::cout << "Wysłana komenda: \n" << command_arg << std::endl;
+  //std::cerr << "Wysłana komenda: \n" << command_arg << std::endl;
   gnuplot_pipe_mutex.lock();
   write(pipe_fd[1],command_arg.c_str(),command_arg.length());
   gnuplot_pipe_mutex.unlock();

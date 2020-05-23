@@ -26,6 +26,9 @@ Dron::Dron(double rozmiar, Wektor3D polozenie, const std::string & kolor)
 
     m_p_sruba.ZmienPozycje(Wektor3D(rozmiar / 2, -1.125 * rozmiar, 0));
     m_l_sruba.ZmienPozycje(Wektor3D(-rozmiar / 2, -1.125 * rozmiar, 0));
+
+    m_kolor = kolor;
+    m_srodek = polozenie;
 }
 
 std::array<int, 3> Dron::Rysuj(const std::shared_ptr<drawNS::Draw3DAPI> &api) const
@@ -70,4 +73,56 @@ void Dron::Kasuj(const std::shared_ptr<drawNS::Draw3DAPI> &api, const std::array
 {
     for(auto nr : obiekty)
         api->erase_shape(nr);
+}
+
+ void Dron::ZmienPozycje(const Wektor3D &wektor_przesuniecia)
+ {
+    m_srodek += wektor_przesuniecia;
+ }
+
+void Dron::Obrot(double kat)
+{
+    m_orientacja.Obrot(kat);
+}
+
+void Dron::AnimujRuchWPrzod(double odleglosc, const std::shared_ptr<drawNS::Draw3DAPI> &api)
+{
+    std::array<int, 3> obiekty;
+
+    if(odleglosc <= 0)
+        throw(std::invalid_argument("Podano błędną wartość odległości."));
+
+    Wektor3D przemieszczenie = m_orientacja * Wektor3D(0, odleglosc, 0);
+
+    for(double i = 0; i < odleglosc; i += odleglosc/1000)
+    {
+        ZmienPozycje(przemieszczenie/1000);
+        obiekty = Rysuj(api);
+        api->redraw();
+        std::this_thread::sleep_for(std::chrono::nanoseconds(100));
+        Kasuj(api, obiekty);
+        m_l_sruba.ObrotSrubyPrawo();
+        m_p_sruba.ObrotSrubyLewo();
+    }
+
+}
+
+void Dron::AnimujObrot(double kat, const std::shared_ptr<drawNS::Draw3DAPI> &api)
+{
+    std::array<int, 3> obiekty;
+
+    if(abs(kat) <= 0.00001)
+        throw(std::invalid_argument("Podano błędną wartość kąta."));
+
+    for(double i = 0; i < 1000; ++i)
+    {
+        Obrot(kat/1000);
+        obiekty = Rysuj(api);
+        api->redraw();
+        std::this_thread::sleep_for(std::chrono::nanoseconds(100));
+        Kasuj(api, obiekty);
+        m_l_sruba.ObrotSrubyPrawo();
+        m_p_sruba.ObrotSrubyLewo();
+    }
+
 }

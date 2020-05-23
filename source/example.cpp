@@ -17,19 +17,7 @@ int main() {
   std::shared_ptr<drawNS::Draw3DAPI> api(new APIGnuPlot3D(-10,10,-10,10,-10,10,0)); //włacza gnuplota, pojawia się scena [-5,5] x [-5,5] x [-5,5] odświeżana co 1000 ms
   //api->change_ref_time_ms(1000); //odświeżanie sceny zmienione na opcję "z każdym pojawieniem się lub zniknięciem kształtu"
  
-  //wait4key();
-
-  for(int i = 0; i < 5; ++i){
-    int x = api->draw_polyhedron(vector<vector<Point3D> > {{
-    drawNS::Point3D(1 + i,1,1), drawNS::Point3D(-1 + i,1,1), drawNS::Point3D(-1 + i,-1,1), drawNS::Point3D(1 + i,-1,1)
-        },{
-    drawNS::Point3D(1 + i,1,-1), drawNS::Point3D(-1 + i,1,-1), drawNS::Point3D(-1 + i,-1,-1), drawNS::Point3D(1 + i,-1,-1)
-      }},"blue");//rysuje niebieski graniastosłup
-    cout << "pojawił się niebieski graniastosłup" << endl;
-    
-   wait4key();
-    api->erase_shape(x);
-  }
+  wait4key();
 
   api->draw_surface(vector<vector<Point3D> > {{
 	drawNS::Point3D(-4,-2,-4), drawNS::Point3D(-4,0,-4), drawNS::Point3D(-4,2,-4)
@@ -44,7 +32,7 @@ int main() {
 	  }},"grey");//rysuje szarą powierzchnie
   cout << "pojawiła się szara powierzchnia" << endl;
   
-  //wait4key();
+  wait4key();
 }
 
 /**

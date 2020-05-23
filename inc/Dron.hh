@@ -22,11 +22,6 @@ protected:
     Sruba m_p_sruba;
     Sruba m_l_sruba;
 
-    Wektor3D m_srodek;
-    MacierzOb m_orientacja = MacierzOb('z');
-
-    std::string m_kolor;
-
 public:
 
     Dron() = delete;
@@ -36,15 +31,6 @@ public:
     std::array<int, 3> Rysuj(const std::shared_ptr<drawNS::Draw3DAPI> &api) const;
 
     void Kasuj(const std::shared_ptr<drawNS::Draw3DAPI> &api, const std::array<int, 3> &obiekty);
-
-    void ZmienPozycje(const Wektor3D &wektor_przesuniecia);
-
-    void Obrot(double kat);
-
-    void AnimujRuchWPrzod(double odleglosc, const std::shared_ptr<drawNS::Draw3DAPI> &api);
-
-    void AnimujObrot(double kat, const std::shared_ptr<drawNS::Draw3DAPI> &api);
-
 };
 
 

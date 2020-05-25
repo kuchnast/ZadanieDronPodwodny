@@ -1,0 +1,8 @@
+var searchData=
+[
+  ['redraw_92',['redraw',['../classdrawNS_1_1APIGnuPlot3D.html#a27a110521a511f0c75e5c867f247a3f6',1,'drawNS::APIGnuPlot3D::redraw()'],['../classdrawNS_1_1Draw3DAPI.html#ae88121104d2eeb8936f8dc1b68fc3bbf',1,'drawNS::Draw3DAPI::redraw()']]],
+  ['refresh_5frate_5fms_93',['refresh_rate_ms',['../classdrawNS_1_1Draw3DAPI.html#a68784b46e3e38b348b004f9cba1caf5e',1,'drawNS::Draw3DAPI']]],
+  ['refresh_5fthread_5fptr_94',['refresh_thread_ptr',['../classdrawNS_1_1APIGnuPlot3D.html#ad8bbc49eac5fc97277aec46165098976',1,'drawNS::APIGnuPlot3D']]],
+  ['replot_5floop_95',['replot_loop',['../classdrawNS_1_1APIGnuPlot3D.html#afa364d7d8a0a74d51b680a9560e1f1ed',1,'drawNS::APIGnuPlot3D']]],
+  ['rysuj_96',['Rysuj',['../classDron.html#a7d82753b10e416eef24138d5de255531',1,'Dron::Rysuj()'],['../classGraniastoslup6.html#af281aa6eb32706b45c7f039d7491d9ef',1,'Graniastoslup6::Rysuj(const std::shared_ptr&lt; drawNS::Draw3DAPI &gt; &amp;api) const override'],['../classGraniastoslup6.html#ada59f59f410c6f39087b874a59ac1b88',1,'Graniastoslup6::Rysuj(const std::shared_ptr&lt; drawNS::Draw3DAPI &gt; &amp;api, const MacierzOb &amp;orientacja, const Wektor3D &amp;srodek) const'],['../classObiekt3D.html#ad4b58100ee5c021ea59731d02d9708bc',1,'Obiekt3D::Rysuj()'],['../classProstopadloscian.html#a24428c322de1e3b494586093e513ef95',1,'Prostopadloscian::Rysuj(const std::shared_ptr&lt; drawNS::Draw3DAPI &gt; &amp;api) const override'],['../classProstopadloscian.html#acbf5bed0a4742cf593ec6e17b11eeddd',1,'Prostopadloscian::Rysuj(const std::shared_ptr&lt; drawNS::Draw3DAPI &gt; &amp;api, const MacierzOb &amp;orientacja, const Wektor3D &amp;srodek) const'],['../classPowierzchnia.html#a8ee28cf287c67f197a3f4328b24806c2',1,'Powierzchnia::Rysuj()']]]
+];

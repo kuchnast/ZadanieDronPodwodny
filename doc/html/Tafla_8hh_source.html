@@ -1,0 +1,115 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.18"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Zadanie Podwodny Dron: Plik źródłowy inc/Powierzchnie/Tafla.hh</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">Zadanie Podwodny Dron
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Wygenerowano przez Doxygen 1.8.18 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'Szukaj');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('',true,false,'search.php','Szukaj');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_bfccd401955b95cf8c75461437045ac0.html">inc</a></li><li class="navelem"><a class="el" href="dir_146cf1d62df0ae676a9e0a54a15166d7.html">Powierzchnie</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="headertitle">
+<div class="title">Tafla.hh</div>  </div>
+</div><!--header-->
+<div class="contents">
+<a href="Tafla_8hh.html">Idź do dokumentacji tego pliku.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="preprocessor">#ifndef TAFLA_HH</span></div>
+<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="preprocessor">#define TAFLA_HH</span></div>
+<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160; </div>
+<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="preprocessor">#include &lt;iostream&gt;</span></div>
+<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160; </div>
+<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="Powierzchnia_8hh.html">Powierzchnia.hh</a>&quot;</span></div>
+<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160; </div>
+<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;<span class="keyword">using</span> <a class="code" href="classdrawNS_1_1Point3D.html">drawNS::Point3D</a>;</div>
+<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160; </div>
+<div class="line"><a name="l00014"></a><span class="lineno"><a class="line" href="classTafla.html">   14</a></span>&#160;<span class="keyword">class </span><a class="code" href="classTafla.html">Tafla</a> : <span class="keyword">public</span> <a class="code" href="classPowierzchnia.html">Powierzchnia</a></div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;{</div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;<span class="keyword">protected</span>:</div>
+<div class="line"><a name="l00017"></a><span class="lineno"><a class="line" href="classTafla.html#a2b7fbc892a618b16860c09056ec9f0e6">   17</a></span>&#160;    uint <a class="code" href="classTafla.html#a2b7fbc892a618b16860c09056ec9f0e6">m_wysokosc_fali</a>; </div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160; </div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;<span class="keyword">public</span>:</div>
+<div class="line"><a name="l00024"></a><span class="lineno"><a class="line" href="classTafla.html#a79c44dcce32d03ae05a841dbdca7af73">   24</a></span>&#160;    <a class="code" href="classTafla.html#a79c44dcce32d03ae05a841dbdca7af73">Tafla</a>() = <span class="keyword">delete</span>;</div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160; </div>
+<div class="line"><a name="l00038"></a><span class="lineno"><a class="line" href="classTafla.html#a41b754641b6b2124831de5b6b9ebe2cf">   38</a></span>&#160;    <a class="code" href="classTafla.html#a41b754641b6b2124831de5b6b9ebe2cf">Tafla</a>(<span class="keywordtype">double</span> x_min, <span class="keywordtype">double</span> x_max, <span class="keywordtype">double</span> y_min, <span class="keywordtype">double</span> y_max, <span class="keywordtype">double</span> z, <span class="keywordtype">double</span> odstep = 1, <span class="keyword">const</span> std::string &amp;kolor = <span class="stringliteral">&quot;blue&quot;</span>, uint wysokosc_fali = 0)</div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;        : <a class="code" href="classPowierzchnia.html">Powierzchnia</a>(x_min, x_max, y_min, y_max, z - wysokosc_fali, odstep, kolor), <a class="code" href="classTafla.html#a2b7fbc892a618b16860c09056ec9f0e6">m_wysokosc_fali</a>(wysokosc_fali)</div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;    {</div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;        <span class="keywordflow">for</span> (<span class="keyword">auto</span> &amp;wiersz : <a class="code" href="classPowierzchnia.html#aaa056c25c8d891d972133a6bda5e57cc">m_wierzcholki</a>)</div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;            <span class="keywordflow">for</span> (uint y = 0; y &lt; wiersz.size(); y += 2)</div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;                wiersz[y] = <a class="code" href="classdrawNS_1_1Point3D.html">Point3D</a>(wiersz[y][0], wiersz[y][1], wiersz[y][2] + <a class="code" href="classTafla.html#a2b7fbc892a618b16860c09056ec9f0e6">m_wysokosc_fali</a>);</div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;    }</div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;};</div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160; </div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;<span class="preprocessor">#endif</span></div>
+</div><!-- fragment --></div><!-- contents -->
+<div class="ttc" id="aclassdrawNS_1_1Point3D_html"><div class="ttname"><a href="classdrawNS_1_1Point3D.html">drawNS::Point3D</a></div><div class="ttdoc">Point in 3D Class represents point in 3D.</div><div class="ttdef"><b>Definition:</b> Draw3D_api_interface.hh:36</div></div>
+<div class="ttc" id="aclassPowierzchnia_html_aaa056c25c8d891d972133a6bda5e57cc"><div class="ttname"><a href="classPowierzchnia.html#aaa056c25c8d891d972133a6bda5e57cc">Powierzchnia::m_wierzcholki</a></div><div class="ttdeci">vector&lt; vector&lt; Point3D &gt; &gt; m_wierzcholki</div><div class="ttdoc">dynamiczna tablica tablic wierzchołków płaszczyzny</div><div class="ttdef"><b>Definition:</b> Powierzchnia.hh:19</div></div>
+<div class="ttc" id="aPowierzchnia_8hh_html"><div class="ttname"><a href="Powierzchnia_8hh.html">Powierzchnia.hh</a></div></div>
+<div class="ttc" id="aclassTafla_html_a2b7fbc892a618b16860c09056ec9f0e6"><div class="ttname"><a href="classTafla.html#a2b7fbc892a618b16860c09056ec9f0e6">Tafla::m_wysokosc_fali</a></div><div class="ttdeci">uint m_wysokosc_fali</div><div class="ttdoc">wysokość fali</div><div class="ttdef"><b>Definition:</b> Tafla.hh:17</div></div>
+<div class="ttc" id="aclassTafla_html_a41b754641b6b2124831de5b6b9ebe2cf"><div class="ttname"><a href="classTafla.html#a41b754641b6b2124831de5b6b9ebe2cf">Tafla::Tafla</a></div><div class="ttdeci">Tafla(double x_min, double x_max, double y_min, double y_max, double z, double odstep=1, const std::string &amp;kolor=&quot;blue&quot;, uint wysokosc_fali=0)</div><div class="ttdoc">Konstruktor nowego obiektu klasy Tafla.</div><div class="ttdef"><b>Definition:</b> Tafla.hh:38</div></div>
+<div class="ttc" id="aclassTafla_html_a79c44dcce32d03ae05a841dbdca7af73"><div class="ttname"><a href="classTafla.html#a79c44dcce32d03ae05a841dbdca7af73">Tafla::Tafla</a></div><div class="ttdeci">Tafla()=delete</div><div class="ttdoc">Usunięty domyślny konstruktor bezparametryczny nowego obiektu klasy Tafla.</div></div>
+<div class="ttc" id="aclassTafla_html"><div class="ttname"><a href="classTafla.html">Tafla</a></div><div class="ttdoc">Klasa modeluje pojęcie tafli jako powierzchni z wybrzuszeniami na kształt fal.</div><div class="ttdef"><b>Definition:</b> Tafla.hh:15</div></div>
+<div class="ttc" id="aclassPowierzchnia_html"><div class="ttname"><a href="classPowierzchnia.html">Powierzchnia</a></div><div class="ttdoc">Klasa modeluje pojęcie płaszczyzny w poziomie.</div><div class="ttdef"><b>Definition:</b> Powierzchnia.hh:17</div></div>
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Wygenerowano przez &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.8.18
+</small></address>
+</body>
+</html>

@@ -1,0 +1,122 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.18"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Zadanie Podwodny Dron: Plik źródłowy inc/Interfejsy/InterfejsDrona.hh</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">Zadanie Podwodny Dron
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Wygenerowano przez Doxygen 1.8.18 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'Szukaj');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('',true,false,'search.php','Szukaj');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_bfccd401955b95cf8c75461437045ac0.html">inc</a></li><li class="navelem"><a class="el" href="dir_d7669fd584de9745cb0366ebf4cae5e5.html">Interfejsy</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="headertitle">
+<div class="title">InterfejsDrona.hh</div>  </div>
+</div><!--header-->
+<div class="contents">
+<a href="InterfejsDrona_8hh.html">Idź do dokumentacji tego pliku.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="preprocessor">#ifndef INTERFEJS_DRONA_HH</span></div>
+<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="preprocessor">#define INTERFEJS_DRONA_HH</span></div>
+<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160; </div>
+<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="preprocessor">#include &lt;iostream&gt;</span></div>
+<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160; </div>
+<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="Dron_8hh.html">Dron.hh</a>&quot;</span></div>
+<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160; </div>
+<div class="line"><a name="l00012"></a><span class="lineno"><a class="line" href="classInterfejsDrona.html">   12</a></span>&#160;<span class="keyword">class </span><a class="code" href="classInterfejsDrona.html">InterfejsDrona</a> : <span class="keyword">public</span> <a class="code" href="classDron.html">Dron</a></div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;{</div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;<span class="keyword">protected</span>:</div>
+<div class="line"><a name="l00015"></a><span class="lineno"><a class="line" href="classInterfejsDrona.html#a9628c14edfd232d750ab85d9aacab66d">   15</a></span>&#160;    uint <a class="code" href="classInterfejsDrona.html#a9628c14edfd232d750ab85d9aacab66d">m_czas_animacji</a>; </div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160; </div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;<span class="keyword">public</span>:</div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160; </div>
+<div class="line"><a name="l00023"></a><span class="lineno"><a class="line" href="classInterfejsDrona.html#ae71c21a2a0958bb08871f959695de95e">   23</a></span>&#160;    <a class="code" href="classInterfejsDrona.html#ae71c21a2a0958bb08871f959695de95e">InterfejsDrona</a>() = <span class="keyword">delete</span>;</div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160; </div>
+<div class="line"><a name="l00034"></a><span class="lineno"><a class="line" href="classInterfejsDrona.html#a34bc87fdc5ca09c77618efeb308d8996">   34</a></span>&#160;    <a class="code" href="classInterfejsDrona.html#a34bc87fdc5ca09c77618efeb308d8996">InterfejsDrona</a>(<span class="keywordtype">double</span> rozmiar, <span class="keyword">const</span> <a class="code" href="classWektor3D.html">Wektor3D</a> &amp;srodek = <a class="code" href="classWektor3D.html">Wektor3D</a>(), <span class="keyword">const</span> std::string &amp;kolor_kadluba = <span class="stringliteral">&quot;black&quot;</span>, <span class="keyword">const</span> std::string &amp;kolor_srub = <span class="stringliteral">&quot;black&quot;</span>, uint czas_animacji = 2000) : <a class="code" href="classDron.html">Dron</a>(rozmiar, srodek, kolor_kadluba, kolor_srub), <a class="code" href="classInterfejsDrona.html#a9628c14edfd232d750ab85d9aacab66d">m_czas_animacji</a>(czas_animacji){}</div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160; </div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="classInterfejsDrona.html#ad8905f35b4e769850b5cf2c39af0eb84">UstawCzasAnimacji</a>(uint czas_animacji);</div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160; </div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="classInterfejsDrona.html#a831c98e120d66749f48d1351523ff078">AnimujRuchWPrzod</a>(<span class="keyword">const</span> std::shared_ptr&lt;drawNS::Draw3DAPI&gt; &amp;api, <span class="keywordtype">double</span> odleglosc);</div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160; </div>
+<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="classInterfejsDrona.html#a695fac378bc5aea5c762913e5ecd75b4">AnimujObrot</a>(<span class="keyword">const</span> std::shared_ptr&lt;drawNS::Draw3DAPI&gt; &amp;api, <span class="keywordtype">double</span> kat);</div>
+<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160; </div>
+<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="classInterfejsDrona.html#ac91ace9c1b2e0664c7a963e9e164cc24">AnimujRuchWPionie</a>(<span class="keyword">const</span> std::shared_ptr&lt;drawNS::Draw3DAPI&gt; &amp;api, <span class="keywordtype">double</span> wysokosc);</div>
+<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;};</div>
+<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160; </div>
+<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160; </div>
+<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160; </div>
+<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160; </div>
+<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;<span class="preprocessor">#endif</span></div>
+</div><!-- fragment --></div><!-- contents -->
+<div class="ttc" id="aclassInterfejsDrona_html_a9628c14edfd232d750ab85d9aacab66d"><div class="ttname"><a href="classInterfejsDrona.html#a9628c14edfd232d750ab85d9aacab66d">InterfejsDrona::m_czas_animacji</a></div><div class="ttdeci">uint m_czas_animacji</div><div class="ttdoc">Czas trwania dowolnej animacji w milisekundach.</div><div class="ttdef"><b>Definition:</b> InterfejsDrona.hh:15</div></div>
+<div class="ttc" id="aDron_8hh_html"><div class="ttname"><a href="Dron_8hh.html">Dron.hh</a></div></div>
+<div class="ttc" id="aclassInterfejsDrona_html_a831c98e120d66749f48d1351523ff078"><div class="ttname"><a href="classInterfejsDrona.html#a831c98e120d66749f48d1351523ff078">InterfejsDrona::AnimujRuchWPrzod</a></div><div class="ttdeci">void AnimujRuchWPrzod(const std::shared_ptr&lt; drawNS::Draw3DAPI &gt; &amp;api, double odleglosc)</div><div class="ttdoc">Animacja ruchu do przodu na zadaną odległość Podczas animacji ruchu, animowany jest również obrót śru...</div><div class="ttdef"><b>Definition:</b> InterfejsDrona.cpp:16</div></div>
+<div class="ttc" id="aclassInterfejsDrona_html_ae71c21a2a0958bb08871f959695de95e"><div class="ttname"><a href="classInterfejsDrona.html#ae71c21a2a0958bb08871f959695de95e">InterfejsDrona::InterfejsDrona</a></div><div class="ttdeci">InterfejsDrona()=delete</div><div class="ttdoc">Usunięty domyślny konstruktor bezparametryczny nowego obiektu klasy Interfejs Drona.</div></div>
+<div class="ttc" id="aclassInterfejsDrona_html_ad8905f35b4e769850b5cf2c39af0eb84"><div class="ttname"><a href="classInterfejsDrona.html#ad8905f35b4e769850b5cf2c39af0eb84">InterfejsDrona::UstawCzasAnimacji</a></div><div class="ttdeci">void UstawCzasAnimacji(uint czas_animacji)</div><div class="ttdoc">Ustawia łączny czas animacji w milisekundach.</div><div class="ttdef"><b>Definition:</b> InterfejsDrona.cpp:11</div></div>
+<div class="ttc" id="aclassWektor3D_html"><div class="ttname"><a href="classWektor3D.html">Wektor3D</a></div><div class="ttdoc">Klasa modelująca pojęcie wektora w układzie 3 zmiennych.</div><div class="ttdef"><b>Definition:</b> Wektor3D.hh:14</div></div>
+<div class="ttc" id="aclassInterfejsDrona_html_ac91ace9c1b2e0664c7a963e9e164cc24"><div class="ttname"><a href="classInterfejsDrona.html#ac91ace9c1b2e0664c7a963e9e164cc24">InterfejsDrona::AnimujRuchWPionie</a></div><div class="ttdeci">void AnimujRuchWPionie(const std::shared_ptr&lt; drawNS::Draw3DAPI &gt; &amp;api, double wysokosc)</div><div class="ttdoc">Animuje wznoszenie się lub opadanie drona.</div><div class="ttdef"><b>Definition:</b> InterfejsDrona.cpp:64</div></div>
+<div class="ttc" id="aclassInterfejsDrona_html"><div class="ttname"><a href="classInterfejsDrona.html">InterfejsDrona</a></div><div class="ttdoc">Klasa modeluje pojęcie interfejsu pozwalającego na obsługę obiektu drona.</div><div class="ttdef"><b>Definition:</b> InterfejsDrona.hh:13</div></div>
+<div class="ttc" id="aclassInterfejsDrona_html_a34bc87fdc5ca09c77618efeb308d8996"><div class="ttname"><a href="classInterfejsDrona.html#a34bc87fdc5ca09c77618efeb308d8996">InterfejsDrona::InterfejsDrona</a></div><div class="ttdeci">InterfejsDrona(double rozmiar, const Wektor3D &amp;srodek=Wektor3D(), const std::string &amp;kolor_kadluba=&quot;black&quot;, const std::string &amp;kolor_srub=&quot;black&quot;, uint czas_animacji=2000)</div><div class="ttdoc">Konstruktor nowego obiektu klasy Dron.</div><div class="ttdef"><b>Definition:</b> InterfejsDrona.hh:34</div></div>
+<div class="ttc" id="aclassInterfejsDrona_html_a695fac378bc5aea5c762913e5ecd75b4"><div class="ttname"><a href="classInterfejsDrona.html#a695fac378bc5aea5c762913e5ecd75b4">InterfejsDrona::AnimujObrot</a></div><div class="ttdeci">void AnimujObrot(const std::shared_ptr&lt; drawNS::Draw3DAPI &gt; &amp;api, double kat)</div><div class="ttdoc">Animacja obrotu o zadany kąt Podczas animacji ruchu, animowany jest również obrót śrub drona.</div><div class="ttdef"><b>Definition:</b> InterfejsDrona.cpp:40</div></div>
+<div class="ttc" id="aclassDron_html"><div class="ttname"><a href="classDron.html">Dron</a></div><div class="ttdoc">Klasa modeluje pojęcie drona złożonego z prostopadłościennego kadłuba oraz dwóch śrub.</div><div class="ttdef"><b>Definition:</b> Dron.hh:17</div></div>
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Wygenerowano przez &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.8.18
+</small></address>
+</body>
+</html>

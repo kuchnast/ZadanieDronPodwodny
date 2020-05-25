@@ -1,0 +1,149 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.18"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Zadanie Podwodny Dron: Plik źródłowy inc/Obiekty3D/Obiekt3D.hh</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">Zadanie Podwodny Dron
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Wygenerowano przez Doxygen 1.8.18 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'Szukaj');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('',true,false,'search.php','Szukaj');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_bfccd401955b95cf8c75461437045ac0.html">inc</a></li><li class="navelem"><a class="el" href="dir_0dbba28d1501bc4f260b75832e795cb3.html">Obiekty3D</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="headertitle">
+<div class="title">Obiekt3D.hh</div>  </div>
+</div><!--header-->
+<div class="contents">
+<a href="Obiekt3D_8hh.html">Idź do dokumentacji tego pliku.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="preprocessor">#ifndef OBIEKT_3D_HH</span></div>
+<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="preprocessor">#define OBIEKT_3D_HH</span></div>
+<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160; </div>
+<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="preprocessor">#include &lt;iostream&gt;</span></div>
+<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="preprocessor">#include &lt;vector&gt;</span></div>
+<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160; </div>
+<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="Wektor3D_8hh.html">Wektor3D.hh</a>&quot;</span></div>
+<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="MacierzOb_8hh.html">MacierzOb.hh</a>&quot;</span></div>
+<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="Dr3D__gnuplot__api_8hh.html">Dr3D_gnuplot_api.hh</a>&quot;</span></div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160; </div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;<span class="keyword">using</span> std::vector;</div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160; </div>
+<div class="line"><a name="l00020"></a><span class="lineno"><a class="line" href="classObiekt3D.html">   20</a></span>&#160;<span class="keyword">class </span><a class="code" href="classObiekt3D.html">Obiekt3D</a></div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;{</div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;<span class="keyword">protected</span>:</div>
+<div class="line"><a name="l00023"></a><span class="lineno"><a class="line" href="classObiekt3D.html#a31b6404103e48b17b62639e951b3bb82">   23</a></span>&#160;    <a class="code" href="classMacierzOb.html">MacierzOb</a> <a class="code" href="classObiekt3D.html#a31b6404103e48b17b62639e951b3bb82">m_orientacja_x</a> = <a class="code" href="classMacierzOb.html">MacierzOb</a>(<span class="charliteral">&#39;x&#39;</span>);  </div>
+<div class="line"><a name="l00024"></a><span class="lineno"><a class="line" href="classObiekt3D.html#a6bdfa16b412871188660b4aaa5968544">   24</a></span>&#160;    <a class="code" href="classMacierzOb.html">MacierzOb</a> <a class="code" href="classObiekt3D.html#a6bdfa16b412871188660b4aaa5968544">m_orientacja_y</a> = <a class="code" href="classMacierzOb.html">MacierzOb</a>(<span class="charliteral">&#39;y&#39;</span>);  </div>
+<div class="line"><a name="l00025"></a><span class="lineno"><a class="line" href="classObiekt3D.html#a011afc67077ed3d71c0db5b210e3744d">   25</a></span>&#160;    <a class="code" href="classMacierzOb.html">MacierzOb</a> <a class="code" href="classObiekt3D.html#a011afc67077ed3d71c0db5b210e3744d">m_orientacja_z</a> = <a class="code" href="classMacierzOb.html">MacierzOb</a>(<span class="charliteral">&#39;z&#39;</span>);  </div>
+<div class="line"><a name="l00026"></a><span class="lineno"><a class="line" href="classObiekt3D.html#a3c20ef1dc092e5905aa67984116ff254">   26</a></span>&#160;    <a class="code" href="classWektor3D.html">Wektor3D</a> <a class="code" href="classObiekt3D.html#a3c20ef1dc092e5905aa67984116ff254">m_srodek</a>;                          </div>
+<div class="line"><a name="l00027"></a><span class="lineno"><a class="line" href="classObiekt3D.html#ae022210038fc9970886f06a443de4a64">   27</a></span>&#160;    vector&lt;vector&lt;Wektor3D&gt;&gt; <a class="code" href="classObiekt3D.html#ae022210038fc9970886f06a443de4a64">m_wierzcholki</a>;     </div>
+<div class="line"><a name="l00028"></a><span class="lineno"><a class="line" href="classObiekt3D.html#ad62ee984a2f08b838aa2c48821256bcd">   28</a></span>&#160;    std::string <a class="code" href="classObiekt3D.html#ad62ee984a2f08b838aa2c48821256bcd">m_kolor</a>;                        </div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160; </div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;<span class="keyword">public</span>:</div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160; </div>
+<div class="line"><a name="l00038"></a><span class="lineno"><a class="line" href="classObiekt3D.html#a9f85977fdb80fe5542a4b778d1a1979b">   38</a></span>&#160;    <span class="keyword">explicit</span> <a class="code" href="classObiekt3D.html#a9f85977fdb80fe5542a4b778d1a1979b">Obiekt3D</a>(<span class="keyword">const</span> std::string &amp;kolor = <span class="stringliteral">&quot;black&quot;</span>) : <a class="code" href="classObiekt3D.html#ad62ee984a2f08b838aa2c48821256bcd">m_kolor</a>(kolor) {}</div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160; </div>
+<div class="line"><a name="l00046"></a><span class="lineno"><a class="line" href="classObiekt3D.html#ad4b58100ee5c021ea59731d02d9708bc">   46</a></span>&#160;    <span class="keyword">virtual</span> <span class="keywordtype">int</span> <a class="code" href="classObiekt3D.html#ad4b58100ee5c021ea59731d02d9708bc">Rysuj</a>(<span class="keyword">const</span> std::shared_ptr&lt;drawNS::Draw3DAPI&gt; &amp;api) <span class="keyword">const</span> = 0;</div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160; </div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="classObiekt3D.html#a419abffcb9a52a1d360d1bb6fa608f18">ZmienPozycje</a>(<span class="keyword">const</span> <a class="code" href="classWektor3D.html">Wektor3D</a> &amp;wektor_przesuniecia);</div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160; </div>
+<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="classObiekt3D.html#aee640a911a901c462190a52adf07d5c2">ZmienOrientacjeX</a>(<span class="keywordtype">double</span> kat);</div>
+<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160; </div>
+<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="classObiekt3D.html#a733ed3e22c2104db6bafbbae0b8597d7">ZmienOrientacjeY</a>(<span class="keywordtype">double</span> kat);</div>
+<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160; </div>
+<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="classObiekt3D.html#a0dae65e6fe3de7ab6322299a7c9732c9">ZmienOrientacjeZ</a>(<span class="keywordtype">double</span> kat);</div>
+<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160; </div>
+<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;    <a class="code" href="classMacierzKw.html">MacierzKw&lt;double, 3&gt;</a> <a class="code" href="classObiekt3D.html#a918b8fc0cc0c3bf389192cd42685d524">WspolnaOrientacja</a>() <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160; </div>
+<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;    <span class="keyword">const</span> <a class="code" href="classWektor3D.html">Wektor3D</a> &amp;<a class="code" href="classObiekt3D.html#a570c74ee26566210e728cbd058c9ce23">ZwrocPozycje</a>() <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160; </div>
+<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;    <span class="keyword">const</span> vector&lt;vector&lt;Wektor3D&gt;&gt; &amp;<a class="code" href="classObiekt3D.html#ae1a7543f04a2b0881fa136404a24ec16">ZwrocWierzcholki</a>() <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160; </div>
+<div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="classObiekt3D.html#a8e291a9f282ada9ebad23b66a5d3cd66">ZmienKolor</a>(<span class="keyword">const</span> std::string &amp;kolor);</div>
+<div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160;};</div>
+<div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160; </div>
+<div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160;<span class="preprocessor">#endif</span></div>
+</div><!-- fragment --></div><!-- contents -->
+<div class="ttc" id="aclassObiekt3D_html_a419abffcb9a52a1d360d1bb6fa608f18"><div class="ttname"><a href="classObiekt3D.html#a419abffcb9a52a1d360d1bb6fa608f18">Obiekt3D::ZmienPozycje</a></div><div class="ttdeci">void ZmienPozycje(const Wektor3D &amp;wektor_przesuniecia)</div><div class="ttdoc">Zmienia pozycje Obiektu3D poprzez zmianę położenia środka obiektu.</div><div class="ttdef"><b>Definition:</b> Obiekt3D.cpp:10</div></div>
+<div class="ttc" id="aclassObiekt3D_html_ad62ee984a2f08b838aa2c48821256bcd"><div class="ttname"><a href="classObiekt3D.html#ad62ee984a2f08b838aa2c48821256bcd">Obiekt3D::m_kolor</a></div><div class="ttdeci">std::string m_kolor</div><div class="ttdoc">nazwa koloru obiektu</div><div class="ttdef"><b>Definition:</b> Obiekt3D.hh:28</div></div>
+<div class="ttc" id="aclassObiekt3D_html_ae1a7543f04a2b0881fa136404a24ec16"><div class="ttname"><a href="classObiekt3D.html#ae1a7543f04a2b0881fa136404a24ec16">Obiekt3D::ZwrocWierzcholki</a></div><div class="ttdeci">const vector&lt; vector&lt; Wektor3D &gt; &gt; &amp; ZwrocWierzcholki() const</div><div class="ttdoc">Zwraca dynamiczną tablicę zawierającą wierzchołki obiektu.</div><div class="ttdef"><b>Definition:</b> Obiekt3D.cpp:40</div></div>
+<div class="ttc" id="aclassObiekt3D_html"><div class="ttname"><a href="classObiekt3D.html">Obiekt3D</a></div><div class="ttdoc">Klasa modeluje pojęcie obiektu 3D.</div><div class="ttdef"><b>Definition:</b> Obiekt3D.hh:21</div></div>
+<div class="ttc" id="aclassObiekt3D_html_a3c20ef1dc092e5905aa67984116ff254"><div class="ttname"><a href="classObiekt3D.html#a3c20ef1dc092e5905aa67984116ff254">Obiekt3D::m_srodek</a></div><div class="ttdeci">Wektor3D m_srodek</div><div class="ttdoc">wektor środka obiektu względem układu</div><div class="ttdef"><b>Definition:</b> Obiekt3D.hh:26</div></div>
+<div class="ttc" id="aDr3D__gnuplot__api_8hh_html"><div class="ttname"><a href="Dr3D__gnuplot__api_8hh.html">Dr3D_gnuplot_api.hh</a></div></div>
+<div class="ttc" id="aclassMacierzKw_html"><div class="ttname"><a href="classMacierzKw.html">MacierzKw&lt; double, 3 &gt;</a></div></div>
+<div class="ttc" id="aclassWektor3D_html"><div class="ttname"><a href="classWektor3D.html">Wektor3D</a></div><div class="ttdoc">Klasa modelująca pojęcie wektora w układzie 3 zmiennych.</div><div class="ttdef"><b>Definition:</b> Wektor3D.hh:14</div></div>
+<div class="ttc" id="aclassMacierzOb_html"><div class="ttname"><a href="classMacierzOb.html">MacierzOb</a></div><div class="ttdoc">Klasa modeluje pojęcie macierzy obrotu w układzie 3D.</div><div class="ttdef"><b>Definition:</b> MacierzOb.hh:13</div></div>
+<div class="ttc" id="aclassObiekt3D_html_ad4b58100ee5c021ea59731d02d9708bc"><div class="ttname"><a href="classObiekt3D.html#ad4b58100ee5c021ea59731d02d9708bc">Obiekt3D::Rysuj</a></div><div class="ttdeci">virtual int Rysuj(const std::shared_ptr&lt; drawNS::Draw3DAPI &gt; &amp;api) const =0</div><div class="ttdoc">Rysuje Obiekt3D o podanym kolorze.</div></div>
+<div class="ttc" id="aclassObiekt3D_html_aee640a911a901c462190a52adf07d5c2"><div class="ttname"><a href="classObiekt3D.html#aee640a911a901c462190a52adf07d5c2">Obiekt3D::ZmienOrientacjeX</a></div><div class="ttdeci">void ZmienOrientacjeX(double kat)</div><div class="ttdoc">Dokonaj zmiany macierzy obrotu w kierunku osi x o podany kąt.</div><div class="ttdef"><b>Definition:</b> Obiekt3D.cpp:15</div></div>
+<div class="ttc" id="aclassObiekt3D_html_a9f85977fdb80fe5542a4b778d1a1979b"><div class="ttname"><a href="classObiekt3D.html#a9f85977fdb80fe5542a4b778d1a1979b">Obiekt3D::Obiekt3D</a></div><div class="ttdeci">Obiekt3D(const std::string &amp;kolor=&quot;black&quot;)</div><div class="ttdoc">Konstruktor nowego obiektu klasy Obiekt3D Utworzony obiekt ma domyślne orientacje we wszystkich kieru...</div><div class="ttdef"><b>Definition:</b> Obiekt3D.hh:38</div></div>
+<div class="ttc" id="aWektor3D_8hh_html"><div class="ttname"><a href="Wektor3D_8hh.html">Wektor3D.hh</a></div></div>
+<div class="ttc" id="aclassObiekt3D_html_a8e291a9f282ada9ebad23b66a5d3cd66"><div class="ttname"><a href="classObiekt3D.html#a8e291a9f282ada9ebad23b66a5d3cd66">Obiekt3D::ZmienKolor</a></div><div class="ttdeci">void ZmienKolor(const std::string &amp;kolor)</div><div class="ttdoc">Zmienia kolor obiektu.</div><div class="ttdef"><b>Definition:</b> Obiekt3D.cpp:45</div></div>
+<div class="ttc" id="aclassObiekt3D_html_a570c74ee26566210e728cbd058c9ce23"><div class="ttname"><a href="classObiekt3D.html#a570c74ee26566210e728cbd058c9ce23">Obiekt3D::ZwrocPozycje</a></div><div class="ttdeci">const Wektor3D &amp; ZwrocPozycje() const</div><div class="ttdoc">Zwraca wektor będący pozycją środka obiektu względem układu.</div><div class="ttdef"><b>Definition:</b> Obiekt3D.cpp:35</div></div>
+<div class="ttc" id="aclassObiekt3D_html_a6bdfa16b412871188660b4aaa5968544"><div class="ttname"><a href="classObiekt3D.html#a6bdfa16b412871188660b4aaa5968544">Obiekt3D::m_orientacja_y</a></div><div class="ttdeci">MacierzOb m_orientacja_y</div><div class="ttdoc">macierz obrotu wokół osi y</div><div class="ttdef"><b>Definition:</b> Obiekt3D.hh:24</div></div>
+<div class="ttc" id="aMacierzOb_8hh_html"><div class="ttname"><a href="MacierzOb_8hh.html">MacierzOb.hh</a></div></div>
+<div class="ttc" id="aclassObiekt3D_html_a918b8fc0cc0c3bf389192cd42685d524"><div class="ttname"><a href="classObiekt3D.html#a918b8fc0cc0c3bf389192cd42685d524">Obiekt3D::WspolnaOrientacja</a></div><div class="ttdeci">MacierzKw&lt; double, 3 &gt; WspolnaOrientacja() const</div><div class="ttdoc">Składa 3 macierze elementarne na wspólną macierz obrotu.</div><div class="ttdef"><b>Definition:</b> Obiekt3D.cpp:30</div></div>
+<div class="ttc" id="aclassObiekt3D_html_a0dae65e6fe3de7ab6322299a7c9732c9"><div class="ttname"><a href="classObiekt3D.html#a0dae65e6fe3de7ab6322299a7c9732c9">Obiekt3D::ZmienOrientacjeZ</a></div><div class="ttdeci">void ZmienOrientacjeZ(double kat)</div><div class="ttdoc">Dokonaj zmiany macierzy obrotu w kierunku osi z o podany kąt.</div><div class="ttdef"><b>Definition:</b> Obiekt3D.cpp:25</div></div>
+<div class="ttc" id="aclassObiekt3D_html_a733ed3e22c2104db6bafbbae0b8597d7"><div class="ttname"><a href="classObiekt3D.html#a733ed3e22c2104db6bafbbae0b8597d7">Obiekt3D::ZmienOrientacjeY</a></div><div class="ttdeci">void ZmienOrientacjeY(double kat)</div><div class="ttdoc">Dokonaj zmiany macierzy obrotu w kierunku osi y o podany kąt.</div><div class="ttdef"><b>Definition:</b> Obiekt3D.cpp:20</div></div>
+<div class="ttc" id="aclassObiekt3D_html_a011afc67077ed3d71c0db5b210e3744d"><div class="ttname"><a href="classObiekt3D.html#a011afc67077ed3d71c0db5b210e3744d">Obiekt3D::m_orientacja_z</a></div><div class="ttdeci">MacierzOb m_orientacja_z</div><div class="ttdoc">macierz obrotu wokół osi z</div><div class="ttdef"><b>Definition:</b> Obiekt3D.hh:25</div></div>
+<div class="ttc" id="aclassObiekt3D_html_ae022210038fc9970886f06a443de4a64"><div class="ttname"><a href="classObiekt3D.html#ae022210038fc9970886f06a443de4a64">Obiekt3D::m_wierzcholki</a></div><div class="ttdeci">vector&lt; vector&lt; Wektor3D &gt; &gt; m_wierzcholki</div><div class="ttdoc">dynamiczna podwójna tablica wierzchołków zawierająca tablice wierzchołków podstaw obiektów</div><div class="ttdef"><b>Definition:</b> Obiekt3D.hh:27</div></div>
+<div class="ttc" id="aclassObiekt3D_html_a31b6404103e48b17b62639e951b3bb82"><div class="ttname"><a href="classObiekt3D.html#a31b6404103e48b17b62639e951b3bb82">Obiekt3D::m_orientacja_x</a></div><div class="ttdeci">MacierzOb m_orientacja_x</div><div class="ttdoc">macierz obrotu wokół osi x</div><div class="ttdef"><b>Definition:</b> Obiekt3D.hh:23</div></div>
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Wygenerowano przez &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.8.18
+</small></address>
+</body>
+</html>

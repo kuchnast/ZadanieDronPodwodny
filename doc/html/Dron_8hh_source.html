@@ -1,0 +1,147 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.18"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Zadanie Podwodny Dron: Plik źródłowy inc/Obiekty3D/Dron.hh</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">Zadanie Podwodny Dron
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Wygenerowano przez Doxygen 1.8.18 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'Szukaj');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('',true,false,'search.php','Szukaj');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_bfccd401955b95cf8c75461437045ac0.html">inc</a></li><li class="navelem"><a class="el" href="dir_0dbba28d1501bc4f260b75832e795cb3.html">Obiekty3D</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="headertitle">
+<div class="title">Dron.hh</div>  </div>
+</div><!--header-->
+<div class="contents">
+<a href="Dron_8hh.html">Idź do dokumentacji tego pliku.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="preprocessor">#ifndef DRON_HH</span></div>
+<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="preprocessor">#define DRON_HH</span></div>
+<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160; </div>
+<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="preprocessor">#include &lt;iostream&gt;</span></div>
+<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160; </div>
+<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="Prostopadloscian_8hh.html">Prostopadloscian.hh</a>&quot;</span></div>
+<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="Sruba_8hh.html">Sruba.hh</a>&quot;</span></div>
+<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160; </div>
+<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;<span class="keyword">using</span> <a class="code" href="classdrawNS_1_1Point3D.html">drawNS::Point3D</a>;</div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;<span class="keyword">using</span> std::vector;</div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160; </div>
+<div class="line"><a name="l00016"></a><span class="lineno"><a class="line" href="classDron.html">   16</a></span>&#160;<span class="keyword">class </span><a class="code" href="classDron.html">Dron</a></div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;{</div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160; </div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;<span class="keyword">protected</span>:</div>
+<div class="line"><a name="l00020"></a><span class="lineno"><a class="line" href="classDron.html#aa236ee51807cd8616f9bdcf1b848ab80">   20</a></span>&#160;    <a class="code" href="classProstopadloscian.html">Prostopadloscian</a> <a class="code" href="classDron.html#aa236ee51807cd8616f9bdcf1b848ab80">m_kadlub</a>;                  </div>
+<div class="line"><a name="l00021"></a><span class="lineno"><a class="line" href="classDron.html#a63710788cbb6a6136587d7b7f038d3e0">   21</a></span>&#160;    <a class="code" href="classSruba.html">Sruba</a> <a class="code" href="classDron.html#a63710788cbb6a6136587d7b7f038d3e0">m_p_sruba</a>;                            </div>
+<div class="line"><a name="l00022"></a><span class="lineno"><a class="line" href="classDron.html#acd5c01f1b62f58273cb77a3c897f8194">   22</a></span>&#160;    <a class="code" href="classSruba.html">Sruba</a> <a class="code" href="classDron.html#acd5c01f1b62f58273cb77a3c897f8194">m_l_sruba</a>;                            </div>
+<div class="line"><a name="l00023"></a><span class="lineno"><a class="line" href="classDron.html#a6596a56af4eaaebf237f265a721f0ba9">   23</a></span>&#160;    <a class="code" href="classWektor3D.html">Wektor3D</a> <a class="code" href="classDron.html#a6596a56af4eaaebf237f265a721f0ba9">m_srodek</a>;                          </div>
+<div class="line"><a name="l00024"></a><span class="lineno"><a class="line" href="classDron.html#a15a6e110760b863fb5e007caa8cd2ebc">   24</a></span>&#160;    <a class="code" href="classMacierzOb.html">MacierzOb</a> <a class="code" href="classDron.html#a15a6e110760b863fb5e007caa8cd2ebc">m_orientacja</a> = <a class="code" href="classMacierzOb.html">MacierzOb</a>(<span class="charliteral">&#39;z&#39;</span>);    </div>
+<div class="line"><a name="l00025"></a><span class="lineno"><a class="line" href="classDron.html#ab9cb1ac19b41c99bbe9bc9c1a93125c7">   25</a></span>&#160;    vector&lt;int&gt; <a class="code" href="classDron.html#ab9cb1ac19b41c99bbe9bc9c1a93125c7">m_id_obiektow</a>;                  </div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160; </div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;<span class="keyword">public</span>:</div>
+<div class="line"><a name="l00032"></a><span class="lineno"><a class="line" href="classDron.html#a74731bf7efbf678eee7e904cec358c6b">   32</a></span>&#160;    <a class="code" href="classDron.html#a74731bf7efbf678eee7e904cec358c6b">Dron</a>() = <span class="keyword">delete</span>;</div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160; </div>
+<div class="line"><a name="l00042"></a><span class="lineno"><a class="line" href="classDron.html#ad035177be4484aa0621ad6c2d9114891">   42</a></span>&#160;    <span class="keyword">explicit</span> <a class="code" href="classDron.html#ad035177be4484aa0621ad6c2d9114891">Dron</a>(<span class="keywordtype">double</span> rozmiar, <span class="keyword">const</span> <a class="code" href="classWektor3D.html">Wektor3D</a> &amp;srodek = <a class="code" href="classWektor3D.html">Wektor3D</a>(), <span class="keyword">const</span> std::string &amp;kolor_kadluba = <span class="stringliteral">&quot;black&quot;</span>, <span class="keyword">const</span> std::string &amp;kolor_srub = <span class="stringliteral">&quot;black&quot;</span>)</div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;        : <a class="code" href="classDron.html#aa236ee51807cd8616f9bdcf1b848ab80">m_kadlub</a>(rozmiar * 2, rozmiar * 2, rozmiar, kolor_kadluba),</div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;          <a class="code" href="classDron.html#a63710788cbb6a6136587d7b7f038d3e0">m_p_sruba</a>(rozmiar / 2, rozmiar / 4, kolor_srub),</div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;          <a class="code" href="classDron.html#acd5c01f1b62f58273cb77a3c897f8194">m_l_sruba</a>(rozmiar / 2, rozmiar / 4, kolor_srub),</div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;          <a class="code" href="classDron.html#a6596a56af4eaaebf237f265a721f0ba9">m_srodek</a>(srodek)</div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;    {</div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;        <a class="code" href="classDron.html#a63710788cbb6a6136587d7b7f038d3e0">m_p_sruba</a>.<a class="code" href="classObiekt3D.html#a419abffcb9a52a1d360d1bb6fa608f18">ZmienPozycje</a>(<a class="code" href="classWektor3D.html">Wektor3D</a>(rozmiar / 2, -1.125 * rozmiar, 0));</div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;        <a class="code" href="classDron.html#acd5c01f1b62f58273cb77a3c897f8194">m_l_sruba</a>.<a class="code" href="classObiekt3D.html#a419abffcb9a52a1d360d1bb6fa608f18">ZmienPozycje</a>(<a class="code" href="classWektor3D.html">Wektor3D</a>(-rozmiar / 2, -1.125 * rozmiar, 0));</div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;        <a class="code" href="classDron.html#ab9cb1ac19b41c99bbe9bc9c1a93125c7">m_id_obiektow</a>.reserve(3);</div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;    };</div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160; </div>
+<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="classDron.html#a7d82753b10e416eef24138d5de255531">Rysuj</a>(<span class="keyword">const</span> std::shared_ptr&lt;drawNS::Draw3DAPI&gt; &amp;api);</div>
+<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160; </div>
+<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="classDron.html#aac700b77e6b7ade7647b8fbe660e2bb9">Kasuj</a>(<span class="keyword">const</span> std::shared_ptr&lt;drawNS::Draw3DAPI&gt; &amp;api);</div>
+<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160; </div>
+<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="classDron.html#a0226ddb01190bcc81be83b04f454f140">ZmienPozycje</a>(<span class="keyword">const</span> <a class="code" href="classWektor3D.html">Wektor3D</a> &amp;wektor_przesuniecia);</div>
+<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160; </div>
+<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="classDron.html#aacdbab98fb3daae1114ff2c2e1fc2767">Obrot</a>(<span class="keywordtype">double</span> kat);</div>
+<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;};</div>
+<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160; </div>
+<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;<span class="preprocessor">#endif</span></div>
+</div><!-- fragment --></div><!-- contents -->
+<div class="ttc" id="aclassObiekt3D_html_a419abffcb9a52a1d360d1bb6fa608f18"><div class="ttname"><a href="classObiekt3D.html#a419abffcb9a52a1d360d1bb6fa608f18">Obiekt3D::ZmienPozycje</a></div><div class="ttdeci">void ZmienPozycje(const Wektor3D &amp;wektor_przesuniecia)</div><div class="ttdoc">Zmienia pozycje Obiektu3D poprzez zmianę położenia środka obiektu.</div><div class="ttdef"><b>Definition:</b> Obiekt3D.cpp:10</div></div>
+<div class="ttc" id="aclassDron_html_a7d82753b10e416eef24138d5de255531"><div class="ttname"><a href="classDron.html#a7d82753b10e416eef24138d5de255531">Dron::Rysuj</a></div><div class="ttdeci">void Rysuj(const std::shared_ptr&lt; drawNS::Draw3DAPI &gt; &amp;api)</div><div class="ttdoc">Rysuje obiekty drona przekształcone według wektora położenia środka oraz macierzy orientacji układu G...</div><div class="ttdef"><b>Definition:</b> Dron.cpp:8</div></div>
+<div class="ttc" id="aclassdrawNS_1_1Point3D_html"><div class="ttname"><a href="classdrawNS_1_1Point3D.html">drawNS::Point3D</a></div><div class="ttdoc">Point in 3D Class represents point in 3D.</div><div class="ttdef"><b>Definition:</b> Draw3D_api_interface.hh:36</div></div>
+<div class="ttc" id="aclassDron_html_a6596a56af4eaaebf237f265a721f0ba9"><div class="ttname"><a href="classDron.html#a6596a56af4eaaebf237f265a721f0ba9">Dron::m_srodek</a></div><div class="ttdeci">Wektor3D m_srodek</div><div class="ttdoc">Wektor położenia środka układu.</div><div class="ttdef"><b>Definition:</b> Dron.hh:23</div></div>
+<div class="ttc" id="aclassDron_html_a74731bf7efbf678eee7e904cec358c6b"><div class="ttname"><a href="classDron.html#a74731bf7efbf678eee7e904cec358c6b">Dron::Dron</a></div><div class="ttdeci">Dron()=delete</div><div class="ttdoc">Usunięty domyślny konstruktor bezparametryczny nowego obiektu klasy Dron.</div></div>
+<div class="ttc" id="aclassDron_html_ad035177be4484aa0621ad6c2d9114891"><div class="ttname"><a href="classDron.html#ad035177be4484aa0621ad6c2d9114891">Dron::Dron</a></div><div class="ttdeci">Dron(double rozmiar, const Wektor3D &amp;srodek=Wektor3D(), const std::string &amp;kolor_kadluba=&quot;black&quot;, const std::string &amp;kolor_srub=&quot;black&quot;)</div><div class="ttdoc">Konstruktor nowego obiektu klasy Dron.</div><div class="ttdef"><b>Definition:</b> Dron.hh:42</div></div>
+<div class="ttc" id="aclassDron_html_a63710788cbb6a6136587d7b7f038d3e0"><div class="ttname"><a href="classDron.html#a63710788cbb6a6136587d7b7f038d3e0">Dron::m_p_sruba</a></div><div class="ttdeci">Sruba m_p_sruba</div><div class="ttdoc">Prawa śruba drona.</div><div class="ttdef"><b>Definition:</b> Dron.hh:21</div></div>
+<div class="ttc" id="aclassProstopadloscian_html"><div class="ttname"><a href="classProstopadloscian.html">Prostopadloscian</a></div><div class="ttdoc">Klasa modeluje pojęcie obiektu 3D będącego prostopadłościanem.</div><div class="ttdef"><b>Definition:</b> Prostopadloscian.hh:17</div></div>
+<div class="ttc" id="aclassDron_html_aac700b77e6b7ade7647b8fbe660e2bb9"><div class="ttname"><a href="classDron.html#aac700b77e6b7ade7647b8fbe660e2bb9">Dron::Kasuj</a></div><div class="ttdeci">void Kasuj(const std::shared_ptr&lt; drawNS::Draw3DAPI &gt; &amp;api)</div><div class="ttdoc">Kasuje narysowane obiekty drona, jeżeli istnieją</div><div class="ttdef"><b>Definition:</b> Dron.cpp:18</div></div>
+<div class="ttc" id="aclassSruba_html"><div class="ttname"><a href="classSruba.html">Sruba</a></div><div class="ttdoc">Klasa modeluje pojęcie śruby drona złożonej z graniastosłupa sześciokątnego.</div><div class="ttdef"><b>Definition:</b> Sruba.hh:13</div></div>
+<div class="ttc" id="aclassWektor3D_html"><div class="ttname"><a href="classWektor3D.html">Wektor3D</a></div><div class="ttdoc">Klasa modelująca pojęcie wektora w układzie 3 zmiennych.</div><div class="ttdef"><b>Definition:</b> Wektor3D.hh:14</div></div>
+<div class="ttc" id="aclassMacierzOb_html"><div class="ttname"><a href="classMacierzOb.html">MacierzOb</a></div><div class="ttdoc">Klasa modeluje pojęcie macierzy obrotu w układzie 3D.</div><div class="ttdef"><b>Definition:</b> MacierzOb.hh:13</div></div>
+<div class="ttc" id="aclassDron_html_acd5c01f1b62f58273cb77a3c897f8194"><div class="ttname"><a href="classDron.html#acd5c01f1b62f58273cb77a3c897f8194">Dron::m_l_sruba</a></div><div class="ttdeci">Sruba m_l_sruba</div><div class="ttdoc">Lewa śruba drona.</div><div class="ttdef"><b>Definition:</b> Dron.hh:22</div></div>
+<div class="ttc" id="aclassDron_html_ab9cb1ac19b41c99bbe9bc9c1a93125c7"><div class="ttname"><a href="classDron.html#ab9cb1ac19b41c99bbe9bc9c1a93125c7">Dron::m_id_obiektow</a></div><div class="ttdeci">vector&lt; int &gt; m_id_obiektow</div><div class="ttdoc">Tablica na identyfikatory rysowanych obiektów.</div><div class="ttdef"><b>Definition:</b> Dron.hh:25</div></div>
+<div class="ttc" id="aSruba_8hh_html"><div class="ttname"><a href="Sruba_8hh.html">Sruba.hh</a></div></div>
+<div class="ttc" id="aclassDron_html_aacdbab98fb3daae1114ff2c2e1fc2767"><div class="ttname"><a href="classDron.html#aacdbab98fb3daae1114ff2c2e1fc2767">Dron::Obrot</a></div><div class="ttdeci">void Obrot(double kat)</div><div class="ttdoc">Dokonaj zmiany macierzy obrotu w kierunku osi z o podany kąt.</div><div class="ttdef"><b>Definition:</b> Dron.cpp:31</div></div>
+<div class="ttc" id="aclassDron_html_aa236ee51807cd8616f9bdcf1b848ab80"><div class="ttname"><a href="classDron.html#aa236ee51807cd8616f9bdcf1b848ab80">Dron::m_kadlub</a></div><div class="ttdeci">Prostopadloscian m_kadlub</div><div class="ttdoc">Prostopadłościan będący kadłubem drona.</div><div class="ttdef"><b>Definition:</b> Dron.hh:20</div></div>
+<div class="ttc" id="aclassDron_html_a0226ddb01190bcc81be83b04f454f140"><div class="ttname"><a href="classDron.html#a0226ddb01190bcc81be83b04f454f140">Dron::ZmienPozycje</a></div><div class="ttdeci">void ZmienPozycje(const Wektor3D &amp;wektor_przesuniecia)</div><div class="ttdoc">Zmienia pozycje drona poprzez zmianę położenia środka obiektu o podany wektor.</div><div class="ttdef"><b>Definition:</b> Dron.cpp:26</div></div>
+<div class="ttc" id="aProstopadloscian_8hh_html"><div class="ttname"><a href="Prostopadloscian_8hh.html">Prostopadloscian.hh</a></div></div>
+<div class="ttc" id="aclassDron_html"><div class="ttname"><a href="classDron.html">Dron</a></div><div class="ttdoc">Klasa modeluje pojęcie drona złożonego z prostopadłościennego kadłuba oraz dwóch śrub.</div><div class="ttdef"><b>Definition:</b> Dron.hh:17</div></div>
+<div class="ttc" id="aclassDron_html_a15a6e110760b863fb5e007caa8cd2ebc"><div class="ttname"><a href="classDron.html#a15a6e110760b863fb5e007caa8cd2ebc">Dron::m_orientacja</a></div><div class="ttdeci">MacierzOb m_orientacja</div><div class="ttdoc">Macierz obrotu względem osi z.</div><div class="ttdef"><b>Definition:</b> Dron.hh:24</div></div>
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Wygenerowano przez &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.8.18
+</small></address>
+</body>
+</html>

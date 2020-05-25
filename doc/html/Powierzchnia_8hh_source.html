@@ -1,0 +1,118 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.18"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Zadanie Podwodny Dron: Plik źródłowy inc/Powierzchnie/Powierzchnia.hh</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">Zadanie Podwodny Dron
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Wygenerowano przez Doxygen 1.8.18 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'Szukaj');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('',true,false,'search.php','Szukaj');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_bfccd401955b95cf8c75461437045ac0.html">inc</a></li><li class="navelem"><a class="el" href="dir_146cf1d62df0ae676a9e0a54a15166d7.html">Powierzchnie</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="headertitle">
+<div class="title">Powierzchnia.hh</div>  </div>
+</div><!--header-->
+<div class="contents">
+<a href="Powierzchnia_8hh.html">Idź do dokumentacji tego pliku.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="preprocessor">#ifndef POWIERZCHNIA_HH</span></div>
+<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="preprocessor">#define POWIERZCHNIA_HH</span></div>
+<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160; </div>
+<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="preprocessor">#include &lt;iostream&gt;</span></div>
+<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="preprocessor">#include &lt;vector&gt;</span></div>
+<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160; </div>
+<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="Dr3D__gnuplot__api_8hh.html">Dr3D_gnuplot_api.hh</a>&quot;</span></div>
+<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160; </div>
+<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;<span class="keyword">using</span> std::vector;</div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;<span class="keyword">using</span> <a class="code" href="classdrawNS_1_1Point3D.html">drawNS::Point3D</a>;</div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160; </div>
+<div class="line"><a name="l00016"></a><span class="lineno"><a class="line" href="classPowierzchnia.html">   16</a></span>&#160;<span class="keyword">class </span><a class="code" href="classPowierzchnia.html">Powierzchnia</a></div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;{</div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;<span class="keyword">protected</span>:</div>
+<div class="line"><a name="l00019"></a><span class="lineno"><a class="line" href="classPowierzchnia.html#aaa056c25c8d891d972133a6bda5e57cc">   19</a></span>&#160;    vector&lt;vector&lt;Point3D&gt;&gt; <a class="code" href="classPowierzchnia.html#aaa056c25c8d891d972133a6bda5e57cc">m_wierzcholki</a>; </div>
+<div class="line"><a name="l00020"></a><span class="lineno"><a class="line" href="classPowierzchnia.html#aa60a14aa0a21edb17b5a94c6fb1dbcf9">   20</a></span>&#160;    std::string <a class="code" href="classPowierzchnia.html#aa60a14aa0a21edb17b5a94c6fb1dbcf9">m_kolor</a>;                     </div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160; </div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;<span class="keyword">public</span>:</div>
+<div class="line"><a name="l00027"></a><span class="lineno"><a class="line" href="classPowierzchnia.html#aa3423dacbe23d5110ed176a08fe69af1">   27</a></span>&#160;    <a class="code" href="classPowierzchnia.html#aa3423dacbe23d5110ed176a08fe69af1">Powierzchnia</a>() = <span class="keyword">delete</span>;</div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160; </div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;    <a class="code" href="classPowierzchnia.html#aa3423dacbe23d5110ed176a08fe69af1">Powierzchnia</a>(<span class="keywordtype">double</span> x_min, <span class="keywordtype">double</span> x_max, <span class="keywordtype">double</span> y_min, <span class="keywordtype">double</span> y_max, <span class="keywordtype">double</span> z, <span class="keywordtype">double</span> odstep = 1, <span class="keyword">const</span> std::string &amp;kolor = <span class="stringliteral">&quot;black&quot;</span>);</div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160; </div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="classPowierzchnia.html#a08e097688fce48b1766436fe5c18d2de">ZmienKolor</a>(<span class="keyword">const</span> std::string &amp;kolor);</div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160; </div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;    <span class="keywordtype">int</span> <a class="code" href="classPowierzchnia.html#a8ee28cf287c67f197a3f4328b24806c2">Rysuj</a>(<span class="keyword">const</span> std::shared_ptr&lt;drawNS::Draw3DAPI&gt; &amp;api) <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160; </div>
+<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;};</div>
+<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160; </div>
+<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160; </div>
+<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;<span class="preprocessor">#endif</span></div>
+</div><!-- fragment --></div><!-- contents -->
+<div class="ttc" id="aclassdrawNS_1_1Point3D_html"><div class="ttname"><a href="classdrawNS_1_1Point3D.html">drawNS::Point3D</a></div><div class="ttdoc">Point in 3D Class represents point in 3D.</div><div class="ttdef"><b>Definition:</b> Draw3D_api_interface.hh:36</div></div>
+<div class="ttc" id="aclassPowierzchnia_html_aa3423dacbe23d5110ed176a08fe69af1"><div class="ttname"><a href="classPowierzchnia.html#aa3423dacbe23d5110ed176a08fe69af1">Powierzchnia::Powierzchnia</a></div><div class="ttdeci">Powierzchnia()=delete</div><div class="ttdoc">Usunięty domyślny konstruktor bezparametryczny nowego obiektu klasy Powierzchnia.</div></div>
+<div class="ttc" id="aclassPowierzchnia_html_aaa056c25c8d891d972133a6bda5e57cc"><div class="ttname"><a href="classPowierzchnia.html#aaa056c25c8d891d972133a6bda5e57cc">Powierzchnia::m_wierzcholki</a></div><div class="ttdeci">vector&lt; vector&lt; Point3D &gt; &gt; m_wierzcholki</div><div class="ttdoc">dynamiczna tablica tablic wierzchołków płaszczyzny</div><div class="ttdef"><b>Definition:</b> Powierzchnia.hh:19</div></div>
+<div class="ttc" id="aDr3D__gnuplot__api_8hh_html"><div class="ttname"><a href="Dr3D__gnuplot__api_8hh.html">Dr3D_gnuplot_api.hh</a></div></div>
+<div class="ttc" id="aclassPowierzchnia_html_a08e097688fce48b1766436fe5c18d2de"><div class="ttname"><a href="classPowierzchnia.html#a08e097688fce48b1766436fe5c18d2de">Powierzchnia::ZmienKolor</a></div><div class="ttdeci">void ZmienKolor(const std::string &amp;kolor)</div><div class="ttdoc">Zmienia kolor powierzchni.</div><div class="ttdef"><b>Definition:</b> Powierzchnia.cpp:35</div></div>
+<div class="ttc" id="aclassPowierzchnia_html_a8ee28cf287c67f197a3f4328b24806c2"><div class="ttname"><a href="classPowierzchnia.html#a8ee28cf287c67f197a3f4328b24806c2">Powierzchnia::Rysuj</a></div><div class="ttdeci">int Rysuj(const std::shared_ptr&lt; drawNS::Draw3DAPI &gt; &amp;api) const</div><div class="ttdoc">Rysuje płaszczyzne z wektorów wierzchołków.</div><div class="ttdef"><b>Definition:</b> Powierzchnia.cpp:40</div></div>
+<div class="ttc" id="aclassPowierzchnia_html_aa60a14aa0a21edb17b5a94c6fb1dbcf9"><div class="ttname"><a href="classPowierzchnia.html#aa60a14aa0a21edb17b5a94c6fb1dbcf9">Powierzchnia::m_kolor</a></div><div class="ttdeci">std::string m_kolor</div><div class="ttdoc">nazwa koloru płaszczyzny</div><div class="ttdef"><b>Definition:</b> Powierzchnia.hh:20</div></div>
+<div class="ttc" id="aclassPowierzchnia_html"><div class="ttname"><a href="classPowierzchnia.html">Powierzchnia</a></div><div class="ttdoc">Klasa modeluje pojęcie płaszczyzny w poziomie.</div><div class="ttdef"><b>Definition:</b> Powierzchnia.hh:17</div></div>
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Wygenerowano przez &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.8.18
+</small></address>
+</body>
+</html>

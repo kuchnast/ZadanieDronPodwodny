@@ -1,0 +1,119 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.18"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Zadanie Podwodny Dron: Plik źródłowy inc/Obiekty3D/Prostopadloscian.hh</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">Zadanie Podwodny Dron
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Wygenerowano przez Doxygen 1.8.18 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'Szukaj');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('',true,false,'search.php','Szukaj');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_bfccd401955b95cf8c75461437045ac0.html">inc</a></li><li class="navelem"><a class="el" href="dir_0dbba28d1501bc4f260b75832e795cb3.html">Obiekty3D</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="headertitle">
+<div class="title">Prostopadloscian.hh</div>  </div>
+</div><!--header-->
+<div class="contents">
+<a href="Prostopadloscian_8hh.html">Idź do dokumentacji tego pliku.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="preprocessor">#ifndef PROSTOPADLOSCIAN_HH</span></div>
+<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="preprocessor">#define PROSTOPADLOSCIAN_HH</span></div>
+<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160; </div>
+<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="preprocessor">#include &lt;iostream&gt;</span></div>
+<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="preprocessor">#include &lt;vector&gt;</span></div>
+<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160; </div>
+<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="Obiekt3D_8hh.html">Obiekt3D.hh</a>&quot;</span></div>
+<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160; </div>
+<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;<span class="keyword">using</span> <a class="code" href="classdrawNS_1_1Point3D.html">drawNS::Point3D</a>;</div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;<span class="keyword">using</span> std::vector;</div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160; </div>
+<div class="line"><a name="l00016"></a><span class="lineno"><a class="line" href="classProstopadloscian.html">   16</a></span>&#160;<span class="keyword">class </span><a class="code" href="classProstopadloscian.html">Prostopadloscian</a> : <span class="keyword">public</span> <a class="code" href="classObiekt3D.html">Obiekt3D</a></div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;{</div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;<span class="keyword">protected</span>:</div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160; </div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;    vector&lt;vector&lt;Point3D&gt;&gt; <a class="code" href="classProstopadloscian.html#a86776c004a9c68a63554f1bac58e571f">_Zbuduj</a>() <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160; </div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;    vector&lt;vector&lt;Point3D&gt;&gt; <a class="code" href="classProstopadloscian.html#a86776c004a9c68a63554f1bac58e571f">_Zbuduj</a>(<span class="keyword">const</span> <a class="code" href="classMacierzOb.html">MacierzOb</a> &amp;orientacja, <span class="keyword">const</span> <a class="code" href="classWektor3D.html">Wektor3D</a> &amp;srodek) <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160; </div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;<span class="keyword">public</span>:</div>
+<div class="line"><a name="l00039"></a><span class="lineno"><a class="line" href="classProstopadloscian.html#aea53d2696f48d474e40af18bcacce515">   39</a></span>&#160;    <a class="code" href="classProstopadloscian.html#aea53d2696f48d474e40af18bcacce515">Prostopadloscian</a>() = <span class="keyword">delete</span>;</div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160; </div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;    <a class="code" href="classProstopadloscian.html#aea53d2696f48d474e40af18bcacce515">Prostopadloscian</a>(<span class="keywordtype">double</span> dl_x, <span class="keywordtype">double</span> dl_y, <span class="keywordtype">double</span> dl_z, <span class="keyword">const</span> std::string &amp;kolor = <span class="stringliteral">&quot;black&quot;</span>);</div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160; </div>
+<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;    <span class="keywordtype">int</span> <a class="code" href="classProstopadloscian.html#a24428c322de1e3b494586093e513ef95">Rysuj</a>(<span class="keyword">const</span> std::shared_ptr&lt;drawNS::Draw3DAPI&gt; &amp;api) <span class="keyword">const override</span>;</div>
+<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160; </div>
+<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;    <span class="keywordtype">int</span> <a class="code" href="classProstopadloscian.html#a24428c322de1e3b494586093e513ef95">Rysuj</a>(<span class="keyword">const</span> std::shared_ptr&lt;drawNS::Draw3DAPI&gt; &amp;api, <span class="keyword">const</span> <a class="code" href="classMacierzOb.html">MacierzOb</a> &amp;orientacja, <span class="keyword">const</span> <a class="code" href="classWektor3D.html">Wektor3D</a> &amp;srodek) <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;};</div>
+<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160; </div>
+<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;<span class="preprocessor">#endif</span></div>
+</div><!-- fragment --></div><!-- contents -->
+<div class="ttc" id="aObiekt3D_8hh_html"><div class="ttname"><a href="Obiekt3D_8hh.html">Obiekt3D.hh</a></div></div>
+<div class="ttc" id="aclassdrawNS_1_1Point3D_html"><div class="ttname"><a href="classdrawNS_1_1Point3D.html">drawNS::Point3D</a></div><div class="ttdoc">Point in 3D Class represents point in 3D.</div><div class="ttdef"><b>Definition:</b> Draw3D_api_interface.hh:36</div></div>
+<div class="ttc" id="aclassObiekt3D_html"><div class="ttname"><a href="classObiekt3D.html">Obiekt3D</a></div><div class="ttdoc">Klasa modeluje pojęcie obiektu 3D.</div><div class="ttdef"><b>Definition:</b> Obiekt3D.hh:21</div></div>
+<div class="ttc" id="aclassProstopadloscian_html_a24428c322de1e3b494586093e513ef95"><div class="ttname"><a href="classProstopadloscian.html#a24428c322de1e3b494586093e513ef95">Prostopadloscian::Rysuj</a></div><div class="ttdeci">int Rysuj(const std::shared_ptr&lt; drawNS::Draw3DAPI &gt; &amp;api) const override</div><div class="ttdoc">Rysuje prostopadłościan z wyliczonych wierzchołków o ustalonym kolorze.</div><div class="ttdef"><b>Definition:</b> Prostopadloscian.cpp:73</div></div>
+<div class="ttc" id="aclassProstopadloscian_html"><div class="ttname"><a href="classProstopadloscian.html">Prostopadloscian</a></div><div class="ttdoc">Klasa modeluje pojęcie obiektu 3D będącego prostopadłościanem.</div><div class="ttdef"><b>Definition:</b> Prostopadloscian.hh:17</div></div>
+<div class="ttc" id="aclassWektor3D_html"><div class="ttname"><a href="classWektor3D.html">Wektor3D</a></div><div class="ttdoc">Klasa modelująca pojęcie wektora w układzie 3 zmiennych.</div><div class="ttdef"><b>Definition:</b> Wektor3D.hh:14</div></div>
+<div class="ttc" id="aclassMacierzOb_html"><div class="ttname"><a href="classMacierzOb.html">MacierzOb</a></div><div class="ttdoc">Klasa modeluje pojęcie macierzy obrotu w układzie 3D.</div><div class="ttdef"><b>Definition:</b> MacierzOb.hh:13</div></div>
+<div class="ttc" id="aclassProstopadloscian_html_aea53d2696f48d474e40af18bcacce515"><div class="ttname"><a href="classProstopadloscian.html#aea53d2696f48d474e40af18bcacce515">Prostopadloscian::Prostopadloscian</a></div><div class="ttdeci">Prostopadloscian()=delete</div><div class="ttdoc">Usunięcie domyślnego konstruktora bezparametrycznego nowego obiektu klasy Prostopadloscian.</div></div>
+<div class="ttc" id="aclassProstopadloscian_html_a86776c004a9c68a63554f1bac58e571f"><div class="ttname"><a href="classProstopadloscian.html#a86776c004a9c68a63554f1bac58e571f">Prostopadloscian::_Zbuduj</a></div><div class="ttdeci">vector&lt; vector&lt; Point3D &gt; &gt; _Zbuduj() const</div><div class="ttdoc">Buduje wierzchołki prostopadłościanu uwzględniając orientacje oraz środek obiektu.</div><div class="ttdef"><b>Definition:</b> Prostopadloscian.cpp:35</div></div>
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Wygenerowano przez &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.8.18
+</small></address>
+</body>
+</html>

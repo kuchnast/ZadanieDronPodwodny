@@ -62,5 +62,7 @@
         "typeinfo": "cpp",
         "valarray": "cpp",
         "variant": "cpp"
-    }
+    },
+    "editor.formatOnPaste": true,
+    "editor.formatOnType": true
 }

@@ -6,107 +6,157 @@
  */
 
 #include <iostream>
-#include <chrono>
-#include <array>
 
 #include "Dr3D_gnuplot_api.hh"
-#include "Prostopadloscian.hh"
-#include "Graniastoslup6.hh"
-#include "Dron.hh"
+#include "InterfejsDrona.hh"
 #include "Powierzchnia.hh"
 #include "Tafla.hh"
 
-using std::vector;
-using std::array;
-using drawNS::Point3D;
 using drawNS::APIGnuPlot3D;
 using std::cerr;
 using std::cin;
 using std::cout;
 using std::endl;
 
+/**
+ * @brief Funkcja wyświetla menu z możliwymi opcjami programu
+ * 
+ */
 void WyswietlMenu()
 {
-    cout << "=============MENU=============" << endl;
-    cout << "r - zadaj ruch na wprost" << endl;
-    cout << "o - zadaj zmiane orientacji" << endl;
-    cout << "m - wyswietl menu" << endl << endl;
-    cout << "k - koniec dzialania programu" << endl;
+  cout << "=============MENU=============" << endl;
+  cout << "r - zadaj ruch na wprost" << endl;
+  cout << "o - zadaj zmianę orientacji" << endl;
+  cout << "w - zadaj zmianę wysokości" << endl;
+  cout << "m - wyswietl menu" << endl
+       << endl;
+  cout << "k - koniec dzialania programu" << endl;
 }
 
 int main()
 {
-  const double x_min = -100, 
-               x_max = 100, 
-               y_min = -100, 
-               y_max = 100, 
-               z_min = -100, 
-               z_max = 100;
+  try
+  {
+    const double x_min = -100, x_max = 100, y_min = -100, y_max = 100, z_min = -100, z_max = 100; //wymiary zbiornika
 
-  WyswietlMenu();
+    InterfejsDrona dron(15, Wektor3D(0, 0, 0), "black", "orange", 1000); //obiekt drona
+    Powierzchnia dno(x_min, x_max, y_min, y_max, z_min, 20, "yellow");   //obiekt dna zbiornika
+    Tafla tafla(x_min, x_max, y_min, y_max, z_max, 20, "blue", 5);       //obiekt tafli z falami
 
- std::shared_ptr<drawNS::Draw3DAPI> api(new APIGnuPlot3D(x_min, x_max, y_min, y_max, z_min, z_max, -1)); //włacza gnuplota, pojawia się scena [-5,5] x [-5,5] x [-5,5] odświeżana co 1000 ms
- Dron dron(10, Wektor3D(0,0,0), "green");
- Powierzchnia dno(x_min, x_max, y_min, y_max, z_min, 20);
- Tafla tafla(x_min, x_max, y_min, y_max, z_max - 5, 20, 5);
- char znak;
+    char znak;
 
- std::array<int, 3> temp = dron.Rysuj(api);
- dno.Rysuj(api, "yellow");
- tafla.Rysuj(api, "blue");
- api->redraw();
- for(auto t: temp)
-  api->erase_shape(t);
+    std::shared_ptr<drawNS::Draw3DAPI> api(new APIGnuPlot3D(x_min, x_max, y_min, y_max, z_min, z_max, -1));
 
- do
- {
-   cout << "Podaj opcje: ";
-   cin >> znak;
-   switch (znak)
-   {
-    case 'r':{
-      double odleglosc;
-      cout << "\tPodaj odległość: ";
-      cin >> odleglosc;
-      if(!cin.good()){
-        cin.clear();
-        cin.ignore(1000,'\n');
-        cout << "Podano błędną wartość odległości!\n";
+    //rysuje stałe obiekty sceny
+    dno.Rysuj(api);
+    tafla.Rysuj(api);
+    dron.Rysuj(api);
+    api->redraw();
+
+    WyswietlMenu();
+    do
+    {
+      cout << "Podaj opcje: ";
+      cin >> znak;
+      switch (znak)
+      {
+      case 'r':
+      {
+        double odleglosc;
+        cout << "\tPodaj odległość: ";
+        cin >> odleglosc;
+        if (!cin.good())
+        {
+          cin.clear();
+          cin.ignore(1000, '\n');
+          cout << "Podano błędną wartość odległości!\n";
+          break;
+        }
+
+        try
+        {
+          dron.AnimujRuchWPrzod(api, odleglosc);
+        }
+        catch (const std::invalid_argument &e)
+        {
+          cerr << e.what() << " Pominięcie instrukcji." << endl;
+        }
+
+        break;
       }
-      
-      dron.AnimujRuchWPrzod(odleglosc, api);
-      break;
-    }
-    case 'o':{
-      double kat;
-      cout << "\tPodaj kąt obrotu: ";
-      cin >> kat;
-      if(!cin.good()){
-        cin.clear();
-        cin.ignore(1000,'\n');
-        cout << "Podano błędną wartość kąta!\n";
+      case 'o':
+      {
+        double kat;
+        cout << "\tPodaj kąt obrotu: ";
+        cin >> kat;
+        if (!cin.good())
+        {
+          cin.clear();
+          cin.ignore(1000, '\n');
+          cout << "Podano błędną wartość kąta!\n";
+          break;
+        }
+        try
+        {
+          dron.AnimujObrot(api, kat);
+        }
+        catch (const std::invalid_argument &e)
+        {
+          cerr << e.what() << " Pominięcie instrukcji." << endl;
+        }
+
+        break;
       }
+      case 'w':
+      {
+        double wysokosc;
+        cout << "\tPodaj odległość: ";
+        cin >> wysokosc;
+        if (!cin.good())
+        {
+          cin.clear();
+          cin.ignore(1000, '\n');
+          cout << "Podano błędną wartość odległości!\n";
+          break;
+        }
 
-      dron.AnimujObrot(kat, api);
+        try
+        {
+          dron.AnimujRuchWPionie(api, wysokosc);
+        }
+        catch (const std::invalid_argument &e)
+        {
+          cerr << e.what() << " Pominięcie instrukcji." << endl;
+        }
 
-      break;
-    }
-    case 'm':{
-      WyswietlMenu();
-      break;
-    }
-    case 'k': {
-      cout << "Kończenie pracy programu.\n";
-      break;
-    }
-    default: {
-      cout << "Nieznana opcja.\n";
-      break;
-    }
-   }
- }
- while(znak != 'k');
+        break;
+      }
+      case 'm':
+      {
+        WyswietlMenu();
+        break;
+      }
+      case 'k':
+      {
+        cout << "Kończenie pracy programu.\n";
+        break;
+      }
+      default:
+      {
+        cout << "Nieznana opcja.\n";
+        break;
+      }
+      }
+    } while (znak != 'k');
+  }
+  catch (const std::invalid_argument &e)
+  {
+    cerr << e.what() << "\nKończenie pracy programu." << endl;
+  }
+  catch (...)
+  {
+    cerr << "Nieznany wyjątek.\nKończenie pracy programu." << endl;
+  }
 
- return 0;
+  return 0;
 }
-

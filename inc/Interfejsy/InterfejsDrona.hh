@@ -72,9 +72,9 @@ public:
  * @param wysokosc wysokość o jaką zmieni się położenie drona
  */
     void AnimujRuchWPionie(const std::shared_ptr<drawNS::Draw3DAPI> &api, double wysokosc);
+
+
+    void AnimujRuchWPionieIWPrzod(const std::shared_ptr<drawNS::Draw3DAPI> &api, double wysokosc, double odleglosc);
 };
-
-
-
 
 #endif

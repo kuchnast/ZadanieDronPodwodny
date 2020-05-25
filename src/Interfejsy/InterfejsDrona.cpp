@@ -76,3 +76,32 @@ void InterfejsDrona::AnimujRuchWPionie(const std::shared_ptr<drawNS::Draw3DAPI> 
         api->redraw();
     }
 }
+
+void InterfejsDrona::AnimujRuchWPionieIWPrzod(const std::shared_ptr<drawNS::Draw3DAPI> &api, double wysokosc, double odleglosc)
+{
+    if (abs(wysokosc) < 0.00001)
+        throw(std::invalid_argument("Podano błędną wartość wysokości."));
+
+    if (abs(odleglosc) < 0.00001)
+        throw(std::invalid_argument("Podano błędną wartość odległości."));
+
+    if (odleglosc < 0)
+    {
+        AnimujObrot(api, 180);
+        odleglosc = -odleglosc;
+    }
+
+    Wektor3D przemieszczenie_pion = Wektor3D(0, 0, wysokosc);
+    Wektor3D przemieszczenie_poziom = m_orientacja * Wektor3D(0, odleglosc, 0);
+
+    for (int i = 0; i < 100; ++i)
+    {
+        ZmienPozycje(przemieszczenie_poziom / 100);
+        ZmienPozycje(przemieszczenie_pion / 100);
+        m_l_sruba.ObrotSrubyPrawo(5);
+        m_p_sruba.ObrotSrubyLewo(5);
+        Rysuj(api);
+        std::this_thread::sleep_for(std::chrono::microseconds(m_czas_animacji * 10));
+        api->redraw();
+    }
+}

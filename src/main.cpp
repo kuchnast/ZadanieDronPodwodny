@@ -28,6 +28,7 @@ void WyswietlMenu()
   cout << "r - zadaj ruch na wprost" << endl;
   cout << "o - zadaj zmianę orientacji" << endl;
   cout << "w - zadaj zmianę wysokości" << endl;
+  cout << "d - zadaj zmianę wysokości i ruch na wprost" << endl;
   cout << "m - wyswietl menu" << endl
        << endl;
   cout << "k - koniec dzialania programu" << endl;
@@ -110,7 +111,7 @@ int main()
       case 'w':
       {
         double wysokosc;
-        cout << "\tPodaj odległość: ";
+        cout << "\tPodaj wysokość: ";
         cin >> wysokosc;
         if (!cin.good())
         {
@@ -123,6 +124,40 @@ int main()
         try
         {
           dron.AnimujRuchWPionie(api, wysokosc);
+        }
+        catch (const std::invalid_argument &e)
+        {
+          cerr << e.what() << " Pominięcie instrukcji." << endl;
+        }
+
+        break;
+      }
+      case 'd':
+      {
+        double wysokosc, odleglosc;
+        cout << "\tPodaj wysokość: ";
+        cin >> wysokosc;
+        if (!cin.good())
+        {
+          cin.clear();
+          cin.ignore(1000, '\n');
+          cout << "Podano błędną wartość odległości!\n";
+          break;
+        }
+
+        cout << "\tPodaj odległość: ";
+        cin >> odleglosc;
+        if (!cin.good())
+        {
+          cin.clear();
+          cin.ignore(1000, '\n');
+          cout << "Podano błędną wartość odległości!\n";
+          break;
+        }
+
+        try
+        {
+          dron.AnimujRuchWPionieIWPrzod(api, wysokosc, odleglosc);
         }
         catch (const std::invalid_argument &e)
         {

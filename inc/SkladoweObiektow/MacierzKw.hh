@@ -32,6 +32,13 @@ public:
   MacierzKw(const Wektor<T, R> macierz[]);
 
 /**
+ * @brief Konstruktor nowego obiektu klasy MacierzKw 
+ * 
+ * @param M obiekt macierzy
+ */
+  MacierzKw(const MacierzKw<T, R> &M);
+
+/**
  * @brief Dodawania dwóch macierzy kwadratowych
  * 
  * @param M2 druga macierz - składnik
@@ -163,6 +170,13 @@ MacierzKw<T, R>::MacierzKw(const Wektor<T, R> macierz[])
 {
   for (int i = 0; i < R; i++)
     (*this)[i] = macierz[i];
+}
+
+template <class T, int R>
+MacierzKw<T, R>::MacierzKw(const MacierzKw<T, R> &M)
+{
+  for (int i = 0; i < R; i++)
+    (*this)[i] = M[i];
 }
 
 template <class T, int R>

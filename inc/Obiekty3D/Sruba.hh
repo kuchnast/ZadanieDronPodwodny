@@ -24,9 +24,10 @@ public:
  * 
  * @param dl_r długość boku podstawy
  * @param dl_z wysokość
+ * @param api łącze do gnuplota
  * @param kolor nazwa koloru obiektu
  */
-    Sruba(double dl_r, double dl_z, const std::string &kolor = "black") : Graniastoslup6(dl_r, dl_z, kolor) { m_orientacja_x.Obrot(90); }
+    Sruba(double dl_r, double dl_z, const std::shared_ptr<drawNS::Draw3DAPI> &api, const std::string &kolor = "black") : Graniastoslup6(dl_r, dl_z, api, kolor) { m_orientacja_x.Obrot(90); }
 
 /**
  * @brief Zmienia orientacje śruby względem osi y o ujemną wartość podanego kąta

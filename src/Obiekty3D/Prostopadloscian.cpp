@@ -6,32 +6,6 @@
 using drawNS::Point3D;
 using std::vector;
 
-Prostopadloscian::Prostopadloscian(double dl_x, double dl_y, double dl_z, const std::string &kolor)
-{
-    if(dl_x <= 0 || dl_y <= 0 || dl_z <= 0)
-        throw(std::invalid_argument("Podano nieprawidłowe długości boków prostopadłościanu."));
-
-    m_kolor = kolor;
-    m_wierzcholki.reserve(2);
-
-    for (int i = 0; i < 2; ++i)
-    {
-        vector<Wektor3D> temp;
-        temp.reserve(4);
-
-        for (int j = 0; j < 2; ++j)
-        {
-            if (j)
-                for (int k = 1; k >= 0; --k)
-                    temp.push_back(Wektor3D(k ? -dl_x / 2 : dl_x / 2, j ? -dl_y / 2 : dl_y / 2, i ? -dl_z / 2 : dl_z / 2));
-            else
-                for (int k = 0; k < 2; ++k)
-                    temp.push_back(Wektor3D(k ? -dl_x / 2 : dl_x / 2, j ? -dl_y / 2 : dl_y / 2, i ? -dl_z / 2 : dl_z / 2));
-        }
-        m_wierzcholki.push_back(temp);
-    }
-}
-
 vector<vector<Point3D>> Prostopadloscian::_Zbuduj() const
 {
     vector<vector<Point3D>> nowe_wierzcholki;
@@ -70,12 +44,30 @@ vector<vector<Point3D>> Prostopadloscian::_Zbuduj(const MacierzOb &orientacja, c
     return nowe_wierzcholki;
 }
 
-int Prostopadloscian::Rysuj(const std::shared_ptr<drawNS::Draw3DAPI> &api) const
+void Prostopadloscian::Rysuj()
 {
-    return api->draw_polyhedron(_Zbuduj(), m_kolor);
+    if (m_id_obiektu != nullptr)
+        Kasuj();
+
+    m_id_obiektu = new int;
+    *m_id_obiektu = m_api->draw_polyhedron(_Zbuduj(), m_kolor);
 }
 
-int Prostopadloscian::Rysuj(const std::shared_ptr<drawNS::Draw3DAPI> &api, const MacierzOb &orientacja, const Wektor3D &srodek) const
+void Prostopadloscian::Kasuj()
 {
-    return api->draw_polyhedron(_Zbuduj(orientacja, srodek), m_kolor);
+    if (m_id_obiektu != nullptr)
+    {
+        m_api->erase_shape(*m_id_obiektu);
+        delete m_id_obiektu;
+        m_id_obiektu = nullptr;
+    }
+}
+
+void Prostopadloscian::Rysuj(const MacierzOb &orientacja, const Wektor3D &srodek)
+{
+    if (m_id_obiektu != nullptr)
+        Kasuj();
+
+    m_id_obiektu = new int;
+    *m_id_obiektu = m_api->draw_polyhedron(_Zbuduj(orientacja, srodek), m_kolor);
 }

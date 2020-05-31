@@ -13,38 +13,38 @@ void InterfejsDrona::UstawCzasAnimacji(uint czas_animacji)
     m_czas_animacji = czas_animacji;
 }
 
-void InterfejsDrona::AnimujRuchWPrzod(const std::shared_ptr<drawNS::Draw3DAPI> &api, double odleglosc)
+void InterfejsDrona::AnimujRuchWPrzod(double odleglosc)
 {
     if (abs(odleglosc) < 0.00001)
         throw(std::invalid_argument("Podano błędną wartość odległości."));
 
     if (odleglosc < 0)
     {
-        AnimujObrot(api, 180);
+        AnimujObrot(180);
         odleglosc = -odleglosc;
     }
 
-    Wektor3D przemieszczenie = m_orientacja * Wektor3D(0, odleglosc, 0);
+    Wektor3D przemieszczenie = m_orientacja_z * Wektor3D(0, odleglosc, 0);
 
     for (int i = 0; i < 100; ++i)
     {
         ZmienPozycje(przemieszczenie / 100);
         m_l_sruba.ObrotSrubyPrawo(5);
         m_p_sruba.ObrotSrubyLewo(5);
-        Rysuj(api);
+        Rysuj();
         std::this_thread::sleep_for(std::chrono::microseconds(m_czas_animacji * 10));
-        api->redraw();
+        m_api->redraw();
     }
 }
 
-void InterfejsDrona::AnimujObrot(const std::shared_ptr<drawNS::Draw3DAPI> &api, double kat)
+void InterfejsDrona::AnimujObrot(double kat)
 {
     if (abs(kat) < 0.00001)
         throw(std::invalid_argument("Podano błędną wartość kąta."));
 
     for (int i = 0; i < 100; ++i)
     {
-        Obrot(kat / 100);
+        ZmienOrientacjeZ(kat / 100);
         if (kat > 0)
         {
             m_l_sruba.ObrotSrubyPrawo(5);
@@ -55,53 +55,41 @@ void InterfejsDrona::AnimujObrot(const std::shared_ptr<drawNS::Draw3DAPI> &api, 
             m_l_sruba.ObrotSrubyLewo(5);
             m_p_sruba.ObrotSrubyLewo(5);
         }
-        Rysuj(api);
+        Rysuj();
         std::this_thread::sleep_for(std::chrono::microseconds(m_czas_animacji * 10));
-        api->redraw();
+        m_api->redraw();
     }
 }
 
-void InterfejsDrona::AnimujRuchWPionie(const std::shared_ptr<drawNS::Draw3DAPI> &api, double wysokosc)
+void InterfejsDrona::AnimujRuchWPionie(double odleglosc, double kat)
 {
-    if (abs(wysokosc) < 0.00001)
-        throw(std::invalid_argument("Podano błędną wartość wysokości."));
-
-    Wektor3D przemieszczenie = Wektor3D(0, 0, wysokosc);
-
-    for (int i = 0; i < 100; ++i)
-    {
-        ZmienPozycje(przemieszczenie / 100);
-        Rysuj(api);
-        std::this_thread::sleep_for(std::chrono::microseconds(m_czas_animacji * 10));
-        api->redraw();
-    }
-}
-
-void InterfejsDrona::AnimujRuchWPionieIWPrzod(const std::shared_ptr<drawNS::Draw3DAPI> &api, double wysokosc, double odleglosc)
-{
-    if (abs(wysokosc) < 0.00001)
-        throw(std::invalid_argument("Podano błędną wartość wysokości."));
-
     if (abs(odleglosc) < 0.00001)
-        throw(std::invalid_argument("Podano błędną wartość odległości."));
+        throw(std::invalid_argument("Podano błędną wartość wysokości."));
+
+    if (abs(kat) < 0.00001 || abs(kat) >= 90)
+        throw(std::invalid_argument("Podano błędną wartość kąta."));
 
     if (odleglosc < 0)
     {
-        AnimujObrot(api, 180);
+        AnimujObrot(180);
         odleglosc = -odleglosc;
     }
 
-    Wektor3D przemieszczenie_pion = Wektor3D(0, 0, wysokosc);
-    Wektor3D przemieszczenie_poziom = m_orientacja * Wektor3D(0, odleglosc, 0);
+    Wektor3D przemieszczenie_pion = Wektor3D(0, 0, sin(kat * M_PI / 180) * odleglosc);
+    Wektor3D przemieszczenie_poziom = m_orientacja_z * Wektor3D(0, cos(kat * M_PI / 180) * odleglosc, 0);
 
     for (int i = 0; i < 100; ++i)
     {
-        ZmienPozycje(przemieszczenie_poziom / 100);
-        ZmienPozycje(przemieszczenie_pion / 100);
+        ZmienPozycje(przemieszczenie_poziom / 100 + przemieszczenie_pion / 100);
         m_l_sruba.ObrotSrubyPrawo(5);
         m_p_sruba.ObrotSrubyLewo(5);
-        Rysuj(api);
+        if(i < 50)
+            ZmienOrientacjeX(kat / 50);
+        else
+            ZmienOrientacjeX(-kat / 50);
+
+        Rysuj();
         std::this_thread::sleep_for(std::chrono::microseconds(m_czas_animacji * 10));
-        api->redraw();
+        m_api->redraw();
     }
 }

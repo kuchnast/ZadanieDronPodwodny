@@ -37,29 +37,63 @@ public:
  * @brief Konstruktor nowego obiektu klasy Graniastoslup6
  * @exception std::invalid_argument podano długości boków mniejsze lub równe 0 
  * 
+ * @param api łącze do gnuplota
  * @param dl_r długość boku podstawy
  * @param dl_z wysokość
  * @param kolor nazwa koloru obiektu
  */
-    Graniastoslup6(double dl_r, double dl_z, const std::string &kolor = "black");
+    Graniastoslup6(double dl_r, double dl_z, const std::shared_ptr<drawNS::Draw3DAPI> &api, const std::string &kolor = "black") : Obiekt3D(api, kolor)
+    {
+        if (dl_r <= 0 || dl_z <= 0)
+            throw(std::invalid_argument("Podano nieprawidłowe długości boków graniastosłupa sześciokątnego."));
+
+        m_wierzcholki.reserve(2);
+
+        double x = cos(M_PI / 6) * dl_r;
+        double y = sin(M_PI / 6) * dl_r;
+
+        for (int i = 0; i < 2; ++i)
+        {
+            vector<Wektor3D> temp;
+            temp.reserve(6);
+            for (int j = 0; j < 2; ++j)
+            {
+                if (j)
+                {
+                    temp.push_back(Wektor3D(0, -dl_r, i ? -dl_z / 2 : dl_z / 2));
+                    temp.push_back(Wektor3D(-x, -y, i ? -dl_z / 2 : dl_z / 2));
+                    temp.push_back(Wektor3D(-x, y, i ? -dl_z / 2 : dl_z / 2));
+                }
+                else
+                {
+                    temp.push_back(Wektor3D(0, dl_r, i ? -dl_z / 2 : dl_z / 2));
+                    temp.push_back(Wektor3D(x, y, i ? -dl_z / 2 : dl_z / 2));
+                    temp.push_back(Wektor3D(x, -y, i ? -dl_z / 2 : dl_z / 2));
+                }
+            }
+            m_wierzcholki.push_back(temp);
+        }
+    }
 
 /**
  * @brief Rysuje graniastosłup sześciokątny z wyliczonych wierzchołków o ustalonym kolorze
  * 
- * @param api łącze do gnuplota
- * @return int identyfikator narysowanego obiektu
  */
-    int Rysuj(const std::shared_ptr<drawNS::Draw3DAPI> &api) const override;
+    void Rysuj() override;
+
+/**
+ * @brief Kasuje obiekt graniastosłupa ze sceny
+ * 
+ */
+    void Kasuj() override;
 
 /**
  * @brief Rysuje graniastosłup sześciokątny z wyliczonych wierzchołków o ustalonym kolorze, względem innego układu o podanej macierzy orientacji i środku
  * 
- * @param api łącze do gnuplota
  * @param orientacja macierz obrotu układu nadrzędnego
  * @param srodek wektor środka w układnie nadrzędnym
- * @return int identyfikator narysowanego obiektu
  */
-    int Rysuj(const std::shared_ptr<drawNS::Draw3DAPI> &api, const MacierzOb &orientacja, const Wektor3D &srodek) const;
+    void Rysuj(const MacierzOb &orientacja, const Wektor3D &srodek);
 };
 
 #endif

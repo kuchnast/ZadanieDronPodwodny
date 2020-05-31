@@ -9,8 +9,9 @@
 
 #include "Dr3D_gnuplot_api.hh"
 #include "InterfejsDrona.hh"
-#include "Powierzchnia.hh"
+#include "Zbiornik.hh"
 #include "Tafla.hh"
+#include "Dno.hh"
 
 using drawNS::APIGnuPlot3D;
 using std::cerr;
@@ -28,7 +29,6 @@ void WyswietlMenu()
   cout << "r - zadaj ruch na wprost" << endl;
   cout << "o - zadaj zmianę orientacji" << endl;
   cout << "w - zadaj zmianę wysokości" << endl;
-  cout << "d - zadaj zmianę wysokości i ruch na wprost" << endl;
   cout << "m - wyswietl menu" << endl
        << endl;
   cout << "k - koniec dzialania programu" << endl;
@@ -38,20 +38,17 @@ int main()
 {
   try
   {
-    const double x_min = -100, x_max = 100, y_min = -100, y_max = 100, z_min = -100, z_max = 100; //wymiary zbiornika
-
-    InterfejsDrona dron(15, Wektor3D(0, 0, 0), "black", "orange", 1000); //obiekt drona
-    Powierzchnia dno(x_min, x_max, y_min, y_max, z_min, 20, "yellow");   //obiekt dna zbiornika
-    Tafla tafla(x_min, x_max, y_min, y_max, z_max, 20, "blue", 5);       //obiekt tafli z falami
-
+    Zbiornik zbiornik(-100, 100, -100, 100, -100, 100);
+    std::shared_ptr<drawNS::Draw3DAPI> api(new APIGnuPlot3D(zbiornik.PrzekazXMin(), zbiornik.PrzekazXMax(), zbiornik.PrzekazYMin(), zbiornik.PrzekazYMax(), zbiornik.PrzekazZMin(), zbiornik.PrzekazZMax(), -1));
+    InterfejsDrona dron(15, api, Wektor3D(0, 0, 0), "black", "orange", 1000); //obiekt drona
+    Dno dno(api, zbiornik, 20, "yellow");                                     //obiekt dna zbiornika
+    Tafla tafla(api, zbiornik, 20, 20, "blue");                                //obiekt tafli z falami
     char znak;
 
-    std::shared_ptr<drawNS::Draw3DAPI> api(new APIGnuPlot3D(x_min, x_max, y_min, y_max, z_min, z_max, -1));
-
     //rysuje stałe obiekty sceny
-    dno.Rysuj(api);
-    tafla.Rysuj(api);
-    dron.Rysuj(api);
+    dno.Rysuj();
+    tafla.Rysuj();
+    dron.Rysuj();
     api->redraw();
 
     WyswietlMenu();
@@ -76,7 +73,7 @@ int main()
 
         try
         {
-          dron.AnimujRuchWPrzod(api, odleglosc);
+          dron.AnimujRuchWPrzod(odleglosc);
         }
         catch (const std::invalid_argument &e)
         {
@@ -85,6 +82,7 @@ int main()
 
         break;
       }
+
       case 'o':
       {
         double kat;
@@ -97,9 +95,10 @@ int main()
           cout << "Podano błędną wartość kąta!\n";
           break;
         }
+
         try
         {
-          dron.AnimujObrot(api, kat);
+          dron.AnimujObrot(kat);
         }
         catch (const std::invalid_argument &e)
         {
@@ -108,43 +107,10 @@ int main()
 
         break;
       }
+
       case 'w':
       {
-        double wysokosc;
-        cout << "\tPodaj wysokość: ";
-        cin >> wysokosc;
-        if (!cin.good())
-        {
-          cin.clear();
-          cin.ignore(1000, '\n');
-          cout << "Podano błędną wartość odległości!\n";
-          break;
-        }
-
-        try
-        {
-          dron.AnimujRuchWPionie(api, wysokosc);
-        }
-        catch (const std::invalid_argument &e)
-        {
-          cerr << e.what() << " Pominięcie instrukcji." << endl;
-        }
-
-        break;
-      }
-      case 'd':
-      {
-        double wysokosc, odleglosc;
-        cout << "\tPodaj wysokość: ";
-        cin >> wysokosc;
-        if (!cin.good())
-        {
-          cin.clear();
-          cin.ignore(1000, '\n');
-          cout << "Podano błędną wartość odległości!\n";
-          break;
-        }
-
+        double kat, odleglosc;
         cout << "\tPodaj odległość: ";
         cin >> odleglosc;
         if (!cin.good())
@@ -155,9 +121,19 @@ int main()
           break;
         }
 
+        cout << "\tPodaj kąt wznoszenia: ";
+        cin >> kat;
+        if (!cin.good())
+        {
+          cin.clear();
+          cin.ignore(1000, '\n');
+          cout << "Podano błędną wartość kąta!\n";
+          break;
+        }
+
         try
         {
-          dron.AnimujRuchWPionieIWPrzod(api, wysokosc, odleglosc);
+          dron.AnimujRuchWPionie(odleglosc, kat);
         }
         catch (const std::invalid_argument &e)
         {
@@ -166,16 +142,19 @@ int main()
 
         break;
       }
+
       case 'm':
       {
         WyswietlMenu();
         break;
       }
+
       case 'k':
       {
         cout << "Kończenie pracy programu.\n";
         break;
       }
+
       default:
       {
         cout << "Nieznana opcja.\n";

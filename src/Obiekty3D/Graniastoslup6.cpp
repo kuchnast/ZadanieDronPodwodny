@@ -7,39 +7,6 @@
 using drawNS::Point3D;
 using std::vector;
 
-Graniastoslup6::Graniastoslup6(double dl_r, double dl_z, const std::string &kolor)
-{
-    if (dl_r <= 0 || dl_z <= 0)
-        throw(std::invalid_argument("Podano nieprawidłowe długości boków graniastosłupa sześciokątnego."));
-
-    m_kolor = kolor;
-    m_wierzcholki.reserve(2);
-
-    double x = cos(M_PI / 6) * dl_r;
-    double y = sin(M_PI / 6) * dl_r;
-
-    for (int i = 0; i < 2; ++i){
-        vector<Wektor3D> temp;
-        temp.reserve(6);
-        for (int j = 0; j < 2; ++j)
-        {
-            if (j)
-            {
-                temp.push_back(Wektor3D(0, -dl_r, i ? -dl_z / 2 : dl_z / 2));
-                temp.push_back(Wektor3D(-x, -y, i ? -dl_z / 2 : dl_z / 2));
-                temp.push_back(Wektor3D(-x, y, i ? -dl_z / 2 : dl_z / 2));
-            }
-            else
-            {
-                temp.push_back(Wektor3D(0, dl_r, i ? -dl_z / 2 : dl_z / 2));
-                temp.push_back(Wektor3D(x, y, i ? -dl_z / 2 : dl_z / 2));
-                temp.push_back(Wektor3D(x, -y, i ? -dl_z / 2 : dl_z / 2));
-            }
-        }
-        m_wierzcholki.push_back(temp);
-    }
-}
-
 vector<vector<Point3D>> Graniastoslup6::_Zbuduj() const
 {
     vector<vector<Point3D>> nowe_wierzcholki;
@@ -78,12 +45,30 @@ vector<vector<Point3D>> Graniastoslup6::_Zbuduj(const MacierzOb &orientacja, con
     return nowe_wierzcholki;
 }
 
-int Graniastoslup6::Rysuj(const std::shared_ptr<drawNS::Draw3DAPI> &api) const
+void Graniastoslup6::Rysuj()
 {
-    return api->draw_polyhedron(_Zbuduj(), m_kolor);
+    if (m_id_obiektu != nullptr)
+        Kasuj();
+
+    m_id_obiektu = new int;
+    *m_id_obiektu = m_api->draw_polyhedron(_Zbuduj(), m_kolor);
 }
 
-int Graniastoslup6::Rysuj(const std::shared_ptr<drawNS::Draw3DAPI> &api, const MacierzOb &orientacja, const Wektor3D &srodek) const
+void Graniastoslup6::Kasuj()
 {
-    return api->draw_polyhedron(_Zbuduj(orientacja, srodek), m_kolor);
+    if (m_id_obiektu != nullptr)
+    {
+        m_api->erase_shape(*m_id_obiektu);
+        delete m_id_obiektu;
+        m_id_obiektu = nullptr;
+    }
+}
+
+void Graniastoslup6::Rysuj(const MacierzOb &orientacja, const Wektor3D &srodek)
+{
+    if (m_id_obiektu != nullptr)
+        Kasuj();
+
+    m_id_obiektu = new int;
+    *m_id_obiektu = m_api->draw_polyhedron(_Zbuduj(orientacja, srodek), m_kolor);
 }

@@ -26,12 +26,13 @@ public:
  * @brief Konstruktor nowego obiektu klasy Dron 
  * 
  * @param rozmiar wysokość drona będąca jednocześnie przelicznikiem kolejnych długości boków i śrub
+ * @param api łącze do gnuplota
  * @param srodek wektor położenia środka obiektu
  * @param kolor_kadluba nazwa koloru kadłuba drona
  * @param kolor_srub nazwa koloru śrub drona
  * @param czas_animacji czas trwania animacji dowolnego ruchu w milisekundach
  */
-    InterfejsDrona(double rozmiar, const Wektor3D &srodek = Wektor3D(), const std::string &kolor_kadluba = "black", const std::string &kolor_srub = "black", uint czas_animacji = 2000) : Dron(rozmiar, srodek, kolor_kadluba, kolor_srub), m_czas_animacji(czas_animacji){}
+    InterfejsDrona(double rozmiar, const std::shared_ptr<drawNS::Draw3DAPI> &api, const Wektor3D &srodek = Wektor3D(), const std::string &kolor_kadluba = "black", const std::string &kolor_srub = "black", uint czas_animacji = 2000) : Dron(rozmiar, api, srodek, kolor_kadluba, kolor_srub), m_czas_animacji(czas_animacji) {}
 
 /**
  * @brief Ustawia łączny czas animacji w milisekundach
@@ -47,10 +48,9 @@ public:
  * 
  * @exception std::invalid_argument podano nieprawidłową wartość odległości
  * 
- * @param api łącze do gnuplota
  * @param odleglosc odległość na jaką dokonywane jest przemieszczenie
  */
-    void AnimujRuchWPrzod(const std::shared_ptr<drawNS::Draw3DAPI> &api, double odleglosc);
+    void AnimujRuchWPrzod(double odleglosc);
 
 /**
  * @brief Animacja obrotu o zadany kąt
@@ -58,23 +58,20 @@ public:
  * 
  * @exception std::invalid_argument podano nieprawidłową wartość kąta
  * 
- * @param api łącze do gnuplota
  * @param kat kąt obrotu w stopniach
  */
-    void AnimujObrot(const std::shared_ptr<drawNS::Draw3DAPI> &api, double kat);
+    void AnimujObrot(double kat);
 
 /**
- * @brief Animuje wznoszenie się lub opadanie drona
+ * @brief Animuje wznoszenie się lub opadanie drona pod podanym kątem
  * 
  * @exception std::invalid_argument podano nieprawidłową wartość wysokości
  * 
- * @param api łącze do gnuplota
- * @param wysokosc wysokość o jaką zmieni się położenie drona
+ * @param odleglosc odległość o jaką przemieści się drona
+ * @param kat kąt o jaki wzniesie się dron
  */
-    void AnimujRuchWPionie(const std::shared_ptr<drawNS::Draw3DAPI> &api, double wysokosc);
+    void AnimujRuchWPionie(double odleglosc, double kat);
 
-
-    void AnimujRuchWPionieIWPrzod(const std::shared_ptr<drawNS::Draw3DAPI> &api, double wysokosc, double odleglosc);
 };
 
 #endif

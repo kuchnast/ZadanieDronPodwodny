@@ -2,10 +2,16 @@
 #include <vector>
 
 #include "Obiekt3D.hh"
-#include "MacierzOb.hh"
-#include "Wektor3D.hh"
 
 using std::vector;
+
+Obiekt3D::~Obiekt3D()
+{
+    if(m_id_obiektu != nullptr){
+        delete m_id_obiektu;
+        m_id_obiektu = nullptr;
+    }
+}
 
 void Obiekt3D::ZmienPozycje(const Wektor3D &wektor_przesuniecia)
 {

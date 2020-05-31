@@ -2,6 +2,7 @@
 #define MACIERZ_OB_HH
 
 #include <iostream>
+#include <math.h>
 
 #include "MacierzKw.hh"
 
@@ -61,6 +62,20 @@ class MacierzOb : public MacierzKw<double, 3>
   MacierzOb() = delete;
 
 /**
+ * @brief Konstruktor nowego obiektu klasy MacierzOb
+ * 
+ * @param M Macierz kwadratowa 3x3, o odpowiedzniej budowie
+ */
+  explicit MacierzOb(const MacierzKw &M, char os = 'w', double kat = 0) : MacierzKw(M)
+  {
+    if(abs((M * M.transponuj()).wyznacznik() - 1) >= 0.0001)
+      throw(std::invalid_argument("Macierz niezgodna z własnościami macierzy ortagonalnej."));
+
+    m_os = os;
+    m_kat = kat;
+  }
+
+  /**
  * @brief Konstruktor nowego obiektu klasy Macierz Ob
  * @exception std::invalid_argument podano nieprawidłowe oznaczenie osi
  * 

@@ -25,7 +25,10 @@ protected:
     MacierzOb m_orientacja_z = MacierzOb('z');  ///< macierz obrotu wokół osi z
     Wektor3D m_srodek;                          ///< wektor środka obiektu względem układu 
     vector<vector<Wektor3D>> m_wierzcholki;     ///< dynamiczna podwójna tablica wierzchołków zawierająca tablice wierzchołków podstaw obiektów
+    
+    std::shared_ptr<drawNS::Draw3DAPI> m_api;   ///< wskaźnik na łącze do gnuplota
     std::string m_kolor;                        ///< nazwa koloru obiektu
+    int* m_id_obiektu = nullptr;                ///< wskaźnik na identyfikator obiektu w gnuplocie, domyślnie nullptr
 
 public:
 
@@ -33,17 +36,28 @@ public:
  * @brief Konstruktor nowego obiektu klasy Obiekt3D
  * Utworzony obiekt ma domyślne orientacje we wszystkich kierunkach oraz środek w początku układu współrzędnych.
  * 
+ * @param api łącze do gnuplota
  * @param kolor nazwa koloru obiektu
  */
-    explicit Obiekt3D(const std::string &kolor = "black") : m_kolor(kolor) {}
+    explicit Obiekt3D(const std::shared_ptr<drawNS::Draw3DAPI> &api, const std::string &kolor = "black") : m_api(api), m_kolor(kolor){}
 
 /**
- * @brief Rysuje Obiekt3D o podanym kolorze
+ * @brief Destruktor obiektu Obiekt3D
  * 
- * @param api łącze do gnuplota
- * @return int identyfikator utworzonego obiektu
  */
-    virtual int Rysuj(const std::shared_ptr<drawNS::Draw3DAPI> &api) const = 0;
+    ~Obiekt3D();
+
+/**
+ * @brief Rysuje Obiekt3D
+ * 
+ */
+    virtual void Rysuj() = 0;
+
+/**
+ * @brief Kasuje Obiekt3D
+ * 
+ */
+    virtual void Kasuj() = 0;
 
 /**
  * @brief Zmienia pozycje Obiektu3D poprzez zmianę położenia środka obiektu

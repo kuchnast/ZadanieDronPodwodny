@@ -5,10 +5,11 @@ BUILD    := ./build
 OBJ_DIR  := $(BUILD)/objects
 APP_DIR  := $(BUILD)/apps
 TARGET   := dron
-INCLUDE  := -Iinc/ -Iinc/Gnuplot/ -Iinc/Interfejsy -Iinc/Obiekty3D -Iinc/Powierzchnie -Iinc/SkladoweObiektow -Iinc/Zbiornik
+INCLUDE  := -Iinc/ -Iinc/Gnuplot/ -Iinc/Interfejsy -Iinc/Obiekty3D -Iinc/Przeszkody -Iinc/Powierzchnie -Iinc/SkladoweObiektow -Iinc/Zbiornik
 SRC      := $(wildcard src/Gnuplot/*.cpp)				\
 			$(wildcard src/SkladoweObiektow/*.cpp) 		\
 			$(wildcard src/Obiekty3D/*.cpp) 			\
+			$(wildcard src/Przeszkody/*.cpp) 			\
 			$(wildcard src/Zbiornik/*.cpp) 				\
 			$(wildcard src/Powierzchnie/*.cpp) 			\
 			$(wildcard src/Interfejsy/*.cpp) 			\

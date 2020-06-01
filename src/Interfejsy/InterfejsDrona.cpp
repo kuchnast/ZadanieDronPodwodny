@@ -78,16 +78,31 @@ void InterfejsDrona::AnimujRuchWPionie(double odleglosc, double kat)
     Wektor3D przemieszczenie_pion = Wektor3D(0, 0, sin(kat * M_PI / 180) * odleglosc);
     Wektor3D przemieszczenie_poziom = m_orientacja_z * Wektor3D(0, cos(kat * M_PI / 180) * odleglosc, 0);
 
+    for (int i = 0; i < 50; ++i)
+    {
+        ZmienOrientacjeX(kat / 50);
+        m_l_sruba.ObrotSrubyPrawo(5);
+        m_p_sruba.ObrotSrubyLewo(5);
+        Rysuj();
+        std::this_thread::sleep_for(std::chrono::microseconds(m_czas_animacji * 10));
+        m_api->redraw();
+    }
+
     for (int i = 0; i < 100; ++i)
     {
         ZmienPozycje(przemieszczenie_poziom / 100 + przemieszczenie_pion / 100);
         m_l_sruba.ObrotSrubyPrawo(5);
         m_p_sruba.ObrotSrubyLewo(5);
-        if(i < 50)
-            ZmienOrientacjeX(kat / 50);
-        else
-            ZmienOrientacjeX(-kat / 50);
+        Rysuj();
+        std::this_thread::sleep_for(std::chrono::microseconds(m_czas_animacji * 10));
+        m_api->redraw();
+    }
 
+        for (int i = 0; i < 50; ++i)
+    {
+        ZmienOrientacjeX(-kat / 50);
+        m_l_sruba.ObrotSrubyPrawo(5);
+        m_p_sruba.ObrotSrubyLewo(5);
         Rysuj();
         std::this_thread::sleep_for(std::chrono::microseconds(m_czas_animacji * 10));
         m_api->redraw();

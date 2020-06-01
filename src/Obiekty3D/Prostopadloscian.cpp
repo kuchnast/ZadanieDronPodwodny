@@ -1,5 +1,6 @@
 #include <iostream>
 #include <vector>
+#include <math.h>
 
 #include "Prostopadloscian.hh"
 
@@ -71,3 +72,4 @@ void Prostopadloscian::Rysuj(const MacierzOb &orientacja, const Wektor3D &srodek
     m_id_obiektu = new int;
     *m_id_obiektu = m_api->draw_polyhedron(_Zbuduj(orientacja, srodek), m_kolor);
 }
+

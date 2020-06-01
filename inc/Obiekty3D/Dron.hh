@@ -6,6 +6,7 @@
 #include "Obiekt3D.hh"
 #include "Prostopadloscian.hh"
 #include "Sruba.hh"
+#include "Przeszkoda.hh"
 
 using drawNS::Point3D;
 using std::vector;
@@ -14,7 +15,7 @@ using std::vector;
  * @brief Klasa modeluje pojęcie drona złożonego z prostopadłościennego kadłuba oraz dwóch śrub
  * 
  */
-class Dron : public Obiekt3D
+class Dron : public Obiekt3D, public Przeszkoda
 {
 
 protected:
@@ -48,6 +49,7 @@ public:
         m_p_sruba.ZmienPozycje(Wektor3D(rozmiar / 2, -1.125 * rozmiar, 0));
         m_l_sruba.ZmienPozycje(Wektor3D(-rozmiar / 2, -1.125 * rozmiar, 0));
         m_srodek = srodek;
+        UstawWektorR(Wektor3D(2.5 * rozmiar, 2.25 * rozmiar, rozmiar));
         m_id_obiektu = new int;
     };
 

@@ -12,6 +12,7 @@
 #include "Zbiornik.hh"
 #include "Tafla.hh"
 #include "Dno.hh"
+#include "PrzeszkodaProstopad.hh"
 
 using drawNS::APIGnuPlot3D;
 using std::cerr;
@@ -42,13 +43,15 @@ int main()
     std::shared_ptr<drawNS::Draw3DAPI> api(new APIGnuPlot3D(zbiornik.PrzekazXMin(), zbiornik.PrzekazXMax(), zbiornik.PrzekazYMin(), zbiornik.PrzekazYMax(), zbiornik.PrzekazZMin(), zbiornik.PrzekazZMax(), -1));
     InterfejsDrona dron(15, api, Wektor3D(0, 0, 0), "black", "orange", 1000); //obiekt drona
     Dno dno(api, zbiornik, 20, "yellow");                                     //obiekt dna zbiornika
-    Tafla tafla(api, zbiornik, 20, 20, "blue");                                //obiekt tafli z falami
+    Tafla tafla(api, zbiornik, 20, 20, "blue");                               //obiekt tafli z falami
+    PrzeszkodaProstopad przeszkoda(50, 50, 50, api, Wektor3D(50, 50, 50), "black");
     char znak;
 
     //rysuje stałe obiekty sceny
     dno.Rysuj();
     tafla.Rysuj();
     dron.Rysuj();
+    przeszkoda.Rysuj();
     api->redraw();
 
     WyswietlMenu();

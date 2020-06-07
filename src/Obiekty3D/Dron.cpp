@@ -26,3 +26,30 @@ void Dron::Kasuj()
         *m_id_obiektu = 0;
     }
 }
+
+bool Dron::CzyKolizja(const Dron &Ob) const
+{
+    double odl = (ZwrocPozycje() + Ob.ZwrocPozycje()).dlugosc();
+
+    if(odl > (*this).ZwrocDlugoscR() + Ob.ZwrocDlugoscR())
+        return false;
+
+    return true;
+}
+
+void Dron::RysujPrzeszkode()
+{
+    Rysuj();
+}
+
+void Dron::KasujPrzeszkode()
+{
+    Kasuj();
+}
+
+void Dron::ZmienKolor(const std::string &kolor)
+{
+    m_kadlub.ZmienKolor(kolor);
+    m_l_sruba.ZmienKolor(kolor);
+    m_p_sruba.ZmienKolor(kolor);
+}

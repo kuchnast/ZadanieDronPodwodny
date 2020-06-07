@@ -13,14 +13,14 @@ void InterfejsDrona::UstawCzasAnimacji(uint czas_animacji)
     m_czas_animacji = czas_animacji;
 }
 
-void InterfejsDrona::AnimujRuchWPrzod(double odleglosc)
+bool InterfejsDrona::AnimujRuchWPrzod(const std::map<std::string, std::shared_ptr<Przeszkoda>> &lista_przeszkod, double odleglosc)
 {
     if (abs(odleglosc) < 0.00001)
         throw(std::invalid_argument("Podano błędną wartość odległości."));
 
     if (odleglosc < 0)
     {
-        AnimujObrot(180);
+        AnimujObrot(lista_przeszkod, 180);
         odleglosc = -odleglosc;
     }
 
@@ -29,15 +29,25 @@ void InterfejsDrona::AnimujRuchWPrzod(double odleglosc)
     for (int i = 0; i < 100; ++i)
     {
         ZmienPozycje(przemieszczenie / 100);
+        for (const auto & P : lista_przeszkod)
+        {
+            if(P.second->CzyKolizja(*this))
+            {
+                ZmienPozycje(-przemieszczenie / 100);
+                return true;
+            }
+        }
         m_l_sruba.ObrotSrubyPrawo(5);
         m_p_sruba.ObrotSrubyLewo(5);
         Rysuj();
         std::this_thread::sleep_for(std::chrono::microseconds(m_czas_animacji * 10));
         m_api->redraw();
     }
+
+    return false;
 }
 
-void InterfejsDrona::AnimujObrot(double kat)
+void InterfejsDrona::AnimujObrot(const std::map<std::string, std::shared_ptr<Przeszkoda>> &lista_przeszkod, double kat)
 {
     if (abs(kat) < 0.00001)
         throw(std::invalid_argument("Podano błędną wartość kąta."));
@@ -61,7 +71,7 @@ void InterfejsDrona::AnimujObrot(double kat)
     }
 }
 
-void InterfejsDrona::AnimujRuchWPionie(double odleglosc, double kat)
+bool InterfejsDrona::AnimujRuchWPionie(const std::map<std::string, std::shared_ptr<Przeszkoda>> &lista_przeszkod, double odleglosc, double kat)
 {
     if (abs(odleglosc) < 0.00001)
         throw(std::invalid_argument("Podano błędną wartość wysokości."));
@@ -71,12 +81,13 @@ void InterfejsDrona::AnimujRuchWPionie(double odleglosc, double kat)
 
     if (odleglosc < 0)
     {
-        AnimujObrot(180);
+        AnimujObrot(lista_przeszkod, 180);
         odleglosc = -odleglosc;
     }
 
     Wektor3D przemieszczenie_pion = Wektor3D(0, 0, sin(kat * M_PI / 180) * odleglosc);
     Wektor3D przemieszczenie_poziom = m_orientacja_z * Wektor3D(0, cos(kat * M_PI / 180) * odleglosc, 0);
+    bool czy_blad = false;
 
     for (int i = 0; i < 50; ++i)
     {
@@ -91,6 +102,17 @@ void InterfejsDrona::AnimujRuchWPionie(double odleglosc, double kat)
     for (int i = 0; i < 100; ++i)
     {
         ZmienPozycje(przemieszczenie_poziom / 100 + przemieszczenie_pion / 100);
+        for (const auto &P : lista_przeszkod)
+        {
+            if (P.second->CzyKolizja(*this))
+            {
+                ZmienPozycje(-(przemieszczenie_poziom / 100 + przemieszczenie_pion / 100));
+                czy_blad = true;
+                break;
+            }
+        }
+        if(czy_blad)
+            break;
         m_l_sruba.ObrotSrubyPrawo(5);
         m_p_sruba.ObrotSrubyLewo(5);
         Rysuj();
@@ -107,4 +129,6 @@ void InterfejsDrona::AnimujRuchWPionie(double odleglosc, double kat)
         std::this_thread::sleep_for(std::chrono::microseconds(m_czas_animacji * 10));
         m_api->redraw();
     }
+
+    return czy_blad;
 }

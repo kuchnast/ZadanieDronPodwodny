@@ -2,7 +2,10 @@
 #define PRZESZKODA_HH
 
 #include <iostream>
+
 #include "Wektor3D.hh"
+
+class Dron;
 
 class Przeszkoda
 {
@@ -11,15 +14,29 @@ private:
     double m_dl_R;
 
 public:
-    Przeszkoda() : m_wektor_R(0, 0, 0), m_dl_R(0) {}
+    Przeszkoda() = delete;
 
-    Przeszkoda(const Wektor3D &W) : m_wektor_R(W), m_dl_R(W.dlugosc()) {}
-
-    void UstawWektorR(const Wektor3D &W);
+    Przeszkoda(Wektor3D wektor_R) : m_wektor_R(wektor_R), m_dl_R(wektor_R.dlugosc()) {}
 
     const Wektor3D &ZwrocWektorR() const;
 
-    double ZwrocDlR() const;
+    double ZwrocDlugoscR() const;
+
+    void UstawWektorR(const Wektor3D &W);
+    
+    virtual bool CzyKolizja(const Dron &Ob) const = 0;
+
+/**
+ * @brief Rysuje Przeszkodę
+ * 
+ */
+    virtual void RysujPrzeszkode() = 0;
+
+/**
+ * @brief Kasuje Przeszkodę
+ * 
+ */
+    virtual void KasujPrzeszkode() = 0;
 };
 
 #endif

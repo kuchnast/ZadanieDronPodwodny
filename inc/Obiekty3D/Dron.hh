@@ -41,6 +41,7 @@ public:
  */
     explicit Dron(double rozmiar, const std::shared_ptr<drawNS::Draw3DAPI> &api, const Wektor3D &srodek = Wektor3D(), const std::string &kolor_kadluba = "black", const std::string &kolor_srub = "black")
         : Obiekt3D(api),
+          Przeszkoda(Wektor3D(rozmiar * 2, rozmiar * 3, rozmiar)),
           m_kadlub(rozmiar * 2, rozmiar * 2, rozmiar, api, kolor_kadluba),
           m_p_sruba(rozmiar / 2, rozmiar / 4, api, kolor_srub),
           m_l_sruba(rozmiar / 2, rozmiar / 4, api, kolor_srub)
@@ -51,6 +52,7 @@ public:
         m_srodek = srodek;
         UstawWektorR(Wektor3D(2.5 * rozmiar, 2.25 * rozmiar, rozmiar));
         m_id_obiektu = new int;
+        
     };
 
 /**
@@ -65,6 +67,26 @@ public:
  * 
  */
     void Kasuj();
+
+/**
+ * @brief Sprawdza czy wystąpiła kolizja z innym dronem
+ * 
+ * @param Ob dron z którym szukamy kolizji
+ * @return true jeżeli występuje kolizja
+ * @return false jeżeli brak kolizji
+ */
+    bool CzyKolizja(const Dron &Ob) const override;
+
+    void RysujPrzeszkode() override;
+
+    void KasujPrzeszkode() override;
+
+/**
+ * @brief Zmienia kolor obiektu
+ * 
+ * @param kolor nazwa koloru
+ */
+    void ZmienKolor(const std::string &kolor);
 };
 
 #endif

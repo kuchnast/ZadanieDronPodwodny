@@ -2,13 +2,14 @@
 #define PRZESZKODA_PROSTOPAD_HH
 
 #include <iostream>
-#include "Wektor3D.hh"
 #include "Prostopadloscian.hh"
-#include "DetekcjaKolizji.hh"
 #include "Przeszkoda.hh"
 
-class PrzeszkodaProstopad : public Prostopadloscian, public DetekcjaKolizji, public Przeszkoda
+class PrzeszkodaProstopad : public Przeszkoda, public Prostopadloscian
 {
+//protected:
+    //Prostopadloscian obiekt;
+
 public:
 
 /**
@@ -21,12 +22,16 @@ public:
  * @param srodek środek położenia obiektu
  * @param kolor nazwa koloru obiektu
  */
-    PrzeszkodaProstopad(double dl_x, double dl_y, double dl_z, const std::shared_ptr<drawNS::Draw3DAPI> &api, const Wektor3D & srodek = Wektor3D(0, 0, 0), const std::string &kolor = "black") : Prostopadloscian(dl_x, dl_y, dl_z, api, kolor) , Przeszkoda(Wektor3D(dl_x/2, dl_y/2, dl_z/2))
+    PrzeszkodaProstopad(double dl_x, double dl_y, double dl_z, const std::shared_ptr<drawNS::Draw3DAPI> &api, const Wektor3D &srodek = Wektor3D(0, 0, 0), const std::string &kolor = "black") : Przeszkoda(Wektor3D(dl_x, dl_y, dl_z)), Prostopadloscian(dl_x, dl_y, dl_z, api, kolor)
     {
-        m_srodek = srodek;
+        ZmienPozycje(srodek);
     }
 
     bool CzyKolizja(const Dron &Ob) const override;
+
+    void RysujPrzeszkode() override;
+
+    void KasujPrzeszkode() override;
 };
 
 

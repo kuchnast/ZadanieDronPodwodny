@@ -4,6 +4,7 @@
 #include <iostream>
 
 #include "Powierzchnia.hh"
+#include "Przeszkoda.hh"
 
 using drawNS::Point3D;
 
@@ -11,7 +12,7 @@ using drawNS::Point3D;
  * @brief Klasa modeluje pojęcie dna zbiornika
  * 
  */
-class Dno : public Powierzchnia
+class Dno : public Powierzchnia, public Przeszkoda
 {
 public:
 /**
@@ -33,9 +34,10 @@ public:
  * @param kolor kolor płaszczyzny
  */
     Dno(const std::shared_ptr<drawNS::Draw3DAPI> &api, double x_min, double x_max, double y_min, double y_max, double z, double odstep = 1, const std::string &kolor = "yellow")
-        : Powierzchnia(api, x_min, x_max, y_min, y_max, z, odstep, kolor){}
+        : Powierzchnia(api, x_min, x_max, y_min, y_max, z, odstep, kolor),
+          Przeszkoda(Wektor3D(sqrt(pow(x_min, 2) + pow(x_max, 2)), sqrt(pow(y_min, 2) + pow(y_max, 2)), 0)) {}
 
-/**
+    /**
  * @brief Konstruktor nowego obiektu klasy Dno umieszczonego w wymiarach zbiornika
  * 
  * 
@@ -46,6 +48,20 @@ public:
  */
     Dno(const std::shared_ptr<drawNS::Draw3DAPI> &api, const Zbiornik &Z, double odstep = 1, const std::string &kolor = "yellow")
         : Dno(api, Z.PrzekazXMin(), Z.PrzekazXMax(), Z.PrzekazYMin(), Z.PrzekazYMax(), Z.PrzekazZMin(), odstep, kolor){}
+
+    bool CzyKolizja(const Dron &Ob) const override;
+
+    /**
+ * @brief Rysuje Przeszkodę
+ * 
+ */
+    void RysujPrzeszkode() override;
+
+    /**
+ * @brief Kasuje Przeszkodę
+ * 
+ */
+    void KasujPrzeszkode() override;
 };
 
 #endif

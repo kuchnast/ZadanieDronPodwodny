@@ -6,6 +6,8 @@
 #include <utility>
 
 #include "PrzeszkodaProstopad.hh"
+#include "Tafla.hh"
+#include "Dno.hh"
 #include "InterfejsDrona.hh"
 
 typedef std::pair<std::string, std::shared_ptr<InterfejsDrona>> PARA_DRON;
@@ -29,6 +31,10 @@ public:
     bool NowyDron(const std::string &nazwa, double rozmiar, const Wektor3D &srodek = Wektor3D(), const std::string &kolor_kadluba = "black", const std::string &kolor_srub = "black", uint czas_animacji = 2000);
 
     bool NowaPrzeszkodaProstopadloscian(const std::string &nazwa, double dl_x, double dl_y, double dl_z, const Wektor3D &srodek = Wektor3D(), const std::string &kolor = "black");
+
+    bool NowaPrzeszkodaTafla(const std::string &nazwa, const Zbiornik &Z, double odstep = 1, uint wysokosc_fali = 5, const std::string &kolor = "blue");
+
+    bool NowaPrzeszkodaDno(const std::string &nazwa, const Zbiornik &Z, double odstep = 1, const std::string &kolor = "yellow");
 
     bool UsunDrona(const std::string &nazwa);
 

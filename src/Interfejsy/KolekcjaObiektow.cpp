@@ -55,6 +55,44 @@ bool KolekcjaObiektow::NowaPrzeszkodaProstopadloscian(const std::string &nazwa, 
     return true;
 }
 
+bool KolekcjaObiektow::NowaPrzeszkodaTafla(const std::string &nazwa, const Zbiornik &Z,  double odstep, uint wysokosc_fali, const std::string &kolor)
+{
+    pair<IT_PRZESZKODA, bool> ret;
+    std::shared_ptr<Tafla> przeszkoda = std::make_shared<Tafla>(m_api, Z, odstep, wysokosc_fali, kolor);
+
+    ret = m_lista_przeszkod.insert(PARA_PRZESZKODA(nazwa, przeszkoda));
+
+    if (ret.second == false)
+    {
+        cout << "Istnieje już przeszkoda o podanej nazwie.\n";
+        return false;
+    }
+
+    (*przeszkoda).RysujPrzeszkode();
+    m_api->redraw();
+
+    return true;
+}
+
+bool KolekcjaObiektow::NowaPrzeszkodaDno(const std::string &nazwa, const Zbiornik &Z, double odstep, const std::string &kolor)
+{
+    pair<IT_PRZESZKODA, bool> ret;
+    std::shared_ptr<Dno> przeszkoda = std::make_shared<Dno>(m_api, Z, odstep, kolor);
+
+    ret = m_lista_przeszkod.insert(PARA_PRZESZKODA(nazwa, przeszkoda));
+
+    if (ret.second == false)
+    {
+        cout << "Istnieje już przeszkoda o podanej nazwie.\n";
+        return false;
+    }
+
+    (*przeszkoda).RysujPrzeszkode();
+    m_api->redraw();
+
+    return true;
+}
+
 bool KolekcjaObiektow::UsunDrona(const std::string &nazwa)
 {
     IT_DRON it = m_lista_dronow.find(nazwa);

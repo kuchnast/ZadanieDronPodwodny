@@ -66,6 +66,8 @@ public:
 
             m_wierzcholki.push_back(temp);
         }
+
+        m_srodek = Wektor3D((x_max - x_min) / 2, (y_max - y_min) / 2, z);
     }
 
 /**

@@ -23,7 +23,7 @@ using std::cout;
 using std::endl;
 using std::vector;
 
-//u 0 Dron_testowy d 0 -50 -50 -50 d1 z d1 d 1 50 50 50 p1 0 50 50 50
+//u 0 Dron d 0 -50 -50 -50 d1 z d1 d 1 50 50 50 p1 0 50 50 50
 
 int main()
 {
@@ -32,17 +32,12 @@ int main()
     char znak;
     Zbiornik zbiornik(-100, 100, -100, 100, -100, 100);
     std::shared_ptr<drawNS::Draw3DAPI> api(new APIGnuPlot3D(zbiornik.PrzekazXMin(), zbiornik.PrzekazXMax(), zbiornik.PrzekazYMin(), zbiornik.PrzekazYMax(), zbiornik.PrzekazZMin(), zbiornik.PrzekazZMax(), -1));
-    Dno dno(api, zbiornik, 20, "yellow");       //obiekt dna zbiornika
-    Tafla tafla(api, zbiornik, 20, 5, "blue"); //obiekt tafli z falami
-    KolekcjaObiektow kolekcja_obiektow(api);    
+    KolekcjaObiektow kolekcja_obiektow(api);
 
-    kolekcja_obiektow.NowyDron("Dron_testowy", 15);
-    kolekcja_obiektow.ZmienAktywnegoDrona("Dron_testowy");
-
-    //rysuje stałe obiekty sceny
-    dno.Rysuj();
-    tafla.Rysuj();
-    api->redraw();
+    kolekcja_obiektow.NowaPrzeszkodaDno("Dno", zbiornik, 20, "yellow");
+    kolekcja_obiektow.NowaPrzeszkodaTafla("Tafla", zbiornik, 20, 5, "blue");
+    kolekcja_obiektow.NowyDron("Dron", 15);
+    kolekcja_obiektow.ZmienAktywnegoDrona("Dron");
 
     WyswietlMenuGlowne();
     do

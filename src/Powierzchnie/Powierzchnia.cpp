@@ -41,5 +41,6 @@ void Powierzchnia::Kasuj()
     {
         m_api->erase_shape(*m_id_obiektu);
         delete m_id_obiektu;
+        m_id_obiektu = nullptr;
     }
 }

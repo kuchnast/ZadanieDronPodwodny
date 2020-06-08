@@ -2,8 +2,10 @@
 #define TAFLA_HH
 
 #include <iostream>
+#include <math.h>
 
 #include "Powierzchnia.hh"
+#include "Przeszkoda.hh"
 
 using drawNS::Point3D;
 
@@ -11,7 +13,7 @@ using drawNS::Point3D;
  * @brief Klasa modeluje pojęcie tafli jako powierzchni z wybrzuszeniami na kształt fal
  * 
  */
-class Tafla : public Powierzchnia
+class Tafla : public Powierzchnia, public Przeszkoda
 {
 protected:
     uint m_wysokosc_fali; ///< wysokość fali
@@ -37,7 +39,9 @@ public:
  * @param kolor kolor płaszczyzny
  */
     Tafla(const std::shared_ptr<drawNS::Draw3DAPI> &api, double x_min, double x_max, double y_min, double y_max, double z, double odstep = 1, uint wysokosc_fali = 5, const std::string &kolor = "blue")
-        : Powierzchnia(api, x_min, x_max, y_min, y_max, z - wysokosc_fali, odstep, kolor), m_wysokosc_fali(wysokosc_fali)
+        : Powierzchnia(api, x_min, x_max, y_min, y_max, z - wysokosc_fali, odstep, kolor),
+          Przeszkoda(Wektor3D(sqrt(pow(x_min, 2) + pow(x_max, 2)), sqrt(pow(y_min, 2) + pow(y_max, 2)), 0)),
+          m_wysokosc_fali(wysokosc_fali)
     {
         for (auto &wiersz : m_wierzcholki)
             for (uint y = 0; y < wiersz.size(); y += 2)
@@ -56,7 +60,21 @@ public:
  * @param kolor kolor płaszczyzny
  */
     Tafla(const std::shared_ptr<drawNS::Draw3DAPI> &api, const Zbiornik &Z, double odstep = 1, uint wysokosc_fali = 5, const std::string &kolor = "blue")
-        : Tafla(api, Z.PrzekazXMin(), Z.PrzekazXMax(), Z.PrzekazYMin(), Z.PrzekazYMax(), Z.PrzekazZMax(), odstep, wysokosc_fali, kolor){}
+        : Tafla(api, Z.PrzekazXMin(), Z.PrzekazXMax(), Z.PrzekazYMin(), Z.PrzekazYMax(), 0.9 * Z.PrzekazZMax(), odstep, wysokosc_fali, kolor){}
+
+    bool CzyKolizja(const Dron &Ob) const override;
+
+/**
+ * @brief Rysuje Przeszkodę
+ * 
+ */
+    void RysujPrzeszkode() override;
+
+/**
+ * @brief Kasuje Przeszkodę
+ * 
+ */
+    void KasujPrzeszkode() override;
 };
 
 #endif

@@ -50,7 +50,7 @@ public:
         m_p_sruba.ZmienPozycje(Wektor3D(rozmiar / 2, -1.125 * rozmiar, 0));
         m_l_sruba.ZmienPozycje(Wektor3D(-rozmiar / 2, -1.125 * rozmiar, 0));
         m_srodek = srodek;
-        UstawWektorR(Wektor3D(2.5 * rozmiar, 2.25 * rozmiar, rozmiar));
+        UstawWektorR(Wektor3D(1.6 * rozmiar, 1.6 * rozmiar, 1.6 * rozmiar));
         m_id_obiektu = new int;
         
     };

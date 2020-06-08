@@ -31,7 +31,7 @@ bool Dron::CzyKolizja(const Dron &Ob) const
 {
     double odl = (ZwrocPozycje() - Ob.ZwrocPozycje()).dlugosc();
 
-    if(odl > (*this).ZwrocDlugoscR() + Ob.ZwrocDlugoscR())
+    if (odl > (*this).ZwrocDlugoscR())
         return false;
 
     return true;

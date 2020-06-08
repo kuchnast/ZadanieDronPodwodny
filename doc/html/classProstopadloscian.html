@@ -80,7 +80,8 @@ Diagram dziedziczenia dla Prostopadloscian</div>
  <div class="center">
   <img src="classProstopadloscian.png" usemap="#Prostopadloscian_map" alt=""/>
   <map id="Prostopadloscian_map" name="Prostopadloscian_map">
-<area href="classObiekt3D.html" title="Klasa modeluje pojęcie obiektu 3D." alt="Obiekt3D" shape="rect" coords="0,0,109,24"/>
+<area href="classObiekt3D.html" title="Klasa modeluje pojęcie obiektu 3D." alt="Obiekt3D" shape="rect" coords="0,0,134,24"/>
+<area href="classPrzeszkodaProstopad.html" title="Klasa modeluje pojęcie przeszkody prostopadłościennej." alt="PrzeszkodaProstopad" shape="rect" coords="0,112,134,136"/>
   </map>
 </div></div>
 <table class="memberdecls">
@@ -89,19 +90,25 @@ Metody publiczne</h2></td></tr>
 <tr class="memitem:aea53d2696f48d474e40af18bcacce515"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classProstopadloscian.html#aea53d2696f48d474e40af18bcacce515">Prostopadloscian</a> ()=delete</td></tr>
 <tr class="memdesc:aea53d2696f48d474e40af18bcacce515"><td class="mdescLeft">&#160;</td><td class="mdescRight">Usunięcie domyślnego konstruktora bezparametrycznego nowego obiektu klasy <a class="el" href="classProstopadloscian.html" title="Klasa modeluje pojęcie obiektu 3D będącego prostopadłościanem.">Prostopadloscian</a>.  <a href="classProstopadloscian.html#aea53d2696f48d474e40af18bcacce515">Więcej...</a><br /></td></tr>
 <tr class="separator:aea53d2696f48d474e40af18bcacce515"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:adcfd92b26ccb7024db11057bc45cf413"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classProstopadloscian.html#adcfd92b26ccb7024db11057bc45cf413">Prostopadloscian</a> (double dl_x, double dl_y, double dl_z, const std::string &amp;kolor=&quot;black&quot;)</td></tr>
-<tr class="memdesc:adcfd92b26ccb7024db11057bc45cf413"><td class="mdescLeft">&#160;</td><td class="mdescRight">Konstruktor nowego obiektu klasy <a class="el" href="classProstopadloscian.html" title="Klasa modeluje pojęcie obiektu 3D będącego prostopadłościanem.">Prostopadloscian</a> Wylicza on wierzchołki dolnej i górnej podstawy prostopadłościanu o podanych wymiarach.  <a href="classProstopadloscian.html#adcfd92b26ccb7024db11057bc45cf413">Więcej...</a><br /></td></tr>
-<tr class="separator:adcfd92b26ccb7024db11057bc45cf413"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a24428c322de1e3b494586093e513ef95"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classProstopadloscian.html#a24428c322de1e3b494586093e513ef95">Rysuj</a> (const std::shared_ptr&lt; <a class="el" href="classdrawNS_1_1Draw3DAPI.html">drawNS::Draw3DAPI</a> &gt; &amp;api) const override</td></tr>
-<tr class="memdesc:a24428c322de1e3b494586093e513ef95"><td class="mdescLeft">&#160;</td><td class="mdescRight">Rysuje prostopadłościan z wyliczonych wierzchołków o ustalonym kolorze.  <a href="classProstopadloscian.html#a24428c322de1e3b494586093e513ef95">Więcej...</a><br /></td></tr>
-<tr class="separator:a24428c322de1e3b494586093e513ef95"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:acbf5bed0a4742cf593ec6e17b11eeddd"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classProstopadloscian.html#acbf5bed0a4742cf593ec6e17b11eeddd">Rysuj</a> (const std::shared_ptr&lt; <a class="el" href="classdrawNS_1_1Draw3DAPI.html">drawNS::Draw3DAPI</a> &gt; &amp;api, const <a class="el" href="classMacierzOb.html">MacierzOb</a> &amp;orientacja, const <a class="el" href="classWektor3D.html">Wektor3D</a> &amp;srodek) const</td></tr>
-<tr class="memdesc:acbf5bed0a4742cf593ec6e17b11eeddd"><td class="mdescLeft">&#160;</td><td class="mdescRight">Rysuje prostopadłościan z wyliczonych wierzchołków o ustalonym kolorze, względem innego układu o podanej macierzy orientacji i środku.  <a href="classProstopadloscian.html#acbf5bed0a4742cf593ec6e17b11eeddd">Więcej...</a><br /></td></tr>
-<tr class="separator:acbf5bed0a4742cf593ec6e17b11eeddd"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4a147281ee70913bf7ed3efff63d5cd2"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classProstopadloscian.html#a4a147281ee70913bf7ed3efff63d5cd2">Prostopadloscian</a> (double dl_x, double dl_y, double dl_z, const std::shared_ptr&lt; <a class="el" href="classdrawNS_1_1Draw3DAPI.html">drawNS::Draw3DAPI</a> &gt; &amp;api, const std::string &amp;kolor=&quot;black&quot;)</td></tr>
+<tr class="memdesc:a4a147281ee70913bf7ed3efff63d5cd2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Konstruktor nowego obiektu klasy <a class="el" href="classProstopadloscian.html" title="Klasa modeluje pojęcie obiektu 3D będącego prostopadłościanem.">Prostopadloscian</a> Wylicza on wierzchołki dolnej i górnej podstawy prostopadłościanu o podanych wymiarach.  <a href="classProstopadloscian.html#a4a147281ee70913bf7ed3efff63d5cd2">Więcej...</a><br /></td></tr>
+<tr class="separator:a4a147281ee70913bf7ed3efff63d5cd2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab05ddef16bf4ad5d830981130c0bf92e"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classProstopadloscian.html#ab05ddef16bf4ad5d830981130c0bf92e">Rysuj</a> () override</td></tr>
+<tr class="memdesc:ab05ddef16bf4ad5d830981130c0bf92e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Rysuje prostopadłościan z wyliczonych wierzchołków o ustalonym kolorze.  <a href="classProstopadloscian.html#ab05ddef16bf4ad5d830981130c0bf92e">Więcej...</a><br /></td></tr>
+<tr class="separator:ab05ddef16bf4ad5d830981130c0bf92e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a87de17306b1417a8051ebbc10bfab741"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classProstopadloscian.html#a87de17306b1417a8051ebbc10bfab741">Kasuj</a> () override</td></tr>
+<tr class="memdesc:a87de17306b1417a8051ebbc10bfab741"><td class="mdescLeft">&#160;</td><td class="mdescRight">Kasuje obiekt prostopadłościanu ze sceny.  <a href="classProstopadloscian.html#a87de17306b1417a8051ebbc10bfab741">Więcej...</a><br /></td></tr>
+<tr class="separator:a87de17306b1417a8051ebbc10bfab741"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a384ed8b8eeb3185e7c6aafe57c75c99b"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classProstopadloscian.html#a384ed8b8eeb3185e7c6aafe57c75c99b">Rysuj</a> (const <a class="el" href="classMacierzOb.html">MacierzOb</a> &amp;orientacja, const <a class="el" href="classWektor3D.html">Wektor3D</a> &amp;srodek)</td></tr>
+<tr class="memdesc:a384ed8b8eeb3185e7c6aafe57c75c99b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Rysuje prostopadłościan z wyliczonych wierzchołków o ustalonym kolorze, względem innego układu o podanej macierzy orientacji i środku.  <a href="classProstopadloscian.html#a384ed8b8eeb3185e7c6aafe57c75c99b">Więcej...</a><br /></td></tr>
+<tr class="separator:a384ed8b8eeb3185e7c6aafe57c75c99b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="inherit_header pub_methods_classObiekt3D"><td colspan="2" onclick="javascript:toggleInherit('pub_methods_classObiekt3D')"><img src="closed.png" alt="-"/>&#160;Metody publiczne dziedziczone z <a class="el" href="classObiekt3D.html">Obiekt3D</a></td></tr>
-<tr class="memitem:a9f85977fdb80fe5542a4b778d1a1979b inherit pub_methods_classObiekt3D"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classObiekt3D.html#a9f85977fdb80fe5542a4b778d1a1979b">Obiekt3D</a> (const std::string &amp;kolor=&quot;black&quot;)</td></tr>
-<tr class="memdesc:a9f85977fdb80fe5542a4b778d1a1979b inherit pub_methods_classObiekt3D"><td class="mdescLeft">&#160;</td><td class="mdescRight">Konstruktor nowego obiektu klasy <a class="el" href="classObiekt3D.html" title="Klasa modeluje pojęcie obiektu 3D.">Obiekt3D</a> Utworzony obiekt ma domyślne orientacje we wszystkich kierunkach oraz środek w początku układu współrzędnych.  <a href="classObiekt3D.html#a9f85977fdb80fe5542a4b778d1a1979b">Więcej...</a><br /></td></tr>
-<tr class="separator:a9f85977fdb80fe5542a4b778d1a1979b inherit pub_methods_classObiekt3D"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac6c0d3a0e453023fae470fd681145892 inherit pub_methods_classObiekt3D"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classObiekt3D.html#ac6c0d3a0e453023fae470fd681145892">Obiekt3D</a> (const std::shared_ptr&lt; <a class="el" href="classdrawNS_1_1Draw3DAPI.html">drawNS::Draw3DAPI</a> &gt; &amp;api, const std::string &amp;kolor=&quot;black&quot;)</td></tr>
+<tr class="memdesc:ac6c0d3a0e453023fae470fd681145892 inherit pub_methods_classObiekt3D"><td class="mdescLeft">&#160;</td><td class="mdescRight">Konstruktor nowego obiektu klasy <a class="el" href="classObiekt3D.html" title="Klasa modeluje pojęcie obiektu 3D.">Obiekt3D</a> Utworzony obiekt ma domyślne orientacje we wszystkich kierunkach oraz środek w początku układu współrzędnych.  <a href="classObiekt3D.html#ac6c0d3a0e453023fae470fd681145892">Więcej...</a><br /></td></tr>
+<tr class="separator:ac6c0d3a0e453023fae470fd681145892 inherit pub_methods_classObiekt3D"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af73981cfba51ea9bfd0ac2f5c03b5811 inherit pub_methods_classObiekt3D"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classObiekt3D.html#af73981cfba51ea9bfd0ac2f5c03b5811">~Obiekt3D</a> ()</td></tr>
+<tr class="memdesc:af73981cfba51ea9bfd0ac2f5c03b5811 inherit pub_methods_classObiekt3D"><td class="mdescLeft">&#160;</td><td class="mdescRight">Destruktor obiektu <a class="el" href="classObiekt3D.html" title="Klasa modeluje pojęcie obiektu 3D.">Obiekt3D</a>.  <a href="classObiekt3D.html#af73981cfba51ea9bfd0ac2f5c03b5811">Więcej...</a><br /></td></tr>
+<tr class="separator:af73981cfba51ea9bfd0ac2f5c03b5811 inherit pub_methods_classObiekt3D"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a419abffcb9a52a1d360d1bb6fa608f18 inherit pub_methods_classObiekt3D"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classObiekt3D.html#a419abffcb9a52a1d360d1bb6fa608f18">ZmienPozycje</a> (const <a class="el" href="classWektor3D.html">Wektor3D</a> &amp;wektor_przesuniecia)</td></tr>
 <tr class="memdesc:a419abffcb9a52a1d360d1bb6fa608f18 inherit pub_methods_classObiekt3D"><td class="mdescLeft">&#160;</td><td class="mdescRight">Zmienia pozycje Obiektu3D poprzez zmianę położenia środka obiektu.  <a href="classObiekt3D.html#a419abffcb9a52a1d360d1bb6fa608f18">Więcej...</a><br /></td></tr>
 <tr class="separator:a419abffcb9a52a1d360d1bb6fa608f18 inherit pub_methods_classObiekt3D"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -154,9 +161,15 @@ Dodatkowe Dziedziczone Składowe</h2></td></tr>
 <tr class="memitem:ae022210038fc9970886f06a443de4a64 inherit pro_attribs_classObiekt3D"><td class="memItemLeft" align="right" valign="top">vector&lt; vector&lt; <a class="el" href="classWektor3D.html">Wektor3D</a> &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classObiekt3D.html#ae022210038fc9970886f06a443de4a64">m_wierzcholki</a></td></tr>
 <tr class="memdesc:ae022210038fc9970886f06a443de4a64 inherit pro_attribs_classObiekt3D"><td class="mdescLeft">&#160;</td><td class="mdescRight">dynamiczna podwójna tablica wierzchołków zawierająca tablice wierzchołków podstaw obiektów  <a href="classObiekt3D.html#ae022210038fc9970886f06a443de4a64">Więcej...</a><br /></td></tr>
 <tr class="separator:ae022210038fc9970886f06a443de4a64 inherit pro_attribs_classObiekt3D"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7437ee1d3e3ce2f2bed18ab93b694f3d inherit pro_attribs_classObiekt3D"><td class="memItemLeft" align="right" valign="top">std::shared_ptr&lt; <a class="el" href="classdrawNS_1_1Draw3DAPI.html">drawNS::Draw3DAPI</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classObiekt3D.html#a7437ee1d3e3ce2f2bed18ab93b694f3d">m_api</a></td></tr>
+<tr class="memdesc:a7437ee1d3e3ce2f2bed18ab93b694f3d inherit pro_attribs_classObiekt3D"><td class="mdescLeft">&#160;</td><td class="mdescRight">wskaźnik na łącze do gnuplota  <a href="classObiekt3D.html#a7437ee1d3e3ce2f2bed18ab93b694f3d">Więcej...</a><br /></td></tr>
+<tr class="separator:a7437ee1d3e3ce2f2bed18ab93b694f3d inherit pro_attribs_classObiekt3D"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ad62ee984a2f08b838aa2c48821256bcd inherit pro_attribs_classObiekt3D"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classObiekt3D.html#ad62ee984a2f08b838aa2c48821256bcd">m_kolor</a></td></tr>
 <tr class="memdesc:ad62ee984a2f08b838aa2c48821256bcd inherit pro_attribs_classObiekt3D"><td class="mdescLeft">&#160;</td><td class="mdescRight">nazwa koloru obiektu  <a href="classObiekt3D.html#ad62ee984a2f08b838aa2c48821256bcd">Więcej...</a><br /></td></tr>
 <tr class="separator:ad62ee984a2f08b838aa2c48821256bcd inherit pro_attribs_classObiekt3D"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac3ffae64095689776a9e0cc77f26d79d inherit pro_attribs_classObiekt3D"><td class="memItemLeft" align="right" valign="top">int *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classObiekt3D.html#ac3ffae64095689776a9e0cc77f26d79d">m_id_obiektu</a> = nullptr</td></tr>
+<tr class="memdesc:ac3ffae64095689776a9e0cc77f26d79d inherit pro_attribs_classObiekt3D"><td class="mdescLeft">&#160;</td><td class="mdescRight">wskaźnik na identyfikator obiektu w gnuplocie, domyślnie nullptr  <a href="classObiekt3D.html#ac3ffae64095689776a9e0cc77f26d79d">Więcej...</a><br /></td></tr>
+<tr class="separator:ac3ffae64095689776a9e0cc77f26d79d inherit pro_attribs_classObiekt3D"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Opis szczegółowy</h2>
 <div class="textblock"><p>Klasa modeluje pojęcie obiektu 3D będącego prostopadłościanem. </p>
@@ -188,11 +201,14 @@ Dodatkowe Dziedziczone Składowe</h2></td></tr>
 
 </div>
 </div>
-<a id="adcfd92b26ccb7024db11057bc45cf413"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#adcfd92b26ccb7024db11057bc45cf413">&#9670;&nbsp;</a></span>Prostopadloscian() <span class="overload">[2/2]</span></h2>
+<a id="a4a147281ee70913bf7ed3efff63d5cd2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4a147281ee70913bf7ed3efff63d5cd2">&#9670;&nbsp;</a></span>Prostopadloscian() <span class="overload">[2/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
       <table class="memname">
         <tr>
           <td class="memname">Prostopadloscian::Prostopadloscian </td>
@@ -215,6 +231,12 @@ Dodatkowe Dziedziczone Składowe</h2></td></tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
+          <td class="paramtype">const std::shared_ptr&lt; <a class="el" href="classdrawNS_1_1Draw3DAPI.html">drawNS::Draw3DAPI</a> &gt; &amp;&#160;</td>
+          <td class="paramname"><em>api</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
           <td class="paramtype">const std::string &amp;&#160;</td>
           <td class="paramname"><em>kolor</em> = <code>&quot;black&quot;</code>&#160;</td>
         </tr>
@@ -224,6 +246,11 @@ Dodatkowe Dziedziczone Składowe</h2></td></tr>
           <td></td><td></td>
         </tr>
       </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
 </div><div class="memdoc">
 
 <p>Konstruktor nowego obiektu klasy <a class="el" href="classProstopadloscian.html" title="Klasa modeluje pojęcie obiektu 3D będącego prostopadłościanem.">Prostopadloscian</a> Wylicza on wierzchołki dolnej i górnej podstawy prostopadłościanu o podanych wymiarach. </p>
@@ -238,6 +265,7 @@ Dodatkowe Dziedziczone Składowe</h2></td></tr>
     <tr><td class="paramname">dl_x</td><td>długość prostopadłościanu </td></tr>
     <tr><td class="paramname">dl_y</td><td>szerokość prostopadłościanu </td></tr>
     <tr><td class="paramname">dl_z</td><td>wysokość prostopadłościanu </td></tr>
+    <tr><td class="paramname">api</td><td>łącze do gnuplota </td></tr>
     <tr><td class="paramname">kolor</td><td>nazwa koloru obiektu </td></tr>
   </table>
   </dd>
@@ -313,8 +341,8 @@ Dodatkowe Dziedziczone Składowe</h2></td></tr>
 
 </div>
 </div>
-<a id="a24428c322de1e3b494586093e513ef95"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a24428c322de1e3b494586093e513ef95">&#9670;&nbsp;</a></span>Rysuj() <span class="overload">[1/2]</span></h2>
+<a id="a87de17306b1417a8051ebbc10bfab741"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a87de17306b1417a8051ebbc10bfab741">&#9670;&nbsp;</a></span>Kasuj()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -323,11 +351,39 @@ Dodatkowe Dziedziczone Składowe</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">int Prostopadloscian::Rysuj </td>
+          <td class="memname">void Prostopadloscian::Kasuj </td>
           <td>(</td>
-          <td class="paramtype">const std::shared_ptr&lt; <a class="el" href="classdrawNS_1_1Draw3DAPI.html">drawNS::Draw3DAPI</a> &gt; &amp;&#160;</td>
-          <td class="paramname"><em>api</em></td><td>)</td>
-          <td> const</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">override</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Kasuje obiekt prostopadłościanu ze sceny. </p>
+
+<p>Implementuje <a class="el" href="classObiekt3D.html#a75c13f41a7b198b6ab15f04323b86a36">Obiekt3D</a>.</p>
+
+</div>
+</div>
+<a id="ab05ddef16bf4ad5d830981130c0bf92e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab05ddef16bf4ad5d830981130c0bf92e">&#9670;&nbsp;</a></span>Rysuj() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Prostopadloscian::Rysuj </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
         </tr>
       </table>
   </td>
@@ -338,33 +394,20 @@ Dodatkowe Dziedziczone Składowe</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Rysuje prostopadłościan z wyliczonych wierzchołków o ustalonym kolorze. </p>
-<dl class="params"><dt>Parametry</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">api</td><td>łącze do gnuplota </td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="section return"><dt>Zwraca</dt><dd>int identyfikator narysowanego obiektu </dd></dl>
 
-<p>Implementuje <a class="el" href="classObiekt3D.html#ad4b58100ee5c021ea59731d02d9708bc">Obiekt3D</a>.</p>
+<p>Implementuje <a class="el" href="classObiekt3D.html#ae252b015977e9a485fb4ba668fbea122">Obiekt3D</a>.</p>
 
 </div>
 </div>
-<a id="acbf5bed0a4742cf593ec6e17b11eeddd"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#acbf5bed0a4742cf593ec6e17b11eeddd">&#9670;&nbsp;</a></span>Rysuj() <span class="overload">[2/2]</span></h2>
+<a id="a384ed8b8eeb3185e7c6aafe57c75c99b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a384ed8b8eeb3185e7c6aafe57c75c99b">&#9670;&nbsp;</a></span>Rysuj() <span class="overload">[2/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">int Prostopadloscian::Rysuj </td>
+          <td class="memname">void Prostopadloscian::Rysuj </td>
           <td>(</td>
-          <td class="paramtype">const std::shared_ptr&lt; <a class="el" href="classdrawNS_1_1Draw3DAPI.html">drawNS::Draw3DAPI</a> &gt; &amp;&#160;</td>
-          <td class="paramname"><em>api</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
           <td class="paramtype">const <a class="el" href="classMacierzOb.html">MacierzOb</a> &amp;&#160;</td>
           <td class="paramname"><em>orientacja</em>, </td>
         </tr>
@@ -377,7 +420,7 @@ Dodatkowe Dziedziczone Składowe</h2></td></tr>
         <tr>
           <td></td>
           <td>)</td>
-          <td></td><td> const</td>
+          <td></td><td></td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -385,13 +428,11 @@ Dodatkowe Dziedziczone Składowe</h2></td></tr>
 <p>Rysuje prostopadłościan z wyliczonych wierzchołków o ustalonym kolorze, względem innego układu o podanej macierzy orientacji i środku. </p>
 <dl class="params"><dt>Parametry</dt><dd>
   <table class="params">
-    <tr><td class="paramname">api</td><td>łącze do gnuplota </td></tr>
     <tr><td class="paramname">orientacja</td><td>macierz obrotu układu nadrzędnego </td></tr>
     <tr><td class="paramname">srodek</td><td>wektor środka w układnie nadrzędnym </td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>Zwraca</dt><dd>int identyfikator narysowanego obiektu </dd></dl>
 
 </div>
 </div>

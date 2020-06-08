@@ -48,13 +48,14 @@ public:
  * 
  * @exception std::invalid_argument podano nieprawidłową wartość odległości
  * 
+ * @param lista_przeszkod kontener przeszkód
  * @param odleglosc odległość na jaką dokonywane jest przemieszczenie
  * @return true jeżeli nastąpiłą kolizja
  * @return false jeżeli ruch zakończył się powodzeniem
  */
     bool AnimujRuchWPrzod(const std::map<std::string, std::shared_ptr<Przeszkoda>> & lista_przeszkod, double odleglosc);
 
-    /**
+/**
  * @brief Animacja obrotu o zadany kąt
  * Podczas animacji ruchu, animowany jest również obrót śrub drona.
  * 
@@ -62,15 +63,18 @@ public:
  * 
  * @param kat kąt obrotu w stopniach
  */
-    void AnimujObrot(const std::map<std::string, std::shared_ptr<Przeszkoda>> & lista_przeszkod, double kat);
+    void AnimujObrot( double kat);
 
-    /**
+ /**
  * @brief Animuje wznoszenie się lub opadanie drona pod podanym kątem
  * 
  * @exception std::invalid_argument podano nieprawidłową wartość wysokości
  * 
+ * @param lista_przeszkod kontener przeszkód
  * @param odleglosc odległość o jaką przemieści się drona
  * @param kat kąt o jaki wzniesie się dron
+ * @return true jeżeli wystąpi kolizja
+ * @return false jeżeli ruch zakończył się prawidłowo
  */
     bool AnimujRuchWPionie(const std::map<std::string, std::shared_ptr<Przeszkoda>> &lista_przeszkod, double odleglosc, double kat);
 };

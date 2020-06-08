@@ -1,13 +1,15 @@
 var indexSectionsWithContent =
 {
-  0: "_acdegiklmoprstuwz~",
-  1: "adgimopstw",
+  0: "_acdegiklmnoprstuwz~",
+  1: "adgikmopstwz",
   2: "d",
-  3: "dgimopstw",
-  4: "_acdegikmoprstuwz~",
+  3: "dgikmopstwz",
+  4: "_acdegikmnoprstuwz~",
   5: "cdgilmprs",
-  6: "s",
-  7: "s"
+  6: "ips",
+  7: "rt",
+  8: "rt",
+  9: "s"
 };
 
 var indexSectionNames =
@@ -19,7 +21,9 @@ var indexSectionNames =
   4: "functions",
   5: "variables",
   6: "typedefs",
-  7: "pages"
+  7: "enums",
+  8: "enumvalues",
+  9: "pages"
 };
 
 var indexSectionLabels =
@@ -31,6 +35,8 @@ var indexSectionLabels =
   4: "Funkcje",
   5: "Zmienne",
   6: "Definicje typów",
-  7: "Strony"
+  7: "Wyliczenia",
+  8: "Wartości wyliczeń",
+  9: "Strony"
 };
 

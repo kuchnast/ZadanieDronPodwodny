@@ -5,11 +5,12 @@
 #include "Prostopadloscian.hh"
 #include "Przeszkoda.hh"
 
+/**
+ * @brief Klasa modeluje pojęcie przeszkody prostopadłościennej
+ * 
+ */
 class PrzeszkodaProstopad : public Przeszkoda, public Prostopadloscian
 {
-//protected:
-    //Prostopadloscian obiekt;
-
 public:
 
 /**
@@ -27,10 +28,25 @@ public:
         ZmienPozycje(srodek);
     }
 
+/**
+ * @brief Sprawdza czy nastąpiłą kolizja obiektu z dronem
+ * 
+ * @param Ob obiekt drona
+ * @return true jeżeli jest kolizja
+ * @return false jeżeli brak kolizji
+ */
     bool CzyKolizja(const Dron &Ob) const override;
 
+/**
+ * @brief Rysuje przeszkodę
+ * 
+ */
     void RysujPrzeszkode() override;
 
+/**
+ * @brief Kasuje przeszkodę
+ * 
+ */
     void KasujPrzeszkode() override;
 };
 

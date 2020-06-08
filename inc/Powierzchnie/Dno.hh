@@ -37,7 +37,7 @@ public:
         : Powierzchnia(api, x_min, x_max, y_min, y_max, z, odstep, kolor),
           Przeszkoda(Wektor3D(sqrt(pow(x_min, 2) + pow(x_max, 2)), sqrt(pow(y_min, 2) + pow(y_max, 2)), 0)) {}
 
-    /**
+/**
  * @brief Konstruktor nowego obiektu klasy Dno umieszczonego w wymiarach zbiornika
  * 
  * 
@@ -51,13 +51,13 @@ public:
 
     bool CzyKolizja(const Dron &Ob) const override;
 
-    /**
+/**
  * @brief Rysuje Przeszkodę
  * 
  */
     void RysujPrzeszkode() override;
 
-    /**
+   /**
  * @brief Kasuje Przeszkodę
  * 
  */

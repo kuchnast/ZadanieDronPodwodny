@@ -61,7 +61,6 @@ bool DronRuchWPrzod(KolekcjaObiektow &K)
     {
         if ((K.ZwrocAktywnegoDrona()).AnimujRuchWPrzod(K.ZwrocListePrzeszkod(), odleglosc))
         {
-            cout << "Wykryto kolizję z innym obiektem. Przerwanie ruchu.\n";
             return false;
         }
     }
@@ -73,6 +72,7 @@ bool DronRuchWPrzod(KolekcjaObiektow &K)
     catch (const std::runtime_error &e)
     {
         cerr << e.what() << " Należy ustawić aktywnego drona, aby wykonać ruch\n";
+        return false;
     }
 
     return true;
@@ -93,7 +93,7 @@ bool DronObrot(KolekcjaObiektow &K)
 
     try
     {
-        (K.ZwrocAktywnegoDrona()).AnimujObrot(K.ZwrocListePrzeszkod(), kat);
+        (K.ZwrocAktywnegoDrona()).AnimujObrot(kat);
     }
     catch (const std::invalid_argument &e)
     {
@@ -103,6 +103,7 @@ bool DronObrot(KolekcjaObiektow &K)
     catch (const std::runtime_error &e)
     {
         cerr << e.what() << " Należy ustawić aktywnego drona, aby wykonać ruch\n";
+        return false;
     }
 
         return true;
@@ -135,7 +136,6 @@ bool DronWznoszenie(KolekcjaObiektow &K)
     {
         if ((K.ZwrocAktywnegoDrona()).AnimujRuchWPionie(K.ZwrocListePrzeszkod(), odleglosc, kat))
         {
-            cout << "Wykryto kolizję z innym obiektem. Przerwanie ruchu.\n";
             return false;
         }
     }
@@ -147,6 +147,7 @@ bool DronWznoszenie(KolekcjaObiektow &K)
     catch (const std::runtime_error &e)
     {
         cerr << e.what() << " Należy ustawić aktywnego drona, aby wykonać ruch\n";
+        return false;
     }
 
     return true;

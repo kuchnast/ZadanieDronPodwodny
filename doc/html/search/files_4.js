@@ -1,5 +1,7 @@
 var searchData=
 [
-  ['obiekt3d_2ecpp_160',['Obiekt3D.cpp',['../Obiekt3D_8cpp.html',1,'']]],
-  ['obiekt3d_2ehh_161',['Obiekt3D.hh',['../Obiekt3D_8hh.html',1,'']]]
+  ['macierzkw_2ehh_240',['MacierzKw.hh',['../MacierzKw_8hh.html',1,'']]],
+  ['macierzob_2ecpp_241',['MacierzOb.cpp',['../MacierzOb_8cpp.html',1,'']]],
+  ['macierzob_2ehh_242',['MacierzOb.hh',['../MacierzOb_8hh.html',1,'']]],
+  ['main_2ecpp_243',['main.cpp',['../main_8cpp.html',1,'']]]
 ];

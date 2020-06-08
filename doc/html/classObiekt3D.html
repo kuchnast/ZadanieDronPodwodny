@@ -80,20 +80,32 @@ Diagram dziedziczenia dla Obiekt3D</div>
  <div class="center">
   <img src="classObiekt3D.png" usemap="#Obiekt3D_map" alt=""/>
   <map id="Obiekt3D_map" name="Obiekt3D_map">
-<area href="classGraniastoslup6.html" title="Klasa modeluje pojęcie obiektu 3D będącego graniastosłupem sześciokątnym prawidłowym." alt="Graniastoslup6" shape="rect" coords="0,56,109,80"/>
-<area href="classProstopadloscian.html" title="Klasa modeluje pojęcie obiektu 3D będącego prostopadłościanem." alt="Prostopadloscian" shape="rect" coords="119,56,228,80"/>
-<area href="classSruba.html" title="Klasa modeluje pojęcie śruby drona złożonej z graniastosłupa sześciokątnego." alt="Sruba" shape="rect" coords="0,112,109,136"/>
+<area href="classDron.html" title="Klasa modeluje pojęcie drona złożonego z prostopadłościennego kadłuba oraz dwóch śrub." alt="Dron" shape="rect" coords="0,56,134,80"/>
+<area href="classGraniastoslup6.html" title="Klasa modeluje pojęcie obiektu 3D będącego graniastosłupem sześciokątnym prawidłowym." alt="Graniastoslup6" shape="rect" coords="144,56,278,80"/>
+<area href="classPowierzchnia.html" title="Klasa modeluje pojęcie płaszczyzny w poziomie." alt="Powierzchnia" shape="rect" coords="360,56,494,80"/>
+<area href="classProstopadloscian.html" title="Klasa modeluje pojęcie obiektu 3D będącego prostopadłościanem." alt="Prostopadloscian" shape="rect" coords="576,56,710,80"/>
+<area href="classInterfejsDrona.html" title="Klasa modeluje pojęcie interfejsu pozwalającego na obsługę obiektu drona." alt="InterfejsDrona" shape="rect" coords="0,112,134,136"/>
+<area href="classSruba.html" title="Klasa modeluje pojęcie śruby drona złożonej z graniastosłupa sześciokątnego." alt="Sruba" shape="rect" coords="144,112,278,136"/>
+<area href="classDno.html" title="Klasa modeluje pojęcie dna zbiornika." alt="Dno" shape="rect" coords="288,112,422,136"/>
+<area href="classTafla.html" title="Klasa modeluje pojęcie tafli jako powierzchni z wybrzuszeniami na kształt fal." alt="Tafla" shape="rect" coords="432,112,566,136"/>
+<area href="classPrzeszkodaProstopad.html" title="Klasa modeluje pojęcie przeszkody prostopadłościennej." alt="PrzeszkodaProstopad" shape="rect" coords="576,112,710,136"/>
   </map>
 </div></div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Metody publiczne</h2></td></tr>
-<tr class="memitem:a9f85977fdb80fe5542a4b778d1a1979b"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classObiekt3D.html#a9f85977fdb80fe5542a4b778d1a1979b">Obiekt3D</a> (const std::string &amp;kolor=&quot;black&quot;)</td></tr>
-<tr class="memdesc:a9f85977fdb80fe5542a4b778d1a1979b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Konstruktor nowego obiektu klasy <a class="el" href="classObiekt3D.html" title="Klasa modeluje pojęcie obiektu 3D.">Obiekt3D</a> Utworzony obiekt ma domyślne orientacje we wszystkich kierunkach oraz środek w początku układu współrzędnych.  <a href="classObiekt3D.html#a9f85977fdb80fe5542a4b778d1a1979b">Więcej...</a><br /></td></tr>
-<tr class="separator:a9f85977fdb80fe5542a4b778d1a1979b"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ad4b58100ee5c021ea59731d02d9708bc"><td class="memItemLeft" align="right" valign="top">virtual int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classObiekt3D.html#ad4b58100ee5c021ea59731d02d9708bc">Rysuj</a> (const std::shared_ptr&lt; <a class="el" href="classdrawNS_1_1Draw3DAPI.html">drawNS::Draw3DAPI</a> &gt; &amp;api) const =0</td></tr>
-<tr class="memdesc:ad4b58100ee5c021ea59731d02d9708bc"><td class="mdescLeft">&#160;</td><td class="mdescRight">Rysuje <a class="el" href="classObiekt3D.html" title="Klasa modeluje pojęcie obiektu 3D.">Obiekt3D</a> o podanym kolorze.  <a href="classObiekt3D.html#ad4b58100ee5c021ea59731d02d9708bc">Więcej...</a><br /></td></tr>
-<tr class="separator:ad4b58100ee5c021ea59731d02d9708bc"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac6c0d3a0e453023fae470fd681145892"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classObiekt3D.html#ac6c0d3a0e453023fae470fd681145892">Obiekt3D</a> (const std::shared_ptr&lt; <a class="el" href="classdrawNS_1_1Draw3DAPI.html">drawNS::Draw3DAPI</a> &gt; &amp;api, const std::string &amp;kolor=&quot;black&quot;)</td></tr>
+<tr class="memdesc:ac6c0d3a0e453023fae470fd681145892"><td class="mdescLeft">&#160;</td><td class="mdescRight">Konstruktor nowego obiektu klasy <a class="el" href="classObiekt3D.html" title="Klasa modeluje pojęcie obiektu 3D.">Obiekt3D</a> Utworzony obiekt ma domyślne orientacje we wszystkich kierunkach oraz środek w początku układu współrzędnych.  <a href="classObiekt3D.html#ac6c0d3a0e453023fae470fd681145892">Więcej...</a><br /></td></tr>
+<tr class="separator:ac6c0d3a0e453023fae470fd681145892"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af73981cfba51ea9bfd0ac2f5c03b5811"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classObiekt3D.html#af73981cfba51ea9bfd0ac2f5c03b5811">~Obiekt3D</a> ()</td></tr>
+<tr class="memdesc:af73981cfba51ea9bfd0ac2f5c03b5811"><td class="mdescLeft">&#160;</td><td class="mdescRight">Destruktor obiektu <a class="el" href="classObiekt3D.html" title="Klasa modeluje pojęcie obiektu 3D.">Obiekt3D</a>.  <a href="classObiekt3D.html#af73981cfba51ea9bfd0ac2f5c03b5811">Więcej...</a><br /></td></tr>
+<tr class="separator:af73981cfba51ea9bfd0ac2f5c03b5811"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae252b015977e9a485fb4ba668fbea122"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classObiekt3D.html#ae252b015977e9a485fb4ba668fbea122">Rysuj</a> ()=0</td></tr>
+<tr class="memdesc:ae252b015977e9a485fb4ba668fbea122"><td class="mdescLeft">&#160;</td><td class="mdescRight">Rysuje <a class="el" href="classObiekt3D.html" title="Klasa modeluje pojęcie obiektu 3D.">Obiekt3D</a>.  <a href="classObiekt3D.html#ae252b015977e9a485fb4ba668fbea122">Więcej...</a><br /></td></tr>
+<tr class="separator:ae252b015977e9a485fb4ba668fbea122"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a75c13f41a7b198b6ab15f04323b86a36"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classObiekt3D.html#a75c13f41a7b198b6ab15f04323b86a36">Kasuj</a> ()=0</td></tr>
+<tr class="memdesc:a75c13f41a7b198b6ab15f04323b86a36"><td class="mdescLeft">&#160;</td><td class="mdescRight">Kasuje <a class="el" href="classObiekt3D.html" title="Klasa modeluje pojęcie obiektu 3D.">Obiekt3D</a>.  <a href="classObiekt3D.html#a75c13f41a7b198b6ab15f04323b86a36">Więcej...</a><br /></td></tr>
+<tr class="separator:a75c13f41a7b198b6ab15f04323b86a36"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a419abffcb9a52a1d360d1bb6fa608f18"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classObiekt3D.html#a419abffcb9a52a1d360d1bb6fa608f18">ZmienPozycje</a> (const <a class="el" href="classWektor3D.html">Wektor3D</a> &amp;wektor_przesuniecia)</td></tr>
 <tr class="memdesc:a419abffcb9a52a1d360d1bb6fa608f18"><td class="mdescLeft">&#160;</td><td class="mdescRight">Zmienia pozycje Obiektu3D poprzez zmianę położenia środka obiektu.  <a href="classObiekt3D.html#a419abffcb9a52a1d360d1bb6fa608f18">Więcej...</a><br /></td></tr>
 <tr class="separator:a419abffcb9a52a1d360d1bb6fa608f18"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -136,16 +148,22 @@ Atrybuty chronione</h2></td></tr>
 <tr class="memitem:ae022210038fc9970886f06a443de4a64"><td class="memItemLeft" align="right" valign="top">vector&lt; vector&lt; <a class="el" href="classWektor3D.html">Wektor3D</a> &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classObiekt3D.html#ae022210038fc9970886f06a443de4a64">m_wierzcholki</a></td></tr>
 <tr class="memdesc:ae022210038fc9970886f06a443de4a64"><td class="mdescLeft">&#160;</td><td class="mdescRight">dynamiczna podwójna tablica wierzchołków zawierająca tablice wierzchołków podstaw obiektów  <a href="classObiekt3D.html#ae022210038fc9970886f06a443de4a64">Więcej...</a><br /></td></tr>
 <tr class="separator:ae022210038fc9970886f06a443de4a64"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7437ee1d3e3ce2f2bed18ab93b694f3d"><td class="memItemLeft" align="right" valign="top">std::shared_ptr&lt; <a class="el" href="classdrawNS_1_1Draw3DAPI.html">drawNS::Draw3DAPI</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classObiekt3D.html#a7437ee1d3e3ce2f2bed18ab93b694f3d">m_api</a></td></tr>
+<tr class="memdesc:a7437ee1d3e3ce2f2bed18ab93b694f3d"><td class="mdescLeft">&#160;</td><td class="mdescRight">wskaźnik na łącze do gnuplota  <a href="classObiekt3D.html#a7437ee1d3e3ce2f2bed18ab93b694f3d">Więcej...</a><br /></td></tr>
+<tr class="separator:a7437ee1d3e3ce2f2bed18ab93b694f3d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ad62ee984a2f08b838aa2c48821256bcd"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classObiekt3D.html#ad62ee984a2f08b838aa2c48821256bcd">m_kolor</a></td></tr>
 <tr class="memdesc:ad62ee984a2f08b838aa2c48821256bcd"><td class="mdescLeft">&#160;</td><td class="mdescRight">nazwa koloru obiektu  <a href="classObiekt3D.html#ad62ee984a2f08b838aa2c48821256bcd">Więcej...</a><br /></td></tr>
 <tr class="separator:ad62ee984a2f08b838aa2c48821256bcd"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac3ffae64095689776a9e0cc77f26d79d"><td class="memItemLeft" align="right" valign="top">int *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classObiekt3D.html#ac3ffae64095689776a9e0cc77f26d79d">m_id_obiektu</a> = nullptr</td></tr>
+<tr class="memdesc:ac3ffae64095689776a9e0cc77f26d79d"><td class="mdescLeft">&#160;</td><td class="mdescRight">wskaźnik na identyfikator obiektu w gnuplocie, domyślnie nullptr  <a href="classObiekt3D.html#ac3ffae64095689776a9e0cc77f26d79d">Więcej...</a><br /></td></tr>
+<tr class="separator:ac3ffae64095689776a9e0cc77f26d79d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Opis szczegółowy</h2>
 <div class="textblock"><p>Klasa modeluje pojęcie obiektu 3D. </p>
 <p>Obiekt ten składa się ze środka według którego budowane są pozostałe punkty, znajdujące się w wektorze wierzchołków. Posiada on trzy macierze orientacji umożliwiające obrót obiektu w każdym z trzech kierunków. </p>
 </div><h2 class="groupheader">Dokumentacja konstruktora i destruktora</h2>
-<a id="a9f85977fdb80fe5542a4b778d1a1979b"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a9f85977fdb80fe5542a4b778d1a1979b">&#9670;&nbsp;</a></span>Obiekt3D()</h2>
+<a id="ac6c0d3a0e453023fae470fd681145892"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac6c0d3a0e453023fae470fd681145892">&#9670;&nbsp;</a></span>Obiekt3D()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -156,9 +174,19 @@ Atrybuty chronione</h2></td></tr>
         <tr>
           <td class="memname">Obiekt3D::Obiekt3D </td>
           <td>(</td>
-          <td class="paramtype">const std::string &amp;&#160;</td>
-          <td class="paramname"><em>kolor</em> = <code>&quot;black&quot;</code></td><td>)</td>
+          <td class="paramtype">const std::shared_ptr&lt; <a class="el" href="classdrawNS_1_1Draw3DAPI.html">drawNS::Draw3DAPI</a> &gt; &amp;&#160;</td>
+          <td class="paramname"><em>api</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
           <td></td>
+          <td class="paramtype">const std::string &amp;&#160;</td>
+          <td class="paramname"><em>kolor</em> = <code>&quot;black&quot;</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
         </tr>
       </table>
   </td>
@@ -171,6 +199,7 @@ Atrybuty chronione</h2></td></tr>
 <p>Konstruktor nowego obiektu klasy <a class="el" href="classObiekt3D.html" title="Klasa modeluje pojęcie obiektu 3D.">Obiekt3D</a> Utworzony obiekt ma domyślne orientacje we wszystkich kierunkach oraz środek w początku układu współrzędnych. </p>
 <dl class="params"><dt>Parametry</dt><dd>
   <table class="params">
+    <tr><td class="paramname">api</td><td>łącze do gnuplota </td></tr>
     <tr><td class="paramname">kolor</td><td>nazwa koloru obiektu </td></tr>
   </table>
   </dd>
@@ -178,9 +207,28 @@ Atrybuty chronione</h2></td></tr>
 
 </div>
 </div>
+<a id="af73981cfba51ea9bfd0ac2f5c03b5811"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af73981cfba51ea9bfd0ac2f5c03b5811">&#9670;&nbsp;</a></span>~Obiekt3D()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">Obiekt3D::~Obiekt3D </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Destruktor obiektu <a class="el" href="classObiekt3D.html" title="Klasa modeluje pojęcie obiektu 3D.">Obiekt3D</a>. </p>
+
+</div>
+</div>
 <h2 class="groupheader">Dokumentacja funkcji składowych</h2>
-<a id="ad4b58100ee5c021ea59731d02d9708bc"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ad4b58100ee5c021ea59731d02d9708bc">&#9670;&nbsp;</a></span>Rysuj()</h2>
+<a id="a75c13f41a7b198b6ab15f04323b86a36"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a75c13f41a7b198b6ab15f04323b86a36">&#9670;&nbsp;</a></span>Kasuj()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -189,11 +237,10 @@ Atrybuty chronione</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">virtual int Obiekt3D::Rysuj </td>
+          <td class="memname">virtual void Obiekt3D::Kasuj </td>
           <td>(</td>
-          <td class="paramtype">const std::shared_ptr&lt; <a class="el" href="classdrawNS_1_1Draw3DAPI.html">drawNS::Draw3DAPI</a> &gt; &amp;&#160;</td>
-          <td class="paramname"><em>api</em></td><td>)</td>
-          <td> const</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
         </tr>
       </table>
   </td>
@@ -203,16 +250,38 @@ Atrybuty chronione</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Rysuje <a class="el" href="classObiekt3D.html" title="Klasa modeluje pojęcie obiektu 3D.">Obiekt3D</a> o podanym kolorze. </p>
-<dl class="params"><dt>Parametry</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">api</td><td>łącze do gnuplota </td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="section return"><dt>Zwraca</dt><dd>int identyfikator utworzonego obiektu </dd></dl>
+<p>Kasuje <a class="el" href="classObiekt3D.html" title="Klasa modeluje pojęcie obiektu 3D.">Obiekt3D</a>. </p>
 
-<p>Implementowany w <a class="el" href="classProstopadloscian.html#a24428c322de1e3b494586093e513ef95">Prostopadloscian</a> i <a class="el" href="classGraniastoslup6.html#af281aa6eb32706b45c7f039d7491d9ef">Graniastoslup6</a>.</p>
+<p>Implementowany w <a class="el" href="classPowierzchnia.html#aec599af9c9757b685814944a129b4ac8">Powierzchnia</a>, <a class="el" href="classGraniastoslup6.html#a7194683f8a98da01340b47c9733c829d">Graniastoslup6</a>, <a class="el" href="classProstopadloscian.html#a87de17306b1417a8051ebbc10bfab741">Prostopadloscian</a> i <a class="el" href="classDron.html#a615edd166a5dd965c9537c963c90cd7e">Dron</a>.</p>
+
+</div>
+</div>
+<a id="ae252b015977e9a485fb4ba668fbea122"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae252b015977e9a485fb4ba668fbea122">&#9670;&nbsp;</a></span>Rysuj()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual void Obiekt3D::Rysuj </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Rysuje <a class="el" href="classObiekt3D.html" title="Klasa modeluje pojęcie obiektu 3D.">Obiekt3D</a>. </p>
+
+<p>Implementowany w <a class="el" href="classPowierzchnia.html#a378437a89cd810c652a92ae99a8ef610">Powierzchnia</a>, <a class="el" href="classGraniastoslup6.html#aa0b6f1cd8a1b3e879b1fe2c3c609ed87">Graniastoslup6</a>, <a class="el" href="classProstopadloscian.html#ab05ddef16bf4ad5d830981130c0bf92e">Prostopadloscian</a> i <a class="el" href="classDron.html#a203a9bf2d5af0ca6b5667dbbf2f4e2fc">Dron</a>.</p>
 
 </div>
 </div>
@@ -407,6 +476,54 @@ Atrybuty chronione</h2></td></tr>
 </div>
 </div>
 <h2 class="groupheader">Dokumentacja atrybutów składowych</h2>
+<a id="a7437ee1d3e3ce2f2bed18ab93b694f3d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7437ee1d3e3ce2f2bed18ab93b694f3d">&#9670;&nbsp;</a></span>m_api</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::shared_ptr&lt;<a class="el" href="classdrawNS_1_1Draw3DAPI.html">drawNS::Draw3DAPI</a>&gt; Obiekt3D::m_api</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>wskaźnik na łącze do gnuplota </p>
+
+</div>
+</div>
+<a id="ac3ffae64095689776a9e0cc77f26d79d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac3ffae64095689776a9e0cc77f26d79d">&#9670;&nbsp;</a></span>m_id_obiektu</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int* Obiekt3D::m_id_obiektu = nullptr</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>wskaźnik na identyfikator obiektu w gnuplocie, domyślnie nullptr </p>
+
+</div>
+</div>
 <a id="ad62ee984a2f08b838aa2c48821256bcd"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#ad62ee984a2f08b838aa2c48821256bcd">&#9670;&nbsp;</a></span>m_kolor</h2>
 

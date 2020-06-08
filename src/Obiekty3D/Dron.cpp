@@ -53,8 +53,3 @@ void Dron::ZmienKolor(const std::string &kolor)
     m_l_sruba.ZmienKolor(kolor);
     m_p_sruba.ZmienKolor(kolor);
 }
-
-const MacierzKw<double, 3> &Dron::OrientacjaZ() const
-{
-    return m_orientacja_z;
-}

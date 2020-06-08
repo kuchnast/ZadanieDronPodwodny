@@ -1,0 +1,118 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.18"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Zadanie Podwodny Dron: Plik źródłowy inc/Przeszkody/PrzeszkodaProstopad.hh</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">Zadanie Podwodny Dron
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Wygenerowano przez Doxygen 1.8.18 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'Szukaj');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('',true,false,'search.php','Szukaj');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_bfccd401955b95cf8c75461437045ac0.html">inc</a></li><li class="navelem"><a class="el" href="dir_cdccca0e77688dafc7981e255e206d6c.html">Przeszkody</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="headertitle">
+<div class="title">PrzeszkodaProstopad.hh</div>  </div>
+</div><!--header-->
+<div class="contents">
+<a href="PrzeszkodaProstopad_8hh.html">Idź do dokumentacji tego pliku.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="preprocessor">#ifndef PRZESZKODA_PROSTOPAD_HH</span></div>
+<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="preprocessor">#define PRZESZKODA_PROSTOPAD_HH</span></div>
+<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160; </div>
+<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="preprocessor">#include &lt;iostream&gt;</span></div>
+<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="Prostopadloscian_8hh.html">Prostopadloscian.hh</a>&quot;</span></div>
+<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="Przeszkoda_8hh.html">Przeszkoda.hh</a>&quot;</span></div>
+<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160; </div>
+<div class="line"><a name="l00012"></a><span class="lineno"><a class="line" href="classPrzeszkodaProstopad.html">   12</a></span>&#160;<span class="keyword">class </span><a class="code" href="classPrzeszkodaProstopad.html">PrzeszkodaProstopad</a> : <span class="keyword">public</span> <a class="code" href="classPrzeszkoda.html">Przeszkoda</a>, <span class="keyword">public</span> <a class="code" href="classProstopadloscian.html">Prostopadloscian</a></div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;{</div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;<span class="keyword">public</span>:</div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160; </div>
+<div class="line"><a name="l00026"></a><span class="lineno"><a class="line" href="classPrzeszkodaProstopad.html#a52b183eb6147f8035fa3c57119de0e1b">   26</a></span>&#160;    <a class="code" href="classPrzeszkodaProstopad.html#a52b183eb6147f8035fa3c57119de0e1b">PrzeszkodaProstopad</a>(<span class="keywordtype">double</span> dl_x, <span class="keywordtype">double</span> dl_y, <span class="keywordtype">double</span> dl_z, <span class="keyword">const</span> std::shared_ptr&lt;drawNS::Draw3DAPI&gt; &amp;api, <span class="keyword">const</span> <a class="code" href="classWektor3D.html">Wektor3D</a> &amp;srodek = <a class="code" href="classWektor3D.html">Wektor3D</a>(0, 0, 0), <span class="keyword">const</span> std::string &amp;kolor = <span class="stringliteral">&quot;black&quot;</span>) : <a class="code" href="classPrzeszkoda.html">Przeszkoda</a>(<a class="code" href="classWektor3D.html">Wektor3D</a>(dl_x / 2, dl_y / 2, dl_z / 2)), <a class="code" href="classProstopadloscian.html">Prostopadloscian</a>(dl_x, dl_y, dl_z, api, kolor)</div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;    {</div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;        <a class="code" href="classObiekt3D.html#a419abffcb9a52a1d360d1bb6fa608f18">ZmienPozycje</a>(srodek);</div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;    }</div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160; </div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;    <span class="keywordtype">bool</span> <a class="code" href="classPrzeszkodaProstopad.html#ae7e36ea67ebfc8ad9f65b011967770f3">CzyKolizja</a>(<span class="keyword">const</span> <a class="code" href="classDron.html">Dron</a> &amp;Ob) <span class="keyword">const override</span>;</div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160; </div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="classPrzeszkodaProstopad.html#a340c6776ed430d81f164112d90a8c452">RysujPrzeszkode</a>() <span class="keyword">override</span>;</div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160; </div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="classPrzeszkodaProstopad.html#abd38a99733af5897a5f3659dcedf1997">KasujPrzeszkode</a>() <span class="keyword">override</span>;</div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;};</div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160; </div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160; </div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160; </div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;<span class="preprocessor">#endif</span></div>
+</div><!-- fragment --></div><!-- contents -->
+<div class="ttc" id="aclassObiekt3D_html_a419abffcb9a52a1d360d1bb6fa608f18"><div class="ttname"><a href="classObiekt3D.html#a419abffcb9a52a1d360d1bb6fa608f18">Obiekt3D::ZmienPozycje</a></div><div class="ttdeci">void ZmienPozycje(const Wektor3D &amp;wektor_przesuniecia)</div><div class="ttdoc">Zmienia pozycje Obiektu3D poprzez zmianę położenia środka obiektu.</div><div class="ttdef"><b>Definition:</b> Obiekt3D.cpp:16</div></div>
+<div class="ttc" id="aclassPrzeszkodaProstopad_html_a52b183eb6147f8035fa3c57119de0e1b"><div class="ttname"><a href="classPrzeszkodaProstopad.html#a52b183eb6147f8035fa3c57119de0e1b">PrzeszkodaProstopad::PrzeszkodaProstopad</a></div><div class="ttdeci">PrzeszkodaProstopad(double dl_x, double dl_y, double dl_z, const std::shared_ptr&lt; drawNS::Draw3DAPI &gt; &amp;api, const Wektor3D &amp;srodek=Wektor3D(0, 0, 0), const std::string &amp;kolor=&quot;black&quot;)</div><div class="ttdoc">Konstruktor nowego obiektu klasy PrzeszkodaProstopad.</div><div class="ttdef"><b>Definition:</b> PrzeszkodaProstopad.hh:26</div></div>
+<div class="ttc" id="aclassPrzeszkoda_html"><div class="ttname"><a href="classPrzeszkoda.html">Przeszkoda</a></div><div class="ttdoc">Klasa modeluje pojęcie przeszkody.</div><div class="ttdef"><b>Definition:</b> Przeszkoda.hh:15</div></div>
+<div class="ttc" id="aclassPrzeszkodaProstopad_html"><div class="ttname"><a href="classPrzeszkodaProstopad.html">PrzeszkodaProstopad</a></div><div class="ttdoc">Klasa modeluje pojęcie przeszkody prostopadłościennej.</div><div class="ttdef"><b>Definition:</b> PrzeszkodaProstopad.hh:13</div></div>
+<div class="ttc" id="aclassPrzeszkodaProstopad_html_a340c6776ed430d81f164112d90a8c452"><div class="ttname"><a href="classPrzeszkodaProstopad.html#a340c6776ed430d81f164112d90a8c452">PrzeszkodaProstopad::RysujPrzeszkode</a></div><div class="ttdeci">void RysujPrzeszkode() override</div><div class="ttdoc">Rysuje przeszkodę</div><div class="ttdef"><b>Definition:</b> PrzeszkodaProstopad.cpp:55</div></div>
+<div class="ttc" id="aclassProstopadloscian_html"><div class="ttname"><a href="classProstopadloscian.html">Prostopadloscian</a></div><div class="ttdoc">Klasa modeluje pojęcie obiektu 3D będącego prostopadłościanem.</div><div class="ttdef"><b>Definition:</b> Prostopadloscian.hh:17</div></div>
+<div class="ttc" id="aPrzeszkoda_8hh_html"><div class="ttname"><a href="Przeszkoda_8hh.html">Przeszkoda.hh</a></div></div>
+<div class="ttc" id="aclassPrzeszkodaProstopad_html_ae7e36ea67ebfc8ad9f65b011967770f3"><div class="ttname"><a href="classPrzeszkodaProstopad.html#ae7e36ea67ebfc8ad9f65b011967770f3">PrzeszkodaProstopad::CzyKolizja</a></div><div class="ttdeci">bool CzyKolizja(const Dron &amp;Ob) const override</div><div class="ttdoc">Sprawdza czy nastąpiłą kolizja obiektu z dronem.</div><div class="ttdef"><b>Definition:</b> PrzeszkodaProstopad.cpp:6</div></div>
+<div class="ttc" id="aclassWektor3D_html"><div class="ttname"><a href="classWektor3D.html">Wektor3D</a></div><div class="ttdoc">Klasa modelująca pojęcie wektora w układzie 3 zmiennych.</div><div class="ttdef"><b>Definition:</b> Wektor3D.hh:14</div></div>
+<div class="ttc" id="aProstopadloscian_8hh_html"><div class="ttname"><a href="Prostopadloscian_8hh.html">Prostopadloscian.hh</a></div></div>
+<div class="ttc" id="aclassPrzeszkodaProstopad_html_abd38a99733af5897a5f3659dcedf1997"><div class="ttname"><a href="classPrzeszkodaProstopad.html#abd38a99733af5897a5f3659dcedf1997">PrzeszkodaProstopad::KasujPrzeszkode</a></div><div class="ttdeci">void KasujPrzeszkode() override</div><div class="ttdoc">Kasuje przeszkodę</div><div class="ttdef"><b>Definition:</b> PrzeszkodaProstopad.cpp:60</div></div>
+<div class="ttc" id="aclassDron_html"><div class="ttname"><a href="classDron.html">Dron</a></div><div class="ttdoc">Klasa modeluje pojęcie drona złożonego z prostopadłościennego kadłuba oraz dwóch śrub.</div><div class="ttdef"><b>Definition:</b> Dron.hh:19</div></div>
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Wygenerowano przez &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.8.18
+</small></address>
+</body>
+</html>

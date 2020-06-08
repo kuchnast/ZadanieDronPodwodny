@@ -20,7 +20,7 @@ bool InterfejsDrona::AnimujRuchWPrzod(const std::map<std::string, std::shared_pt
 
     if (odleglosc < 0)
     {
-        AnimujObrot(lista_przeszkod, 180);
+        AnimujObrot(180);
         odleglosc = -odleglosc;
     }
 
@@ -48,7 +48,7 @@ bool InterfejsDrona::AnimujRuchWPrzod(const std::map<std::string, std::shared_pt
     return false;
 }
 
-void InterfejsDrona::AnimujObrot(const std::map<std::string, std::shared_ptr<Przeszkoda>> &lista_przeszkod, double kat)
+void InterfejsDrona::AnimujObrot(double kat)
 {
     if (abs(kat) < 0.00001)
         throw(std::invalid_argument("Podano błędną wartość kąta."));
@@ -82,7 +82,7 @@ bool InterfejsDrona::AnimujRuchWPionie(const std::map<std::string, std::shared_p
 
     if (odleglosc < 0)
     {
-        AnimujObrot(lista_przeszkod, 180);
+        AnimujObrot(180);
         odleglosc = -odleglosc;
     }
 
@@ -93,6 +93,23 @@ bool InterfejsDrona::AnimujRuchWPionie(const std::map<std::string, std::shared_p
     for (int i = 0; i < 50; ++i)
     {
         ZmienOrientacjeX(kat / 50);
+        for (const auto &P : lista_przeszkod)
+        {
+            if (P.second->CzyKolizja(*this))
+            {
+                for (int j = 0; j <= i; ++j)
+                {
+                    ZmienOrientacjeX(-kat / 50);
+                    m_l_sruba.ObrotSrubyPrawo(5);
+                    m_p_sruba.ObrotSrubyLewo(5);
+                    Rysuj();
+                    std::this_thread::sleep_for(std::chrono::microseconds(m_czas_animacji * 10));
+                    m_api->redraw();
+                }
+                std::cout << "Kolizja z obiektem " << P.first << ".\n";
+                return true;
+            }
+        }
         m_l_sruba.ObrotSrubyPrawo(5);
         m_p_sruba.ObrotSrubyLewo(5);
         Rysuj();
@@ -122,7 +139,7 @@ bool InterfejsDrona::AnimujRuchWPionie(const std::map<std::string, std::shared_p
         m_api->redraw();
     }
 
-        for (int i = 0; i < 50; ++i)
+    for (int i = 0; i < 50; ++i)
     {
         ZmienOrientacjeX(-kat / 50);
         m_l_sruba.ObrotSrubyPrawo(5);

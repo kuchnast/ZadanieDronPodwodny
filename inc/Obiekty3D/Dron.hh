@@ -77,8 +77,16 @@ public:
  */
     bool CzyKolizja(const Dron &Ob) const override;
 
+/**
+ * @brief Rysuje obiekt drona
+ * 
+ */
     void RysujPrzeszkode() override;
 
+/**
+ * @brief Kasuje obiekt drona
+ * 
+ */
     void KasujPrzeszkode() override;
 
 /**
@@ -87,8 +95,6 @@ public:
  * @param kolor nazwa koloru
  */
     void ZmienKolor(const std::string &kolor);
-
-    const MacierzKw<double, 3> & OrientacjaZ() const;
 };
 
 #endif

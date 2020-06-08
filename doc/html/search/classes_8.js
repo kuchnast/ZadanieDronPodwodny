@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['tafla_141',['Tafla',['../classTafla.html',1,'']]]
+  ['sruba_217',['Sruba',['../classSruba.html',1,'']]]
 ];

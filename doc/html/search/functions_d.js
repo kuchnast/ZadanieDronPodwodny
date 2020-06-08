@@ -1,6 +1,6 @@
 var searchData=
 [
-  ['tafla_224',['Tafla',['../classTafla.html#a79c44dcce32d03ae05a841dbdca7af73',1,'Tafla::Tafla()=delete'],['../classTafla.html#a41b754641b6b2124831de5b6b9ebe2cf',1,'Tafla::Tafla(double x_min, double x_max, double y_min, double y_max, double z, double odstep=1, const std::string &amp;kolor=&quot;blue&quot;, uint wysokosc_fali=0)']]],
-  ['translate_5fcolor_225',['translate_color',['../classdrawNS_1_1APIGnuPlot3D.html#ad9c71531a2f5c76ecdb65fa913962961',1,'drawNS::APIGnuPlot3D']]],
-  ['transponuj_226',['transponuj',['../classMacierzKw.html#aadd5a2b99baadefe2d64631d2c5c45c7',1,'MacierzKw']]]
+  ['send2gnuplot_333',['send2gnuplot',['../classdrawNS_1_1APIGnuPlot3D.html#a6a8a5e074e337ed9be9cfb45b6738b89',1,'drawNS::APIGnuPlot3D']]],
+  ['sruba_334',['Sruba',['../classSruba.html#a5150d9eef684c654fb64d9ca8976734c',1,'Sruba::Sruba()=delete'],['../classSruba.html#a0d8ace397b865fb89df00235bd264ca2',1,'Sruba::Sruba(double dl_r, double dl_z, const std::shared_ptr&lt; drawNS::Draw3DAPI &gt; &amp;api, const std::string &amp;kolor=&quot;black&quot;)']]],
+  ['stop_5fdrawing_5fproces_335',['stop_drawing_proces',['../classdrawNS_1_1APIGnuPlot3D.html#af9507e24c3fd5bad9e75b00f30cc9f80',1,'drawNS::APIGnuPlot3D']]]
 ];

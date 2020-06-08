@@ -1,0 +1,128 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.18"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Zadanie Podwodny Dron: Plik źródłowy inc/Przeszkody/Przeszkoda.hh</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">Zadanie Podwodny Dron
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Wygenerowano przez Doxygen 1.8.18 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'Szukaj');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('',true,false,'search.php','Szukaj');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_bfccd401955b95cf8c75461437045ac0.html">inc</a></li><li class="navelem"><a class="el" href="dir_cdccca0e77688dafc7981e255e206d6c.html">Przeszkody</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="headertitle">
+<div class="title">Przeszkoda.hh</div>  </div>
+</div><!--header-->
+<div class="contents">
+<a href="Przeszkoda_8hh.html">Idź do dokumentacji tego pliku.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="preprocessor">#ifndef PRZESZKODA_HH</span></div>
+<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="preprocessor">#define PRZESZKODA_HH</span></div>
+<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160; </div>
+<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="preprocessor">#include &lt;iostream&gt;</span></div>
+<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160; </div>
+<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="Wektor3D_8hh.html">Wektor3D.hh</a>&quot;</span></div>
+<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160; </div>
+<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;<span class="keyword">class </span><a class="code" href="classDron.html">Dron</a>;</div>
+<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160; </div>
+<div class="line"><a name="l00014"></a><span class="lineno"><a class="line" href="classPrzeszkoda.html">   14</a></span>&#160;<span class="keyword">class </span><a class="code" href="classPrzeszkoda.html">Przeszkoda</a></div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;{</div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;<span class="keyword">private</span>:</div>
+<div class="line"><a name="l00017"></a><span class="lineno"><a class="line" href="classPrzeszkoda.html#a684ca8608871fafbce24a3a3c567d3cd">   17</a></span>&#160;    <a class="code" href="classWektor3D.html">Wektor3D</a> <a class="code" href="classPrzeszkoda.html#a684ca8608871fafbce24a3a3c567d3cd">m_wektor_R</a>;    </div>
+<div class="line"><a name="l00018"></a><span class="lineno"><a class="line" href="classPrzeszkoda.html#ad877ce9d28c7c0c4e1450de6e2fec839">   18</a></span>&#160;    <span class="keywordtype">double</span> <a class="code" href="classPrzeszkoda.html#ad877ce9d28c7c0c4e1450de6e2fec839">m_dl_R</a>;          </div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160; </div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;<span class="keyword">public</span>:</div>
+<div class="line"><a name="l00025"></a><span class="lineno"><a class="line" href="classPrzeszkoda.html#a78d27c77e552de400eed05d1997e7012">   25</a></span>&#160;    <a class="code" href="classPrzeszkoda.html#a78d27c77e552de400eed05d1997e7012">Przeszkoda</a>() = <span class="keyword">delete</span>;</div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160; </div>
+<div class="line"><a name="l00032"></a><span class="lineno"><a class="line" href="classPrzeszkoda.html#a73c6dd62182b56e3fa32a45b25f93b10">   32</a></span>&#160;    <a class="code" href="classPrzeszkoda.html#a73c6dd62182b56e3fa32a45b25f93b10">Przeszkoda</a>(<a class="code" href="classWektor3D.html">Wektor3D</a> wektor_R) : <a class="code" href="classPrzeszkoda.html#a684ca8608871fafbce24a3a3c567d3cd">m_wektor_R</a>(wektor_R), <a class="code" href="classPrzeszkoda.html#ad877ce9d28c7c0c4e1450de6e2fec839">m_dl_R</a>(wektor_R.dlugosc()) {}</div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160; </div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;    <span class="keyword">const</span> <a class="code" href="classWektor3D.html">Wektor3D</a> &amp;<a class="code" href="classPrzeszkoda.html#a9ec40f2fa4804dada0f5dd7303054c62">ZwrocWektorR</a>() <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160; </div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;    <span class="keywordtype">double</span> <a class="code" href="classPrzeszkoda.html#a7c3b0a1cced54f1a3520669ff5552346">ZwrocDlugoscR</a>() <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160; </div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="classPrzeszkoda.html#a85ffe15ce9142cd52756dee4926f5c55">UstawWektorR</a>(<span class="keyword">const</span> <a class="code" href="classWektor3D.html">Wektor3D</a> &amp;W);</div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160; </div>
+<div class="line"><a name="l00062"></a><span class="lineno"><a class="line" href="classPrzeszkoda.html#a6d57220fe88a1ac20ca81ad4dbc266cb">   62</a></span>&#160;    <span class="keyword">virtual</span> <span class="keywordtype">bool</span> <a class="code" href="classPrzeszkoda.html#a6d57220fe88a1ac20ca81ad4dbc266cb">CzyKolizja</a>(<span class="keyword">const</span> <a class="code" href="classDron.html">Dron</a> &amp;Ob) <span class="keyword">const</span> = 0;</div>
+<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160; </div>
+<div class="line"><a name="l00068"></a><span class="lineno"><a class="line" href="classPrzeszkoda.html#a255cec82787ac10f0fa88374b23bee8f">   68</a></span>&#160;    <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classPrzeszkoda.html#a255cec82787ac10f0fa88374b23bee8f">RysujPrzeszkode</a>() = 0;</div>
+<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160; </div>
+<div class="line"><a name="l00074"></a><span class="lineno"><a class="line" href="classPrzeszkoda.html#a01871a4a2e96d1ab449082543fcc4020">   74</a></span>&#160;    <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classPrzeszkoda.html#a01871a4a2e96d1ab449082543fcc4020">KasujPrzeszkode</a>() = 0;</div>
+<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;};</div>
+<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160; </div>
+<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;<span class="preprocessor">#endif</span></div>
+</div><!-- fragment --></div><!-- contents -->
+<div class="ttc" id="aclassPrzeszkoda_html_ad877ce9d28c7c0c4e1450de6e2fec839"><div class="ttname"><a href="classPrzeszkoda.html#ad877ce9d28c7c0c4e1450de6e2fec839">Przeszkoda::m_dl_R</a></div><div class="ttdeci">double m_dl_R</div><div class="ttdoc">długość promienia</div><div class="ttdef"><b>Definition:</b> Przeszkoda.hh:18</div></div>
+<div class="ttc" id="aclassPrzeszkoda_html_a78d27c77e552de400eed05d1997e7012"><div class="ttname"><a href="classPrzeszkoda.html#a78d27c77e552de400eed05d1997e7012">Przeszkoda::Przeszkoda</a></div><div class="ttdeci">Przeszkoda()=delete</div><div class="ttdoc">Usunięty domyślny konstruktor nowego obiektu Przeszkoda.</div></div>
+<div class="ttc" id="aclassPrzeszkoda_html_a73c6dd62182b56e3fa32a45b25f93b10"><div class="ttname"><a href="classPrzeszkoda.html#a73c6dd62182b56e3fa32a45b25f93b10">Przeszkoda::Przeszkoda</a></div><div class="ttdeci">Przeszkoda(Wektor3D wektor_R)</div><div class="ttdoc">Konstruktor nowego obiektu Przeszkoda.</div><div class="ttdef"><b>Definition:</b> Przeszkoda.hh:32</div></div>
+<div class="ttc" id="aclassPrzeszkoda_html"><div class="ttname"><a href="classPrzeszkoda.html">Przeszkoda</a></div><div class="ttdoc">Klasa modeluje pojęcie przeszkody.</div><div class="ttdef"><b>Definition:</b> Przeszkoda.hh:15</div></div>
+<div class="ttc" id="aclassWektor3D_html"><div class="ttname"><a href="classWektor3D.html">Wektor3D</a></div><div class="ttdoc">Klasa modelująca pojęcie wektora w układzie 3 zmiennych.</div><div class="ttdef"><b>Definition:</b> Wektor3D.hh:14</div></div>
+<div class="ttc" id="aclassPrzeszkoda_html_a9ec40f2fa4804dada0f5dd7303054c62"><div class="ttname"><a href="classPrzeszkoda.html#a9ec40f2fa4804dada0f5dd7303054c62">Przeszkoda::ZwrocWektorR</a></div><div class="ttdeci">const Wektor3D &amp; ZwrocWektorR() const</div><div class="ttdoc">Zwraca wektor promienia.</div><div class="ttdef"><b>Definition:</b> Przeszkoda.cpp:3</div></div>
+<div class="ttc" id="aclassPrzeszkoda_html_a6d57220fe88a1ac20ca81ad4dbc266cb"><div class="ttname"><a href="classPrzeszkoda.html#a6d57220fe88a1ac20ca81ad4dbc266cb">Przeszkoda::CzyKolizja</a></div><div class="ttdeci">virtual bool CzyKolizja(const Dron &amp;Ob) const =0</div><div class="ttdoc">Sprawdza czy nastąpiłą kolizja obiektu z dronem.</div></div>
+<div class="ttc" id="aclassPrzeszkoda_html_a01871a4a2e96d1ab449082543fcc4020"><div class="ttname"><a href="classPrzeszkoda.html#a01871a4a2e96d1ab449082543fcc4020">Przeszkoda::KasujPrzeszkode</a></div><div class="ttdeci">virtual void KasujPrzeszkode()=0</div><div class="ttdoc">Kasuje Przeszkodę</div></div>
+<div class="ttc" id="aclassPrzeszkoda_html_a7c3b0a1cced54f1a3520669ff5552346"><div class="ttname"><a href="classPrzeszkoda.html#a7c3b0a1cced54f1a3520669ff5552346">Przeszkoda::ZwrocDlugoscR</a></div><div class="ttdeci">double ZwrocDlugoscR() const</div><div class="ttdoc">Zwraca długość wektora R.</div><div class="ttdef"><b>Definition:</b> Przeszkoda.cpp:8</div></div>
+<div class="ttc" id="aWektor3D_8hh_html"><div class="ttname"><a href="Wektor3D_8hh.html">Wektor3D.hh</a></div></div>
+<div class="ttc" id="aclassPrzeszkoda_html_a684ca8608871fafbce24a3a3c567d3cd"><div class="ttname"><a href="classPrzeszkoda.html#a684ca8608871fafbce24a3a3c567d3cd">Przeszkoda::m_wektor_R</a></div><div class="ttdeci">Wektor3D m_wektor_R</div><div class="ttdoc">wektor na najbardziej oddalony wierzchołek obiektu</div><div class="ttdef"><b>Definition:</b> Przeszkoda.hh:17</div></div>
+<div class="ttc" id="aclassPrzeszkoda_html_a85ffe15ce9142cd52756dee4926f5c55"><div class="ttname"><a href="classPrzeszkoda.html#a85ffe15ce9142cd52756dee4926f5c55">Przeszkoda::UstawWektorR</a></div><div class="ttdeci">void UstawWektorR(const Wektor3D &amp;W)</div><div class="ttdoc">Ustawia wektor R.</div><div class="ttdef"><b>Definition:</b> Przeszkoda.cpp:13</div></div>
+<div class="ttc" id="aclassPrzeszkoda_html_a255cec82787ac10f0fa88374b23bee8f"><div class="ttname"><a href="classPrzeszkoda.html#a255cec82787ac10f0fa88374b23bee8f">Przeszkoda::RysujPrzeszkode</a></div><div class="ttdeci">virtual void RysujPrzeszkode()=0</div><div class="ttdoc">Rysuje Przeszkodę</div></div>
+<div class="ttc" id="aclassDron_html"><div class="ttname"><a href="classDron.html">Dron</a></div><div class="ttdoc">Klasa modeluje pojęcie drona złożonego z prostopadłościennego kadłuba oraz dwóch śrub.</div><div class="ttdef"><b>Definition:</b> Dron.hh:19</div></div>
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Wygenerowano przez &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.8.18
+</small></address>
+</body>
+</html>

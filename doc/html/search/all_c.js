@@ -1,8 +1,25 @@
 var searchData=
 [
-  ['redraw_92',['redraw',['../classdrawNS_1_1APIGnuPlot3D.html#a27a110521a511f0c75e5c867f247a3f6',1,'drawNS::APIGnuPlot3D::redraw()'],['../classdrawNS_1_1Draw3DAPI.html#ae88121104d2eeb8936f8dc1b68fc3bbf',1,'drawNS::Draw3DAPI::redraw()']]],
-  ['refresh_5frate_5fms_93',['refresh_rate_ms',['../classdrawNS_1_1Draw3DAPI.html#a68784b46e3e38b348b004f9cba1caf5e',1,'drawNS::Draw3DAPI']]],
-  ['refresh_5fthread_5fptr_94',['refresh_thread_ptr',['../classdrawNS_1_1APIGnuPlot3D.html#ad8bbc49eac5fc97277aec46165098976',1,'drawNS::APIGnuPlot3D']]],
-  ['replot_5floop_95',['replot_loop',['../classdrawNS_1_1APIGnuPlot3D.html#afa364d7d8a0a74d51b680a9560e1f1ed',1,'drawNS::APIGnuPlot3D']]],
-  ['rysuj_96',['Rysuj',['../classDron.html#a7d82753b10e416eef24138d5de255531',1,'Dron::Rysuj()'],['../classGraniastoslup6.html#af281aa6eb32706b45c7f039d7491d9ef',1,'Graniastoslup6::Rysuj(const std::shared_ptr&lt; drawNS::Draw3DAPI &gt; &amp;api) const override'],['../classGraniastoslup6.html#ada59f59f410c6f39087b874a59ac1b88',1,'Graniastoslup6::Rysuj(const std::shared_ptr&lt; drawNS::Draw3DAPI &gt; &amp;api, const MacierzOb &amp;orientacja, const Wektor3D &amp;srodek) const'],['../classObiekt3D.html#ad4b58100ee5c021ea59731d02d9708bc',1,'Obiekt3D::Rysuj()'],['../classProstopadloscian.html#a24428c322de1e3b494586093e513ef95',1,'Prostopadloscian::Rysuj(const std::shared_ptr&lt; drawNS::Draw3DAPI &gt; &amp;api) const override'],['../classProstopadloscian.html#acbf5bed0a4742cf593ec6e17b11eeddd',1,'Prostopadloscian::Rysuj(const std::shared_ptr&lt; drawNS::Draw3DAPI &gt; &amp;api, const MacierzOb &amp;orientacja, const Wektor3D &amp;srodek) const'],['../classPowierzchnia.html#a8ee28cf287c67f197a3f4328b24806c2',1,'Powierzchnia::Rysuj()']]]
+  ['para_5fdron_116',['PARA_DRON',['../KolekcjaObiektow_8hh.html#af784ad7af0f0f16dfe39fb60920a3078',1,'KolekcjaObiektow.hh']]],
+  ['para_5fprzeszkoda_117',['PARA_PRZESZKODA',['../KolekcjaObiektow_8hh.html#a348ef8a568fad944b749b9d1d86bd2cc',1,'KolekcjaObiektow.hh']]],
+  ['pipe_5ffd_118',['pipe_fd',['../classdrawNS_1_1APIGnuPlot3D.html#a729d3cddc1024629c8f492408ae15243',1,'drawNS::APIGnuPlot3D']]],
+  ['point3d_119',['Point3D',['../classdrawNS_1_1Point3D.html',1,'drawNS::Point3D'],['../classdrawNS_1_1Point3D.html#a0c903a94653375c05122ac5cc73dcf39',1,'drawNS::Point3D::Point3D()=delete'],['../classdrawNS_1_1Point3D.html#a01dac6d46c79850baf2503751974b63b',1,'drawNS::Point3D::Point3D(double x, double y, double z)'],['../classdrawNS_1_1Point3D.html#a35c7d06832d15bdfb50f30b546f1b370',1,'drawNS::Point3D::Point3D(const Wektor&lt; double, 3 &gt; &amp;W)']]],
+  ['powierzchnia_120',['Powierzchnia',['../classPowierzchnia.html',1,'Powierzchnia'],['../classPowierzchnia.html#aa3423dacbe23d5110ed176a08fe69af1',1,'Powierzchnia::Powierzchnia()=delete'],['../classPowierzchnia.html#a646c620d678acc20fd5db923297b9a89',1,'Powierzchnia::Powierzchnia(const std::shared_ptr&lt; drawNS::Draw3DAPI &gt; &amp;api, double x_min, double x_max, double y_min, double y_max, double z, double odstep=1, const std::string &amp;kolor=&quot;black&quot;)'],['../classPowierzchnia.html#a8b6b85b3c67af319d0780affd6fccb9d',1,'Powierzchnia::Powierzchnia(const std::shared_ptr&lt; drawNS::Draw3DAPI &gt; &amp;api, const Zbiornik &amp;Z, double z, double odstep=1, const std::string &amp;kolor=&quot;black&quot;)']]],
+  ['powierzchnia_2ecpp_121',['Powierzchnia.cpp',['../Powierzchnia_8cpp.html',1,'']]],
+  ['powierzchnia_2ehh_122',['Powierzchnia.hh',['../Powierzchnia_8hh.html',1,'']]],
+  ['prostopadloscian_123',['Prostopadloscian',['../classProstopadloscian.html',1,'Prostopadloscian'],['../classProstopadloscian.html#aea53d2696f48d474e40af18bcacce515',1,'Prostopadloscian::Prostopadloscian()=delete'],['../classProstopadloscian.html#a4a147281ee70913bf7ed3efff63d5cd2',1,'Prostopadloscian::Prostopadloscian(double dl_x, double dl_y, double dl_z, const std::shared_ptr&lt; drawNS::Draw3DAPI &gt; &amp;api, const std::string &amp;kolor=&quot;black&quot;)']]],
+  ['prostopadloscian_2ecpp_124',['Prostopadloscian.cpp',['../Prostopadloscian_8cpp.html',1,'']]],
+  ['prostopadloscian_2ehh_125',['Prostopadloscian.hh',['../Prostopadloscian_8hh.html',1,'']]],
+  ['przekazxmax_126',['PrzekazXMax',['../classZbiornik.html#af39952bda7541a615a650a33d1c54d7b',1,'Zbiornik']]],
+  ['przekazxmin_127',['PrzekazXMin',['../classZbiornik.html#ae8ef8e7540be9af5f14aace55907d10e',1,'Zbiornik']]],
+  ['przekazymax_128',['PrzekazYMax',['../classZbiornik.html#aa70c5294e37c12b61892b9942eb9f452',1,'Zbiornik']]],
+  ['przekazymin_129',['PrzekazYMin',['../classZbiornik.html#ac38fa9d3e344a8e8c2cd816e3859111f',1,'Zbiornik']]],
+  ['przekazzmax_130',['PrzekazZMax',['../classZbiornik.html#a84c75bb541d19391cb4c8b128c701e39',1,'Zbiornik']]],
+  ['przekazzmin_131',['PrzekazZMin',['../classZbiornik.html#a1fe253e54618925cf53eda578cbece62',1,'Zbiornik']]],
+  ['przeszkoda_132',['Przeszkoda',['../classPrzeszkoda.html',1,'Przeszkoda'],['../classPrzeszkoda.html#a78d27c77e552de400eed05d1997e7012',1,'Przeszkoda::Przeszkoda()=delete'],['../classPrzeszkoda.html#a73c6dd62182b56e3fa32a45b25f93b10',1,'Przeszkoda::Przeszkoda(Wektor3D wektor_R)']]],
+  ['przeszkoda_2ecpp_133',['Przeszkoda.cpp',['../Przeszkoda_8cpp.html',1,'']]],
+  ['przeszkoda_2ehh_134',['Przeszkoda.hh',['../Przeszkoda_8hh.html',1,'']]],
+  ['przeszkodaprostopad_135',['PrzeszkodaProstopad',['../classPrzeszkodaProstopad.html',1,'PrzeszkodaProstopad'],['../classPrzeszkodaProstopad.html#a52b183eb6147f8035fa3c57119de0e1b',1,'PrzeszkodaProstopad::PrzeszkodaProstopad()']]],
+  ['przeszkodaprostopad_2ecpp_136',['PrzeszkodaProstopad.cpp',['../PrzeszkodaProstopad_8cpp.html',1,'']]],
+  ['przeszkodaprostopad_2ehh_137',['PrzeszkodaProstopad.hh',['../PrzeszkodaProstopad_8hh.html',1,'']]]
 ];

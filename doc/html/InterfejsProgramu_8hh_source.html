@@ -1,0 +1,134 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.18"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Zadanie Podwodny Dron: Plik źródłowy inc/Interfejsy/InterfejsProgramu.hh</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">Zadanie Podwodny Dron
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Wygenerowano przez Doxygen 1.8.18 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'Szukaj');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('',true,false,'search.php','Szukaj');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_bfccd401955b95cf8c75461437045ac0.html">inc</a></li><li class="navelem"><a class="el" href="dir_d7669fd584de9745cb0366ebf4cae5e5.html">Interfejsy</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="headertitle">
+<div class="title">InterfejsProgramu.hh</div>  </div>
+</div><!--header-->
+<div class="contents">
+<a href="InterfejsProgramu_8hh.html">Idź do dokumentacji tego pliku.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="preprocessor">#ifndef INTERFEJS_PROGRAMU_HH</span></div>
+<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="preprocessor">#define INTERFEJS_PROGRAMU_HH</span></div>
+<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160; </div>
+<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="KolekcjaObiektow_8hh.html">KolekcjaObiektow.hh</a>&quot;</span></div>
+<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160; </div>
+<div class="line"><a name="l00010"></a><span class="lineno"><a class="line" href="InterfejsProgramu_8hh.html#a1597a8b16dab81fca366e9b9deffc6e6">   10</a></span>&#160;<span class="keyword">enum</span> <a class="code" href="InterfejsProgramu_8hh.html#a1597a8b16dab81fca366e9b9deffc6e6">TypObiektu</a></div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;{</div>
+<div class="line"><a name="l00012"></a><span class="lineno"><a class="line" href="InterfejsProgramu_8hh.html#a1597a8b16dab81fca366e9b9deffc6e6a112c91f459ebb690e10369f4992ddb58">   12</a></span>&#160;    <a class="code" href="InterfejsProgramu_8hh.html#a1597a8b16dab81fca366e9b9deffc6e6a112c91f459ebb690e10369f4992ddb58">TO_DRON</a>,</div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;    <a class="code" href="InterfejsProgramu_8hh.html#a1597a8b16dab81fca366e9b9deffc6e6a1cfa91f7d2044c713ddb98d8845988f3">TO_PRZESZKODA</a></div>
+<div class="line"><a name="l00014"></a><span class="lineno"><a class="line" href="InterfejsProgramu_8hh.html#a1597a8b16dab81fca366e9b9deffc6e6a1cfa91f7d2044c713ddb98d8845988f3">   14</a></span>&#160;};</div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160; </div>
+<div class="line"><a name="l00020"></a><span class="lineno"><a class="line" href="InterfejsProgramu_8hh.html#a0effa7f9fce09c1a9b2da6037de0dfa8">   20</a></span>&#160;<span class="keyword">enum</span> <a class="code" href="InterfejsProgramu_8hh.html#a0effa7f9fce09c1a9b2da6037de0dfa8">RodzajPrzeszkody</a></div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;{</div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;    <a class="code" href="InterfejsProgramu_8hh.html#a0effa7f9fce09c1a9b2da6037de0dfa8ab0f1e454a467a230ecf8bc03b5c27765">RP_PROSTOPADLOSCIAN</a></div>
+<div class="line"><a name="l00023"></a><span class="lineno"><a class="line" href="InterfejsProgramu_8hh.html#a0effa7f9fce09c1a9b2da6037de0dfa8ab0f1e454a467a230ecf8bc03b5c27765">   23</a></span>&#160;};</div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160; </div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;<span class="keywordtype">void</span> <a class="code" href="InterfejsProgramu_8hh.html#a59d83c41f8d7214c0afd7ab3b13b4e94">WyswietlMenuGlowne</a>();</div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160; </div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;<span class="keywordtype">void</span> <a class="code" href="InterfejsProgramu_8hh.html#a9715c29933acf56dc08df0f6e2de4bfe">WyswietlMenuObiektow</a>();</div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160; </div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;<span class="keywordtype">void</span> <a class="code" href="InterfejsProgramu_8hh.html#a6194e3e3fb32772cbaf5e9d0f6e3e293">WyswietlMenuPrzeszkod</a>();</div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160; </div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;<span class="keywordtype">void</span> <a class="code" href="InterfejsProgramu_8hh.html#a710108f00dc7deddfde08b016768f9e3">WyswietlLiczbeWektorow</a>();</div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160; </div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;<span class="keywordtype">bool</span> <a class="code" href="InterfejsProgramu_8hh.html#ae2391338c51c8ff56c8d39b89e7d36ef">DronRuchWPrzod</a>(<a class="code" href="classKolekcjaObiektow.html">KolekcjaObiektow</a> &amp;K);</div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160; </div>
+<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;<span class="keywordtype">bool</span> <a class="code" href="InterfejsProgramu_8hh.html#a68f82799e9423a3a37692a4d89232420">DronObrot</a>(<a class="code" href="classKolekcjaObiektow.html">KolekcjaObiektow</a> &amp;K);</div>
+<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160; </div>
+<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;<span class="keywordtype">bool</span> <a class="code" href="InterfejsProgramu_8hh.html#ad6fed83bd2c696cca93b4b7266907231">DronWznoszenie</a>(<a class="code" href="classKolekcjaObiektow.html">KolekcjaObiektow</a> &amp;K);</div>
+<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160; </div>
+<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;<span class="keywordtype">bool</span> <a class="code" href="InterfejsProgramu_8hh.html#a47fb20b40b6f1e3c69b33f3450e511bb">DodajObiekt</a>(<a class="code" href="classKolekcjaObiektow.html">KolekcjaObiektow</a> &amp;K);</div>
+<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160; </div>
+<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;<span class="keywordtype">bool</span> <a class="code" href="InterfejsProgramu_8hh.html#a939ab93027ce8c0970fe0d72205ac1b2">UsunObiekt</a>(<a class="code" href="classKolekcjaObiektow.html">KolekcjaObiektow</a> &amp;K);</div>
+<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160; </div>
+<div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;<span class="keywordtype">bool</span> <a class="code" href="InterfejsProgramu_8hh.html#ae9fdc10b91fdc4c6e3108828deddae1e">ZmienAktywnegoDrona</a>(<a class="code" href="classKolekcjaObiektow.html">KolekcjaObiektow</a> &amp;K);</div>
+<div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160; </div>
+<div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160;<span class="preprocessor">#endif</span></div>
+</div><!-- fragment --></div><!-- contents -->
+<div class="ttc" id="aKolekcjaObiektow_8hh_html"><div class="ttname"><a href="KolekcjaObiektow_8hh.html">KolekcjaObiektow.hh</a></div></div>
+<div class="ttc" id="aInterfejsProgramu_8hh_html_a47fb20b40b6f1e3c69b33f3450e511bb"><div class="ttname"><a href="InterfejsProgramu_8hh.html#a47fb20b40b6f1e3c69b33f3450e511bb">DodajObiekt</a></div><div class="ttdeci">bool DodajObiekt(KolekcjaObiektow &amp;K)</div><div class="ttdoc">Wyświetla menu obiektów i dodaje obiekt do zbiornika.</div><div class="ttdef"><b>Definition:</b> InterfejsProgramu.cpp:156</div></div>
+<div class="ttc" id="aInterfejsProgramu_8hh_html_a1597a8b16dab81fca366e9b9deffc6e6a1cfa91f7d2044c713ddb98d8845988f3"><div class="ttname"><a href="InterfejsProgramu_8hh.html#a1597a8b16dab81fca366e9b9deffc6e6a1cfa91f7d2044c713ddb98d8845988f3">TO_PRZESZKODA</a></div><div class="ttdeci">@ TO_PRZESZKODA</div><div class="ttdef"><b>Definition:</b> InterfejsProgramu.hh:13</div></div>
+<div class="ttc" id="aInterfejsProgramu_8hh_html_a1597a8b16dab81fca366e9b9deffc6e6"><div class="ttname"><a href="InterfejsProgramu_8hh.html#a1597a8b16dab81fca366e9b9deffc6e6">TypObiektu</a></div><div class="ttdeci">TypObiektu</div><div class="ttdoc">Typy obiektów możliwych do utworzenia.</div><div class="ttdef"><b>Definition:</b> InterfejsProgramu.hh:11</div></div>
+<div class="ttc" id="aInterfejsProgramu_8hh_html_a710108f00dc7deddfde08b016768f9e3"><div class="ttname"><a href="InterfejsProgramu_8hh.html#a710108f00dc7deddfde08b016768f9e3">WyswietlLiczbeWektorow</a></div><div class="ttdeci">void WyswietlLiczbeWektorow()</div><div class="ttdoc">Wyświetla liczbę obecnie przechowywanych wektorów.</div><div class="ttdef"><b>Definition:</b> InterfejsProgramu.cpp:42</div></div>
+<div class="ttc" id="aInterfejsProgramu_8hh_html_a68f82799e9423a3a37692a4d89232420"><div class="ttname"><a href="InterfejsProgramu_8hh.html#a68f82799e9423a3a37692a4d89232420">DronObrot</a></div><div class="ttdeci">bool DronObrot(KolekcjaObiektow &amp;K)</div><div class="ttdoc">Obrót aktywnym dronem.</div><div class="ttdef"><b>Definition:</b> InterfejsProgramu.cpp:81</div></div>
+<div class="ttc" id="aInterfejsProgramu_8hh_html_a939ab93027ce8c0970fe0d72205ac1b2"><div class="ttname"><a href="InterfejsProgramu_8hh.html#a939ab93027ce8c0970fe0d72205ac1b2">UsunObiekt</a></div><div class="ttdeci">bool UsunObiekt(KolekcjaObiektow &amp;K)</div><div class="ttdoc">Wyświetla menu obiektów i usuwa obiekt ze zbiornika.</div><div class="ttdef"><b>Definition:</b> InterfejsProgramu.cpp:242</div></div>
+<div class="ttc" id="aInterfejsProgramu_8hh_html_a9715c29933acf56dc08df0f6e2de4bfe"><div class="ttname"><a href="InterfejsProgramu_8hh.html#a9715c29933acf56dc08df0f6e2de4bfe">WyswietlMenuObiektow</a></div><div class="ttdeci">void WyswietlMenuObiektow()</div><div class="ttdoc">Wyświetla menu obiektów możliwych do utworzenia.</div><div class="ttdef"><b>Definition:</b> InterfejsProgramu.cpp:29</div></div>
+<div class="ttc" id="aInterfejsProgramu_8hh_html_ae2391338c51c8ff56c8d39b89e7d36ef"><div class="ttname"><a href="InterfejsProgramu_8hh.html#ae2391338c51c8ff56c8d39b89e7d36ef">DronRuchWPrzod</a></div><div class="ttdeci">bool DronRuchWPrzod(KolekcjaObiektow &amp;K)</div><div class="ttdoc">Ruch do przodu aktywnym dronem.</div><div class="ttdef"><b>Definition:</b> InterfejsProgramu.cpp:47</div></div>
+<div class="ttc" id="aInterfejsProgramu_8hh_html_a6194e3e3fb32772cbaf5e9d0f6e3e293"><div class="ttname"><a href="InterfejsProgramu_8hh.html#a6194e3e3fb32772cbaf5e9d0f6e3e293">WyswietlMenuPrzeszkod</a></div><div class="ttdeci">void WyswietlMenuPrzeszkod()</div><div class="ttdoc">Wyświetla menu przeszkód możliwych do utworzenia.</div><div class="ttdef"><b>Definition:</b> InterfejsProgramu.cpp:36</div></div>
+<div class="ttc" id="aInterfejsProgramu_8hh_html_a0effa7f9fce09c1a9b2da6037de0dfa8ab0f1e454a467a230ecf8bc03b5c27765"><div class="ttname"><a href="InterfejsProgramu_8hh.html#a0effa7f9fce09c1a9b2da6037de0dfa8ab0f1e454a467a230ecf8bc03b5c27765">RP_PROSTOPADLOSCIAN</a></div><div class="ttdeci">@ RP_PROSTOPADLOSCIAN</div><div class="ttdef"><b>Definition:</b> InterfejsProgramu.hh:22</div></div>
+<div class="ttc" id="aInterfejsProgramu_8hh_html_ad6fed83bd2c696cca93b4b7266907231"><div class="ttname"><a href="InterfejsProgramu_8hh.html#ad6fed83bd2c696cca93b4b7266907231">DronWznoszenie</a></div><div class="ttdeci">bool DronWznoszenie(KolekcjaObiektow &amp;K)</div><div class="ttdoc">Ruch w pionie aktywnym dronem.</div><div class="ttdef"><b>Definition:</b> InterfejsProgramu.cpp:112</div></div>
+<div class="ttc" id="aInterfejsProgramu_8hh_html_a0effa7f9fce09c1a9b2da6037de0dfa8"><div class="ttname"><a href="InterfejsProgramu_8hh.html#a0effa7f9fce09c1a9b2da6037de0dfa8">RodzajPrzeszkody</a></div><div class="ttdeci">RodzajPrzeszkody</div><div class="ttdoc">Rodzaje przeszkód możliwych do utworzenia.</div><div class="ttdef"><b>Definition:</b> InterfejsProgramu.hh:21</div></div>
+<div class="ttc" id="aInterfejsProgramu_8hh_html_a59d83c41f8d7214c0afd7ab3b13b4e94"><div class="ttname"><a href="InterfejsProgramu_8hh.html#a59d83c41f8d7214c0afd7ab3b13b4e94">WyswietlMenuGlowne</a></div><div class="ttdeci">void WyswietlMenuGlowne()</div><div class="ttdoc">Wyświetla menu programu z możliwymi opcjami.</div><div class="ttdef"><b>Definition:</b> InterfejsProgramu.cpp:11</div></div>
+<div class="ttc" id="aclassKolekcjaObiektow_html"><div class="ttname"><a href="classKolekcjaObiektow.html">KolekcjaObiektow</a></div><div class="ttdoc">Klasa modeluje pojęcie kolekcji obiektów zbiornika.</div><div class="ttdef"><b>Definition:</b> KolekcjaObiektow.hh:42</div></div>
+<div class="ttc" id="aInterfejsProgramu_8hh_html_a1597a8b16dab81fca366e9b9deffc6e6a112c91f459ebb690e10369f4992ddb58"><div class="ttname"><a href="InterfejsProgramu_8hh.html#a1597a8b16dab81fca366e9b9deffc6e6a112c91f459ebb690e10369f4992ddb58">TO_DRON</a></div><div class="ttdeci">@ TO_DRON</div><div class="ttdef"><b>Definition:</b> InterfejsProgramu.hh:12</div></div>
+<div class="ttc" id="aInterfejsProgramu_8hh_html_ae9fdc10b91fdc4c6e3108828deddae1e"><div class="ttname"><a href="InterfejsProgramu_8hh.html#ae9fdc10b91fdc4c6e3108828deddae1e">ZmienAktywnegoDrona</a></div><div class="ttdeci">bool ZmienAktywnegoDrona(KolekcjaObiektow &amp;K)</div><div class="ttdoc">Wyświetla menu dronów z zaznaczonym aktywnym i pozwala na zmianę aktywnego.</div><div class="ttdef"><b>Definition:</b> InterfejsProgramu.cpp:288</div></div>
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Wygenerowano przez &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.8.18
+</small></address>
+</body>
+</html>

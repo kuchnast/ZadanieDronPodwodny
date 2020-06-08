@@ -1,0 +1,164 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.18"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Zadanie Podwodny Dron: Plik źródłowy inc/Interfejsy/KolekcjaObiektow.hh</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">Zadanie Podwodny Dron
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Wygenerowano przez Doxygen 1.8.18 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'Szukaj');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('',true,false,'search.php','Szukaj');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_bfccd401955b95cf8c75461437045ac0.html">inc</a></li><li class="navelem"><a class="el" href="dir_d7669fd584de9745cb0366ebf4cae5e5.html">Interfejsy</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="headertitle">
+<div class="title">KolekcjaObiektow.hh</div>  </div>
+</div><!--header-->
+<div class="contents">
+<a href="KolekcjaObiektow_8hh.html">Idź do dokumentacji tego pliku.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="preprocessor">#ifndef KOLEKCJA_OBIEKTOW_HH</span></div>
+<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="preprocessor">#define KOLEKCJA_OBIEKTOW_HH</span></div>
+<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160; </div>
+<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="preprocessor">#include &lt;iostream&gt;</span></div>
+<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="preprocessor">#include &lt;map&gt;</span></div>
+<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="preprocessor">#include &lt;utility&gt;</span></div>
+<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160; </div>
+<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="PrzeszkodaProstopad_8hh.html">PrzeszkodaProstopad.hh</a>&quot;</span></div>
+<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="Tafla_8hh.html">Tafla.hh</a>&quot;</span></div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="Dno_8hh.html">Dno.hh</a>&quot;</span></div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="InterfejsDrona_8hh.html">InterfejsDrona.hh</a>&quot;</span></div>
+<div class="line"><a name="l00016"></a><span class="lineno"><a class="line" href="KolekcjaObiektow_8hh.html#af784ad7af0f0f16dfe39fb60920a3078">   16</a></span>&#160;<span class="keyword">typedef</span> std::pair&lt;std::string, std::shared_ptr&lt;InterfejsDrona&gt;&gt; <a class="code" href="KolekcjaObiektow_8hh.html#af784ad7af0f0f16dfe39fb60920a3078">PARA_DRON</a>;</div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160; </div>
+<div class="line"><a name="l00022"></a><span class="lineno"><a class="line" href="KolekcjaObiektow_8hh.html#af1d3896889146263cb336d23d2d58250">   22</a></span>&#160;<span class="keyword">typedef</span> std::map&lt;std::string, std::shared_ptr&lt;InterfejsDrona&gt;&gt;::iterator <a class="code" href="KolekcjaObiektow_8hh.html#af1d3896889146263cb336d23d2d58250">IT_DRON</a>;</div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160; </div>
+<div class="line"><a name="l00028"></a><span class="lineno"><a class="line" href="KolekcjaObiektow_8hh.html#a348ef8a568fad944b749b9d1d86bd2cc">   28</a></span>&#160;<span class="keyword">typedef</span> std::pair&lt;std::string, std::shared_ptr&lt;Przeszkoda&gt;&gt; <a class="code" href="KolekcjaObiektow_8hh.html#a348ef8a568fad944b749b9d1d86bd2cc">PARA_PRZESZKODA</a>;</div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160; </div>
+<div class="line"><a name="l00034"></a><span class="lineno"><a class="line" href="KolekcjaObiektow_8hh.html#ad97cfcd90bc724c2dca99c89ea0d3995">   34</a></span>&#160;<span class="keyword">typedef</span> std::map&lt;std::string, std::shared_ptr&lt;Przeszkoda&gt;&gt;::iterator <a class="code" href="KolekcjaObiektow_8hh.html#ad97cfcd90bc724c2dca99c89ea0d3995">IT_PRZESZKODA</a>;</div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160; </div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160; </div>
+<div class="line"><a name="l00041"></a><span class="lineno"><a class="line" href="classKolekcjaObiektow.html">   41</a></span>&#160;<span class="keyword">class </span><a class="code" href="classKolekcjaObiektow.html">KolekcjaObiektow</a></div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;{</div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;<span class="keyword">protected</span>:</div>
+<div class="line"><a name="l00044"></a><span class="lineno"><a class="line" href="classKolekcjaObiektow.html#a0d8c96102e246c5e064b6f9ad6a72933">   44</a></span>&#160;    std::map&lt;std::string, std::shared_ptr&lt;InterfejsDrona&gt;&gt; <a class="code" href="classKolekcjaObiektow.html#a0d8c96102e246c5e064b6f9ad6a72933">m_lista_dronow</a>;  </div>
+<div class="line"><a name="l00045"></a><span class="lineno"><a class="line" href="classKolekcjaObiektow.html#a94ec70c1909b0b3dba6443914f695736">   45</a></span>&#160;    std::map&lt;std::string, std::shared_ptr&lt;Przeszkoda&gt;&gt; <a class="code" href="classKolekcjaObiektow.html#a94ec70c1909b0b3dba6443914f695736">m_lista_przeszkod</a>;   </div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160; </div>
+<div class="line"><a name="l00047"></a><span class="lineno"><a class="line" href="classKolekcjaObiektow.html#a7ed1d1e535125923d1b72c6160b13cb1">   47</a></span>&#160;    std::string <a class="code" href="classKolekcjaObiektow.html#a7ed1d1e535125923d1b72c6160b13cb1">m_aktywny_dron</a>;                                             </div>
+<div class="line"><a name="l00048"></a><span class="lineno"><a class="line" href="classKolekcjaObiektow.html#afaeb07d8cfe689016d39831dba9941ef">   48</a></span>&#160;    std::shared_ptr&lt;drawNS::Draw3DAPI&gt; <a class="code" href="classKolekcjaObiektow.html#afaeb07d8cfe689016d39831dba9941ef">m_api</a>;                               </div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160; </div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;<span class="keyword">public</span>:</div>
+<div class="line"><a name="l00056"></a><span class="lineno"><a class="line" href="classKolekcjaObiektow.html#a690e9bd3420ad0b877ad6ebff157c939">   56</a></span>&#160;    <span class="keyword">explicit</span> <a class="code" href="classKolekcjaObiektow.html#a690e9bd3420ad0b877ad6ebff157c939">KolekcjaObiektow</a>(<span class="keyword">const</span> std::shared_ptr&lt;drawNS::Draw3DAPI&gt; &amp;api) : <a class="code" href="classKolekcjaObiektow.html#afaeb07d8cfe689016d39831dba9941ef">m_api</a>(api) {}</div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160; </div>
+<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;    <span class="keywordtype">bool</span> <a class="code" href="classKolekcjaObiektow.html#a82ae080ec740671195c8b50641b6f651">NowyDron</a>(<span class="keyword">const</span> std::string &amp;nazwa, <span class="keywordtype">double</span> rozmiar, <span class="keyword">const</span> <a class="code" href="classWektor3D.html">Wektor3D</a> &amp;srodek = <a class="code" href="classWektor3D.html">Wektor3D</a>(), <span class="keyword">const</span> std::string &amp;kolor_kadluba = <span class="stringliteral">&quot;black&quot;</span>, <span class="keyword">const</span> std::string &amp;kolor_srub = <span class="stringliteral">&quot;black&quot;</span>, uint czas_animacji = 2000);</div>
+<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160; </div>
+<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;    <span class="keywordtype">bool</span> <a class="code" href="classKolekcjaObiektow.html#acbb7dcf7691e829a7c7598a0e4ba04f7">NowaPrzeszkodaProstopadloscian</a>(<span class="keyword">const</span> std::string &amp;nazwa, <span class="keywordtype">double</span> dl_x, <span class="keywordtype">double</span> dl_y, <span class="keywordtype">double</span> dl_z, <span class="keyword">const</span> <a class="code" href="classWektor3D.html">Wektor3D</a> &amp;srodek = <a class="code" href="classWektor3D.html">Wektor3D</a>(), <span class="keyword">const</span> std::string &amp;kolor = <span class="stringliteral">&quot;black&quot;</span>);</div>
+<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160; </div>
+<div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;    <span class="keywordtype">bool</span> <a class="code" href="classKolekcjaObiektow.html#a7f9341b84370b1553090b7d66a8c819c">NowaPrzeszkodaTafla</a>(<span class="keyword">const</span> std::string &amp;nazwa, <span class="keyword">const</span> <a class="code" href="classZbiornik.html">Zbiornik</a> &amp;Z, <span class="keywordtype">double</span> odstep = 1, uint wysokosc_fali = 5, <span class="keyword">const</span> std::string &amp;kolor = <span class="stringliteral">&quot;blue&quot;</span>);</div>
+<div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160; </div>
+<div class="line"><a name="l00109"></a><span class="lineno">  109</span>&#160;    <span class="keywordtype">bool</span> <a class="code" href="classKolekcjaObiektow.html#a6c93ea797246402bd26e4043333d93a4">NowaPrzeszkodaDno</a>(<span class="keyword">const</span> std::string &amp;nazwa, <span class="keyword">const</span> <a class="code" href="classZbiornik.html">Zbiornik</a> &amp;Z, <span class="keywordtype">double</span> odstep = 1, <span class="keyword">const</span> std::string &amp;kolor = <span class="stringliteral">&quot;yellow&quot;</span>);</div>
+<div class="line"><a name="l00110"></a><span class="lineno">  110</span>&#160; </div>
+<div class="line"><a name="l00119"></a><span class="lineno">  119</span>&#160;    <span class="keywordtype">bool</span> <a class="code" href="classKolekcjaObiektow.html#a6ed83472ce89ecb08ff5ad8dc0301567">UsunDrona</a>(<span class="keyword">const</span> std::string &amp;nazwa);</div>
+<div class="line"><a name="l00120"></a><span class="lineno">  120</span>&#160;    </div>
+<div class="line"><a name="l00128"></a><span class="lineno">  128</span>&#160;    <span class="keywordtype">bool</span> <a class="code" href="classKolekcjaObiektow.html#a057b8963f45798bd8e8ca3fca42e1a14">UsunPrzeszkode</a>(<span class="keyword">const</span> std::string &amp;nazwa);</div>
+<div class="line"><a name="l00129"></a><span class="lineno">  129</span>&#160; </div>
+<div class="line"><a name="l00136"></a><span class="lineno">  136</span>&#160;    <a class="code" href="classInterfejsDrona.html">InterfejsDrona</a> &amp;<a class="code" href="classKolekcjaObiektow.html#a4693fa53db75eaaf6ee9ad151d2c6a1e">ZwrocAktywnegoDrona</a>() <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00137"></a><span class="lineno">  137</span>&#160; </div>
+<div class="line"><a name="l00143"></a><span class="lineno">  143</span>&#160;    <span class="keyword">const</span> std::map&lt;std::string, std::shared_ptr&lt;Przeszkoda&gt;&gt; &amp; <a class="code" href="classKolekcjaObiektow.html#a3e720693e8c6640f13666afd2f548210">ZwrocListePrzeszkod</a>() <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00144"></a><span class="lineno">  144</span>&#160; </div>
+<div class="line"><a name="l00153"></a><span class="lineno">  153</span>&#160;    <span class="keywordtype">bool</span> <a class="code" href="classKolekcjaObiektow.html#afa11d70b8bb8798ab1028e8ee807b64d">ZmienAktywnegoDrona</a>(<span class="keyword">const</span> std::string &amp;nazwa);</div>
+<div class="line"><a name="l00154"></a><span class="lineno">  154</span>&#160; </div>
+<div class="line"><a name="l00159"></a><span class="lineno">  159</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="classKolekcjaObiektow.html#abe50f5131e37bdb0e6cba0e0023201f5">WyswietlListeDronow</a>() <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00160"></a><span class="lineno">  160</span>&#160; </div>
+<div class="line"><a name="l00165"></a><span class="lineno">  165</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="classKolekcjaObiektow.html#ac35aa5e93d80e9dd920da8aa14d61a22">WyswietlListePrzeszkod</a>() <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00166"></a><span class="lineno">  166</span>&#160;};</div>
+<div class="line"><a name="l00167"></a><span class="lineno">  167</span>&#160; </div>
+<div class="line"><a name="l00168"></a><span class="lineno">  168</span>&#160;<span class="preprocessor">#endif</span></div>
+</div><!-- fragment --></div><!-- contents -->
+<div class="ttc" id="aclassZbiornik_html"><div class="ttname"><a href="classZbiornik.html">Zbiornik</a></div><div class="ttdef"><b>Definition:</b> Zbiornik.hh:5</div></div>
+<div class="ttc" id="aclassKolekcjaObiektow_html_a3e720693e8c6640f13666afd2f548210"><div class="ttname"><a href="classKolekcjaObiektow.html#a3e720693e8c6640f13666afd2f548210">KolekcjaObiektow::ZwrocListePrzeszkod</a></div><div class="ttdeci">const std::map&lt; std::string, std::shared_ptr&lt; Przeszkoda &gt; &gt; &amp; ZwrocListePrzeszkod() const</div><div class="ttdoc">Zwraca kontener przeszkód w zbiorniku.</div><div class="ttdef"><b>Definition:</b> KolekcjaObiektow.cpp:147</div></div>
+<div class="ttc" id="aclassKolekcjaObiektow_html_a4693fa53db75eaaf6ee9ad151d2c6a1e"><div class="ttname"><a href="classKolekcjaObiektow.html#a4693fa53db75eaaf6ee9ad151d2c6a1e">KolekcjaObiektow::ZwrocAktywnegoDrona</a></div><div class="ttdeci">InterfejsDrona &amp; ZwrocAktywnegoDrona() const</div><div class="ttdoc">Zwraca Interfejs aktywnego drona, jeżeli jest ustawiony.</div><div class="ttdef"><b>Definition:</b> KolekcjaObiektow.cpp:137</div></div>
+<div class="ttc" id="aclassKolekcjaObiektow_html_ac35aa5e93d80e9dd920da8aa14d61a22"><div class="ttname"><a href="classKolekcjaObiektow.html#ac35aa5e93d80e9dd920da8aa14d61a22">KolekcjaObiektow::WyswietlListePrzeszkod</a></div><div class="ttdeci">void WyswietlListePrzeszkod() const</div><div class="ttdoc">Wyświetla listę przeszkód oraz ich nazwy.</div><div class="ttdef"><b>Definition:</b> KolekcjaObiektow.cpp:210</div></div>
+<div class="ttc" id="aclassKolekcjaObiektow_html_afaeb07d8cfe689016d39831dba9941ef"><div class="ttname"><a href="classKolekcjaObiektow.html#afaeb07d8cfe689016d39831dba9941ef">KolekcjaObiektow::m_api</a></div><div class="ttdeci">std::shared_ptr&lt; drawNS::Draw3DAPI &gt; m_api</div><div class="ttdoc">łącze do gnuplota.</div><div class="ttdef"><b>Definition:</b> KolekcjaObiektow.hh:48</div></div>
+<div class="ttc" id="aclassWektor3D_html"><div class="ttname"><a href="classWektor3D.html">Wektor3D</a></div><div class="ttdoc">Klasa modelująca pojęcie wektora w układzie 3 zmiennych.</div><div class="ttdef"><b>Definition:</b> Wektor3D.hh:14</div></div>
+<div class="ttc" id="aKolekcjaObiektow_8hh_html_af1d3896889146263cb336d23d2d58250"><div class="ttname"><a href="KolekcjaObiektow_8hh.html#af1d3896889146263cb336d23d2d58250">IT_DRON</a></div><div class="ttdeci">std::map&lt; std::string, std::shared_ptr&lt; InterfejsDrona &gt; &gt;::iterator IT_DRON</div><div class="ttdoc">Iterator na element kontenera obiektów typów string i inteligentny wskaźnik na Interfejs Drona.</div><div class="ttdef"><b>Definition:</b> KolekcjaObiektow.hh:22</div></div>
+<div class="ttc" id="aclassKolekcjaObiektow_html_a6c93ea797246402bd26e4043333d93a4"><div class="ttname"><a href="classKolekcjaObiektow.html#a6c93ea797246402bd26e4043333d93a4">KolekcjaObiektow::NowaPrzeszkodaDno</a></div><div class="ttdeci">bool NowaPrzeszkodaDno(const std::string &amp;nazwa, const Zbiornik &amp;Z, double odstep=1, const std::string &amp;kolor=&quot;yellow&quot;)</div><div class="ttdoc">Tworzy nowy obiekt dna i umieszcza go w zbiorniku.</div><div class="ttdef"><b>Definition:</b> KolekcjaObiektow.cpp:77</div></div>
+<div class="ttc" id="aclassInterfejsDrona_html"><div class="ttname"><a href="classInterfejsDrona.html">InterfejsDrona</a></div><div class="ttdoc">Klasa modeluje pojęcie interfejsu pozwalającego na obsługę obiektu drona.</div><div class="ttdef"><b>Definition:</b> InterfejsDrona.hh:13</div></div>
+<div class="ttc" id="aInterfejsDrona_8hh_html"><div class="ttname"><a href="InterfejsDrona_8hh.html">InterfejsDrona.hh</a></div></div>
+<div class="ttc" id="aclassKolekcjaObiektow_html_a0d8c96102e246c5e064b6f9ad6a72933"><div class="ttname"><a href="classKolekcjaObiektow.html#a0d8c96102e246c5e064b6f9ad6a72933">KolekcjaObiektow::m_lista_dronow</a></div><div class="ttdeci">std::map&lt; std::string, std::shared_ptr&lt; InterfejsDrona &gt; &gt; m_lista_dronow</div><div class="ttdoc">kontener interfejsów dronów i ich nazw</div><div class="ttdef"><b>Definition:</b> KolekcjaObiektow.hh:44</div></div>
+<div class="ttc" id="aclassKolekcjaObiektow_html_a82ae080ec740671195c8b50641b6f651"><div class="ttname"><a href="classKolekcjaObiektow.html#a82ae080ec740671195c8b50641b6f651">KolekcjaObiektow::NowyDron</a></div><div class="ttdeci">bool NowyDron(const std::string &amp;nazwa, double rozmiar, const Wektor3D &amp;srodek=Wektor3D(), const std::string &amp;kolor_kadluba=&quot;black&quot;, const std::string &amp;kolor_srub=&quot;black&quot;, uint czas_animacji=2000)</div><div class="ttdoc">Tworzy nowy obiekt drona i rysuje go w zbiorniku.</div><div class="ttdef"><b>Definition:</b> KolekcjaObiektow.cpp:11</div></div>
+<div class="ttc" id="aclassKolekcjaObiektow_html_a057b8963f45798bd8e8ca3fca42e1a14"><div class="ttname"><a href="classKolekcjaObiektow.html#a057b8963f45798bd8e8ca3fca42e1a14">KolekcjaObiektow::UsunPrzeszkode</a></div><div class="ttdeci">bool UsunPrzeszkode(const std::string &amp;nazwa)</div><div class="ttdoc">Usuwa przeszkode ze zbiornika.</div><div class="ttdef"><b>Definition:</b> KolekcjaObiektow.cpp:122</div></div>
+<div class="ttc" id="aclassKolekcjaObiektow_html_acbb7dcf7691e829a7c7598a0e4ba04f7"><div class="ttname"><a href="classKolekcjaObiektow.html#acbb7dcf7691e829a7c7598a0e4ba04f7">KolekcjaObiektow::NowaPrzeszkodaProstopadloscian</a></div><div class="ttdeci">bool NowaPrzeszkodaProstopadloscian(const std::string &amp;nazwa, double dl_x, double dl_y, double dl_z, const Wektor3D &amp;srodek=Wektor3D(), const std::string &amp;kolor=&quot;black&quot;)</div><div class="ttdoc">Tworzy nowy obiekt przeszkody prostopadłościennej i umieszcza ją w zbiorniku.</div><div class="ttdef"><b>Definition:</b> KolekcjaObiektow.cpp:39</div></div>
+<div class="ttc" id="aTafla_8hh_html"><div class="ttname"><a href="Tafla_8hh.html">Tafla.hh</a></div></div>
+<div class="ttc" id="aclassKolekcjaObiektow_html_a7f9341b84370b1553090b7d66a8c819c"><div class="ttname"><a href="classKolekcjaObiektow.html#a7f9341b84370b1553090b7d66a8c819c">KolekcjaObiektow::NowaPrzeszkodaTafla</a></div><div class="ttdeci">bool NowaPrzeszkodaTafla(const std::string &amp;nazwa, const Zbiornik &amp;Z, double odstep=1, uint wysokosc_fali=5, const std::string &amp;kolor=&quot;blue&quot;)</div><div class="ttdoc">Tworzy nowy obiekt tafli i umieszcza go w zbiorniku.</div><div class="ttdef"><b>Definition:</b> KolekcjaObiektow.cpp:58</div></div>
+<div class="ttc" id="aKolekcjaObiektow_8hh_html_ad97cfcd90bc724c2dca99c89ea0d3995"><div class="ttname"><a href="KolekcjaObiektow_8hh.html#ad97cfcd90bc724c2dca99c89ea0d3995">IT_PRZESZKODA</a></div><div class="ttdeci">std::map&lt; std::string, std::shared_ptr&lt; Przeszkoda &gt; &gt;::iterator IT_PRZESZKODA</div><div class="ttdoc">Iterator na element kontenera obiektów typów string i inteligentny wskaźnik na Przeszkoda.</div><div class="ttdef"><b>Definition:</b> KolekcjaObiektow.hh:34</div></div>
+<div class="ttc" id="aKolekcjaObiektow_8hh_html_af784ad7af0f0f16dfe39fb60920a3078"><div class="ttname"><a href="KolekcjaObiektow_8hh.html#af784ad7af0f0f16dfe39fb60920a3078">PARA_DRON</a></div><div class="ttdeci">std::pair&lt; std::string, std::shared_ptr&lt; InterfejsDrona &gt; &gt; PARA_DRON</div><div class="ttdoc">Para obiektów typów string i inteligentny wskaźnik na Interfejs Drona.</div><div class="ttdef"><b>Definition:</b> KolekcjaObiektow.hh:16</div></div>
+<div class="ttc" id="aclassKolekcjaObiektow_html_afa11d70b8bb8798ab1028e8ee807b64d"><div class="ttname"><a href="classKolekcjaObiektow.html#afa11d70b8bb8798ab1028e8ee807b64d">KolekcjaObiektow::ZmienAktywnegoDrona</a></div><div class="ttdeci">bool ZmienAktywnegoDrona(const std::string &amp;nazwa)</div><div class="ttdoc">Pozwala zmienić aktywnego drona na innego w zbiorniku Dodatkowo aktywny dron zmienia kolor na pomarań...</div><div class="ttdef"><b>Definition:</b> KolekcjaObiektow.cpp:152</div></div>
+<div class="ttc" id="aPrzeszkodaProstopad_8hh_html"><div class="ttname"><a href="PrzeszkodaProstopad_8hh.html">PrzeszkodaProstopad.hh</a></div></div>
+<div class="ttc" id="aclassKolekcjaObiektow_html_abe50f5131e37bdb0e6cba0e0023201f5"><div class="ttname"><a href="classKolekcjaObiektow.html#abe50f5131e37bdb0e6cba0e0023201f5">KolekcjaObiektow::WyswietlListeDronow</a></div><div class="ttdeci">void WyswietlListeDronow() const</div><div class="ttdoc">Wyświetla listę dronów w zbiorniku i ich nazwy, zaznacza aktywnego.</div><div class="ttdef"><b>Definition:</b> KolekcjaObiektow.cpp:192</div></div>
+<div class="ttc" id="aclassKolekcjaObiektow_html_a6ed83472ce89ecb08ff5ad8dc0301567"><div class="ttname"><a href="classKolekcjaObiektow.html#a6ed83472ce89ecb08ff5ad8dc0301567">KolekcjaObiektow::UsunDrona</a></div><div class="ttdeci">bool UsunDrona(const std::string &amp;nazwa)</div><div class="ttdoc">Usuwa drona ze zbiornika W przypadku usunięcia aktywnego drona, przed możliwością ruchu trzeba będzie...</div><div class="ttdef"><b>Definition:</b> KolekcjaObiektow.cpp:96</div></div>
+<div class="ttc" id="aKolekcjaObiektow_8hh_html_a348ef8a568fad944b749b9d1d86bd2cc"><div class="ttname"><a href="KolekcjaObiektow_8hh.html#a348ef8a568fad944b749b9d1d86bd2cc">PARA_PRZESZKODA</a></div><div class="ttdeci">std::pair&lt; std::string, std::shared_ptr&lt; Przeszkoda &gt; &gt; PARA_PRZESZKODA</div><div class="ttdoc">Para obiektów typów string i inteligentny wskaźnik na Przeszkoda.</div><div class="ttdef"><b>Definition:</b> KolekcjaObiektow.hh:28</div></div>
+<div class="ttc" id="aDno_8hh_html"><div class="ttname"><a href="Dno_8hh.html">Dno.hh</a></div></div>
+<div class="ttc" id="aclassKolekcjaObiektow_html"><div class="ttname"><a href="classKolekcjaObiektow.html">KolekcjaObiektow</a></div><div class="ttdoc">Klasa modeluje pojęcie kolekcji obiektów zbiornika.</div><div class="ttdef"><b>Definition:</b> KolekcjaObiektow.hh:42</div></div>
+<div class="ttc" id="aclassKolekcjaObiektow_html_a94ec70c1909b0b3dba6443914f695736"><div class="ttname"><a href="classKolekcjaObiektow.html#a94ec70c1909b0b3dba6443914f695736">KolekcjaObiektow::m_lista_przeszkod</a></div><div class="ttdeci">std::map&lt; std::string, std::shared_ptr&lt; Przeszkoda &gt; &gt; m_lista_przeszkod</div><div class="ttdoc">kontener przeszkód i ich nazw</div><div class="ttdef"><b>Definition:</b> KolekcjaObiektow.hh:45</div></div>
+<div class="ttc" id="aclassKolekcjaObiektow_html_a690e9bd3420ad0b877ad6ebff157c939"><div class="ttname"><a href="classKolekcjaObiektow.html#a690e9bd3420ad0b877ad6ebff157c939">KolekcjaObiektow::KolekcjaObiektow</a></div><div class="ttdeci">KolekcjaObiektow(const std::shared_ptr&lt; drawNS::Draw3DAPI &gt; &amp;api)</div><div class="ttdoc">Konstruktor nowego obiektu Kolekcja Obiektow.</div><div class="ttdef"><b>Definition:</b> KolekcjaObiektow.hh:56</div></div>
+<div class="ttc" id="aclassKolekcjaObiektow_html_a7ed1d1e535125923d1b72c6160b13cb1"><div class="ttname"><a href="classKolekcjaObiektow.html#a7ed1d1e535125923d1b72c6160b13cb1">KolekcjaObiektow::m_aktywny_dron</a></div><div class="ttdeci">std::string m_aktywny_dron</div><div class="ttdoc">nazwa aktywnego drona</div><div class="ttdef"><b>Definition:</b> KolekcjaObiektow.hh:47</div></div>
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Wygenerowano przez &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.8.18
+</small></address>
+</body>
+</html>

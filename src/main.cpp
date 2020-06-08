@@ -2,7 +2,7 @@
  *
  * \section intro_sec Informacje
  *
- * Program rysuje drona w układzie trzech zmiennych oraz pozwala na jego przemieszczanie.
+ * Program rysuje drona w układzie trzech zmiennych oraz pozwala na jego przemieszczanie w środowisku kolizyjnym.
  */
 
 #include <iostream>
@@ -21,9 +21,6 @@ using std::cerr;
 using std::cin;
 using std::cout;
 using std::endl;
-using std::vector;
-
-//u 0 Dron d 0 -50 -50 -50 d1 z d1 d 1 50 50 50 p1 0 50 50 50
 
 int main()
 {

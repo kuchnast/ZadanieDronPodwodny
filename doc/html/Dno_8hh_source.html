@@ -1,0 +1,125 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.18"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Zadanie Podwodny Dron: Plik źródłowy inc/Powierzchnie/Dno.hh</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">Zadanie Podwodny Dron
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Wygenerowano przez Doxygen 1.8.18 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'Szukaj');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('',true,false,'search.php','Szukaj');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_bfccd401955b95cf8c75461437045ac0.html">inc</a></li><li class="navelem"><a class="el" href="dir_146cf1d62df0ae676a9e0a54a15166d7.html">Powierzchnie</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="headertitle">
+<div class="title">Dno.hh</div>  </div>
+</div><!--header-->
+<div class="contents">
+<a href="Dno_8hh.html">Idź do dokumentacji tego pliku.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="preprocessor">#ifndef DNO_HH</span></div>
+<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="preprocessor">#define DNO_HH</span></div>
+<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160; </div>
+<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="preprocessor">#include &lt;iostream&gt;</span></div>
+<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160; </div>
+<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="Powierzchnia_8hh.html">Powierzchnia.hh</a>&quot;</span></div>
+<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="Przeszkoda_8hh.html">Przeszkoda.hh</a>&quot;</span></div>
+<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160; </div>
+<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;<span class="keyword">using</span> <a class="code" href="classdrawNS_1_1Point3D.html">drawNS::Point3D</a>;</div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160; </div>
+<div class="line"><a name="l00015"></a><span class="lineno"><a class="line" href="classDno.html">   15</a></span>&#160;<span class="keyword">class </span><a class="code" href="classDno.html">Dno</a> : <span class="keyword">public</span> <a class="code" href="classPowierzchnia.html">Powierzchnia</a>, <span class="keyword">public</span> <a class="code" href="classPrzeszkoda.html">Przeszkoda</a></div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;{</div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;<span class="keyword">public</span>:</div>
+<div class="line"><a name="l00022"></a><span class="lineno"><a class="line" href="classDno.html#a880394976250a4addfdddddb11a67da6">   22</a></span>&#160;    <a class="code" href="classDno.html#a880394976250a4addfdddddb11a67da6">Dno</a>() = <span class="keyword">delete</span>;</div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160; </div>
+<div class="line"><a name="l00036"></a><span class="lineno"><a class="line" href="classDno.html#ad87166793a45598680afeca3773578a8">   36</a></span>&#160;    <a class="code" href="classDno.html#ad87166793a45598680afeca3773578a8">Dno</a>(<span class="keyword">const</span> std::shared_ptr&lt;drawNS::Draw3DAPI&gt; &amp;api, <span class="keywordtype">double</span> x_min, <span class="keywordtype">double</span> x_max, <span class="keywordtype">double</span> y_min, <span class="keywordtype">double</span> y_max, <span class="keywordtype">double</span> z, <span class="keywordtype">double</span> odstep = 1, <span class="keyword">const</span> std::string &amp;kolor = <span class="stringliteral">&quot;yellow&quot;</span>)</div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;        : <a class="code" href="classPowierzchnia.html">Powierzchnia</a>(api, x_min, x_max, y_min, y_max, z, odstep, kolor),</div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;          <a class="code" href="classPrzeszkoda.html">Przeszkoda</a>(<a class="code" href="classWektor3D.html">Wektor3D</a>(sqrt(pow(x_min, 2) + pow(x_max, 2)), sqrt(pow(y_min, 2) + pow(y_max, 2)), 0)) {}</div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160; </div>
+<div class="line"><a name="l00049"></a><span class="lineno"><a class="line" href="classDno.html#a3f29a9a11cfe516dab0083c824887abc">   49</a></span>&#160;    <a class="code" href="classDno.html#a3f29a9a11cfe516dab0083c824887abc">Dno</a>(<span class="keyword">const</span> std::shared_ptr&lt;drawNS::Draw3DAPI&gt; &amp;api, <span class="keyword">const</span> <a class="code" href="classZbiornik.html">Zbiornik</a> &amp;Z, <span class="keywordtype">double</span> odstep = 1, <span class="keyword">const</span> std::string &amp;kolor = <span class="stringliteral">&quot;yellow&quot;</span>)</div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;        : <a class="code" href="classDno.html">Dno</a>(api, Z.PrzekazXMin(), Z.PrzekazXMax(), Z.PrzekazYMin(), Z.PrzekazYMax(), Z.PrzekazZMin(), odstep, kolor){}</div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160; </div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;    <span class="keywordtype">bool</span> <a class="code" href="classDno.html#a5ccb3837244abd30307158a4f35c03a8">CzyKolizja</a>(<span class="keyword">const</span> <a class="code" href="classDron.html">Dron</a> &amp;Ob) <span class="keyword">const override</span>;</div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160; </div>
+<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="classDno.html#a56da113c064cec6ef4e605e71af47717">RysujPrzeszkode</a>() <span class="keyword">override</span>;</div>
+<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160; </div>
+<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="classDno.html#acdc14297191710a987c19eac79e6352b">KasujPrzeszkode</a>() <span class="keyword">override</span>;</div>
+<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;};</div>
+<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160; </div>
+<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;<span class="preprocessor">#endif</span></div>
+</div><!-- fragment --></div><!-- contents -->
+<div class="ttc" id="aclassZbiornik_html"><div class="ttname"><a href="classZbiornik.html">Zbiornik</a></div><div class="ttdef"><b>Definition:</b> Zbiornik.hh:5</div></div>
+<div class="ttc" id="aclassdrawNS_1_1Point3D_html"><div class="ttname"><a href="classdrawNS_1_1Point3D.html">drawNS::Point3D</a></div><div class="ttdoc">Point in 3D Class represents point in 3D.</div><div class="ttdef"><b>Definition:</b> Draw3D_api_interface.hh:36</div></div>
+<div class="ttc" id="aclassPrzeszkoda_html"><div class="ttname"><a href="classPrzeszkoda.html">Przeszkoda</a></div><div class="ttdoc">Klasa modeluje pojęcie przeszkody.</div><div class="ttdef"><b>Definition:</b> Przeszkoda.hh:15</div></div>
+<div class="ttc" id="aPowierzchnia_8hh_html"><div class="ttname"><a href="Powierzchnia_8hh.html">Powierzchnia.hh</a></div></div>
+<div class="ttc" id="aclassDno_html"><div class="ttname"><a href="classDno.html">Dno</a></div><div class="ttdoc">Klasa modeluje pojęcie dna zbiornika.</div><div class="ttdef"><b>Definition:</b> Dno.hh:16</div></div>
+<div class="ttc" id="aclassDno_html_a880394976250a4addfdddddb11a67da6"><div class="ttname"><a href="classDno.html#a880394976250a4addfdddddb11a67da6">Dno::Dno</a></div><div class="ttdeci">Dno()=delete</div><div class="ttdoc">Usunięty domyślny konstruktor bezparametryczny nowego obiektu klasy Dno.</div></div>
+<div class="ttc" id="aPrzeszkoda_8hh_html"><div class="ttname"><a href="Przeszkoda_8hh.html">Przeszkoda.hh</a></div></div>
+<div class="ttc" id="aclassWektor3D_html"><div class="ttname"><a href="classWektor3D.html">Wektor3D</a></div><div class="ttdoc">Klasa modelująca pojęcie wektora w układzie 3 zmiennych.</div><div class="ttdef"><b>Definition:</b> Wektor3D.hh:14</div></div>
+<div class="ttc" id="aclassDno_html_a56da113c064cec6ef4e605e71af47717"><div class="ttname"><a href="classDno.html#a56da113c064cec6ef4e605e71af47717">Dno::RysujPrzeszkode</a></div><div class="ttdeci">void RysujPrzeszkode() override</div><div class="ttdoc">Rysuje Przeszkodę</div><div class="ttdef"><b>Definition:</b> Dno.cpp:18</div></div>
+<div class="ttc" id="aclassDno_html_a5ccb3837244abd30307158a4f35c03a8"><div class="ttname"><a href="classDno.html#a5ccb3837244abd30307158a4f35c03a8">Dno::CzyKolizja</a></div><div class="ttdeci">bool CzyKolizja(const Dron &amp;Ob) const override</div><div class="ttdoc">Sprawdza czy nastąpiłą kolizja obiektu z dronem.</div><div class="ttdef"><b>Definition:</b> Dno.cpp:5</div></div>
+<div class="ttc" id="aclassDno_html_a3f29a9a11cfe516dab0083c824887abc"><div class="ttname"><a href="classDno.html#a3f29a9a11cfe516dab0083c824887abc">Dno::Dno</a></div><div class="ttdeci">Dno(const std::shared_ptr&lt; drawNS::Draw3DAPI &gt; &amp;api, const Zbiornik &amp;Z, double odstep=1, const std::string &amp;kolor=&quot;yellow&quot;)</div><div class="ttdoc">Konstruktor nowego obiektu klasy Dno umieszczonego w wymiarach zbiornika.</div><div class="ttdef"><b>Definition:</b> Dno.hh:49</div></div>
+<div class="ttc" id="aclassDno_html_ad87166793a45598680afeca3773578a8"><div class="ttname"><a href="classDno.html#ad87166793a45598680afeca3773578a8">Dno::Dno</a></div><div class="ttdeci">Dno(const std::shared_ptr&lt; drawNS::Draw3DAPI &gt; &amp;api, double x_min, double x_max, double y_min, double y_max, double z, double odstep=1, const std::string &amp;kolor=&quot;yellow&quot;)</div><div class="ttdoc">Konstruktor nowego obiektu klasy Dno.</div><div class="ttdef"><b>Definition:</b> Dno.hh:36</div></div>
+<div class="ttc" id="aclassPowierzchnia_html"><div class="ttname"><a href="classPowierzchnia.html">Powierzchnia</a></div><div class="ttdoc">Klasa modeluje pojęcie płaszczyzny w poziomie.</div><div class="ttdef"><b>Definition:</b> Powierzchnia.hh:18</div></div>
+<div class="ttc" id="aclassDno_html_acdc14297191710a987c19eac79e6352b"><div class="ttname"><a href="classDno.html#acdc14297191710a987c19eac79e6352b">Dno::KasujPrzeszkode</a></div><div class="ttdeci">void KasujPrzeszkode() override</div><div class="ttdoc">Kasuje Przeszkodę</div><div class="ttdef"><b>Definition:</b> Dno.cpp:23</div></div>
+<div class="ttc" id="aclassDron_html"><div class="ttname"><a href="classDron.html">Dron</a></div><div class="ttdoc">Klasa modeluje pojęcie drona złożonego z prostopadłościennego kadłuba oraz dwóch śrub.</div><div class="ttdef"><b>Definition:</b> Dron.hh:19</div></div>
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Wygenerowano przez &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.8.18
+</small></address>
+</body>
+</html>

@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['strona_20główna_270',['Strona główna',['../index.html',1,'']]]
+  ['strona_20główna_421',['Strona główna',['../index.html',1,'']]]
 ];

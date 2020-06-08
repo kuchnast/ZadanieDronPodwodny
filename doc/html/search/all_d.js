@@ -1,11 +1,11 @@
 var searchData=
 [
-  ['strona_20główna_97',['Strona główna',['../index.html',1,'']]],
-  ['send2gnuplot_98',['send2gnuplot',['../classdrawNS_1_1APIGnuPlot3D.html#a6a8a5e074e337ed9be9cfb45b6738b89',1,'drawNS::APIGnuPlot3D']]],
-  ['shape_5fand_5fcolor_99',['shape_and_color',['../Dr3D__gnuplot__api_8hh.html#a419c9afc99a17af23a2af2b61b823320',1,'Dr3D_gnuplot_api.hh']]],
-  ['shapes_100',['shapes',['../classdrawNS_1_1APIGnuPlot3D.html#af7929c194853bc7bbc1ec167699e0642',1,'drawNS::APIGnuPlot3D']]],
-  ['sruba_101',['Sruba',['../classSruba.html',1,'Sruba'],['../classSruba.html#a5150d9eef684c654fb64d9ca8976734c',1,'Sruba::Sruba()=delete'],['../classSruba.html#ae6392ea316eea67c22646d276b7062d9',1,'Sruba::Sruba(double dl_r, double dl_z, const std::string &amp;kolor=&quot;black&quot;)']]],
-  ['sruba_2ecpp_102',['Sruba.cpp',['../Sruba_8cpp.html',1,'']]],
-  ['sruba_2ehh_103',['Sruba.hh',['../Sruba_8hh.html',1,'']]],
-  ['stop_5fdrawing_5fproces_104',['stop_drawing_proces',['../classdrawNS_1_1APIGnuPlot3D.html#af9507e24c3fd5bad9e75b00f30cc9f80',1,'drawNS::APIGnuPlot3D']]]
+  ['redraw_138',['redraw',['../classdrawNS_1_1APIGnuPlot3D.html#a27a110521a511f0c75e5c867f247a3f6',1,'drawNS::APIGnuPlot3D::redraw()'],['../classdrawNS_1_1Draw3DAPI.html#ae88121104d2eeb8936f8dc1b68fc3bbf',1,'drawNS::Draw3DAPI::redraw()']]],
+  ['refresh_5frate_5fms_139',['refresh_rate_ms',['../classdrawNS_1_1Draw3DAPI.html#a68784b46e3e38b348b004f9cba1caf5e',1,'drawNS::Draw3DAPI']]],
+  ['refresh_5fthread_5fptr_140',['refresh_thread_ptr',['../classdrawNS_1_1APIGnuPlot3D.html#ad8bbc49eac5fc97277aec46165098976',1,'drawNS::APIGnuPlot3D']]],
+  ['replot_5floop_141',['replot_loop',['../classdrawNS_1_1APIGnuPlot3D.html#afa364d7d8a0a74d51b680a9560e1f1ed',1,'drawNS::APIGnuPlot3D']]],
+  ['rodzajprzeszkody_142',['RodzajPrzeszkody',['../InterfejsProgramu_8hh.html#a0effa7f9fce09c1a9b2da6037de0dfa8',1,'InterfejsProgramu.hh']]],
+  ['rp_5fprostopadloscian_143',['RP_PROSTOPADLOSCIAN',['../InterfejsProgramu_8hh.html#a0effa7f9fce09c1a9b2da6037de0dfa8ab0f1e454a467a230ecf8bc03b5c27765',1,'InterfejsProgramu.hh']]],
+  ['rysuj_144',['Rysuj',['../classDron.html#a203a9bf2d5af0ca6b5667dbbf2f4e2fc',1,'Dron::Rysuj()'],['../classGraniastoslup6.html#aa0b6f1cd8a1b3e879b1fe2c3c609ed87',1,'Graniastoslup6::Rysuj() override'],['../classGraniastoslup6.html#a7f3e8c2c9cc06ce5e219fa5bc33177e1',1,'Graniastoslup6::Rysuj(const MacierzOb &amp;orientacja, const Wektor3D &amp;srodek)'],['../classObiekt3D.html#ae252b015977e9a485fb4ba668fbea122',1,'Obiekt3D::Rysuj()'],['../classProstopadloscian.html#ab05ddef16bf4ad5d830981130c0bf92e',1,'Prostopadloscian::Rysuj() override'],['../classProstopadloscian.html#a384ed8b8eeb3185e7c6aafe57c75c99b',1,'Prostopadloscian::Rysuj(const MacierzOb &amp;orientacja, const Wektor3D &amp;srodek)'],['../classPowierzchnia.html#a378437a89cd810c652a92ae99a8ef610',1,'Powierzchnia::Rysuj()']]],
+  ['rysujprzeszkode_145',['RysujPrzeszkode',['../classDron.html#acbc4bc9d6be9a8bc33bf20530e7222b4',1,'Dron::RysujPrzeszkode()'],['../classDno.html#a56da113c064cec6ef4e605e71af47717',1,'Dno::RysujPrzeszkode()'],['../classTafla.html#a9119e9846fcb8080d438902b556d34f3',1,'Tafla::RysujPrzeszkode()'],['../classPrzeszkoda.html#a255cec82787ac10f0fa88374b23bee8f',1,'Przeszkoda::RysujPrzeszkode()'],['../classPrzeszkodaProstopad.html#a340c6776ed430d81f164112d90a8c452',1,'PrzeszkodaProstopad::RysujPrzeszkode()']]]
 ];

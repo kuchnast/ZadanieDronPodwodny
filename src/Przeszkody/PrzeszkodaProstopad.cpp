@@ -14,7 +14,7 @@ bool PrzeszkodaProstopad::CzyKolizja(const Dron &Ob) const
     }
 
     Wektor3D wek_prost = ZwrocWektorR();
-    Wektor3D wek_dron = Ob.OrientacjaZ() * Ob.ZwrocWektorR();
+    Wektor3D wek_dron = Ob.WspolnaOrientacja() * Ob.ZwrocWektorR();
     
     int kolizja_xyz = 0;
 

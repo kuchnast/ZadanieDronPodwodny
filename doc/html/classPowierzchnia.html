@@ -63,7 +63,7 @@ $(function() {
 <div class="header">
   <div class="summary">
 <a href="#pub-methods">Metody publiczne</a> &#124;
-<a href="#pro-attribs">Atrybuty chronione</a> &#124;
+<a href="#pro-methods">Metody chronione</a> &#124;
 <a href="classPowierzchnia-members.html">Lista wszystkich składowych</a>  </div>
   <div class="headertitle">
 <div class="title">Dokumentacja klasy Powierzchnia</div>  </div>
@@ -80,7 +80,9 @@ Diagram dziedziczenia dla Powierzchnia</div>
  <div class="center">
   <img src="classPowierzchnia.png" usemap="#Powierzchnia_map" alt=""/>
   <map id="Powierzchnia_map" name="Powierzchnia_map">
-<area href="classTafla.html" title="Klasa modeluje pojęcie tafli jako powierzchni z wybrzuszeniami na kształt fal." alt="Tafla" shape="rect" coords="0,56,88,80"/>
+<area href="classObiekt3D.html" title="Klasa modeluje pojęcie obiektu 3D." alt="Obiekt3D" shape="rect" coords="49,0,137,24"/>
+<area href="classDno.html" title="Klasa modeluje pojęcie dna zbiornika." alt="Dno" shape="rect" coords="0,112,88,136"/>
+<area href="classTafla.html" title="Klasa modeluje pojęcie tafli jako powierzchni z wybrzuszeniami na kształt fal." alt="Tafla" shape="rect" coords="98,112,186,136"/>
   </map>
 </div></div>
 <table class="memberdecls">
@@ -89,30 +91,89 @@ Metody publiczne</h2></td></tr>
 <tr class="memitem:aa3423dacbe23d5110ed176a08fe69af1"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPowierzchnia.html#aa3423dacbe23d5110ed176a08fe69af1">Powierzchnia</a> ()=delete</td></tr>
 <tr class="memdesc:aa3423dacbe23d5110ed176a08fe69af1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Usunięty domyślny konstruktor bezparametryczny nowego obiektu klasy <a class="el" href="classPowierzchnia.html" title="Klasa modeluje pojęcie płaszczyzny w poziomie.">Powierzchnia</a>.  <a href="classPowierzchnia.html#aa3423dacbe23d5110ed176a08fe69af1">Więcej...</a><br /></td></tr>
 <tr class="separator:aa3423dacbe23d5110ed176a08fe69af1"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a7f3c53e4042739d7c1050cd1ac2e58c2"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPowierzchnia.html#a7f3c53e4042739d7c1050cd1ac2e58c2">Powierzchnia</a> (double x_min, double x_max, double y_min, double y_max, double z, double odstep=1, const std::string &amp;kolor=&quot;black&quot;)</td></tr>
-<tr class="memdesc:a7f3c53e4042739d7c1050cd1ac2e58c2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Konstruktor nowego obiektu klasy <a class="el" href="classPowierzchnia.html" title="Klasa modeluje pojęcie płaszczyzny w poziomie.">Powierzchnia</a>.  <a href="classPowierzchnia.html#a7f3c53e4042739d7c1050cd1ac2e58c2">Więcej...</a><br /></td></tr>
-<tr class="separator:a7f3c53e4042739d7c1050cd1ac2e58c2"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a08e097688fce48b1766436fe5c18d2de"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPowierzchnia.html#a08e097688fce48b1766436fe5c18d2de">ZmienKolor</a> (const std::string &amp;kolor)</td></tr>
-<tr class="memdesc:a08e097688fce48b1766436fe5c18d2de"><td class="mdescLeft">&#160;</td><td class="mdescRight">Zmienia kolor powierzchni.  <a href="classPowierzchnia.html#a08e097688fce48b1766436fe5c18d2de">Więcej...</a><br /></td></tr>
-<tr class="separator:a08e097688fce48b1766436fe5c18d2de"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a8ee28cf287c67f197a3f4328b24806c2"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPowierzchnia.html#a8ee28cf287c67f197a3f4328b24806c2">Rysuj</a> (const std::shared_ptr&lt; <a class="el" href="classdrawNS_1_1Draw3DAPI.html">drawNS::Draw3DAPI</a> &gt; &amp;api) const</td></tr>
-<tr class="memdesc:a8ee28cf287c67f197a3f4328b24806c2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Rysuje płaszczyzne z wektorów wierzchołków.  <a href="classPowierzchnia.html#a8ee28cf287c67f197a3f4328b24806c2">Więcej...</a><br /></td></tr>
-<tr class="separator:a8ee28cf287c67f197a3f4328b24806c2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a646c620d678acc20fd5db923297b9a89"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPowierzchnia.html#a646c620d678acc20fd5db923297b9a89">Powierzchnia</a> (const std::shared_ptr&lt; <a class="el" href="classdrawNS_1_1Draw3DAPI.html">drawNS::Draw3DAPI</a> &gt; &amp;api, double x_min, double x_max, double y_min, double y_max, double z, double odstep=1, const std::string &amp;kolor=&quot;black&quot;)</td></tr>
+<tr class="memdesc:a646c620d678acc20fd5db923297b9a89"><td class="mdescLeft">&#160;</td><td class="mdescRight">Konstruktor nowego obiektu klasy <a class="el" href="classPowierzchnia.html" title="Klasa modeluje pojęcie płaszczyzny w poziomie.">Powierzchnia</a>.  <a href="classPowierzchnia.html#a646c620d678acc20fd5db923297b9a89">Więcej...</a><br /></td></tr>
+<tr class="separator:a646c620d678acc20fd5db923297b9a89"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8b6b85b3c67af319d0780affd6fccb9d"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPowierzchnia.html#a8b6b85b3c67af319d0780affd6fccb9d">Powierzchnia</a> (const std::shared_ptr&lt; <a class="el" href="classdrawNS_1_1Draw3DAPI.html">drawNS::Draw3DAPI</a> &gt; &amp;api, const <a class="el" href="classZbiornik.html">Zbiornik</a> &amp;Z, double z, double odstep=1, const std::string &amp;kolor=&quot;black&quot;)</td></tr>
+<tr class="memdesc:a8b6b85b3c67af319d0780affd6fccb9d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Konstruktor nowego obiektu klasy <a class="el" href="classPowierzchnia.html" title="Klasa modeluje pojęcie płaszczyzny w poziomie.">Powierzchnia</a> o wielkości zbiornika na odpowiedniej wysokości.  <a href="classPowierzchnia.html#a8b6b85b3c67af319d0780affd6fccb9d">Więcej...</a><br /></td></tr>
+<tr class="separator:a8b6b85b3c67af319d0780affd6fccb9d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a378437a89cd810c652a92ae99a8ef610"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPowierzchnia.html#a378437a89cd810c652a92ae99a8ef610">Rysuj</a> () override</td></tr>
+<tr class="memdesc:a378437a89cd810c652a92ae99a8ef610"><td class="mdescLeft">&#160;</td><td class="mdescRight">Rysuje płaszczyzne z wektorów wierzchołków.  <a href="classPowierzchnia.html#a378437a89cd810c652a92ae99a8ef610">Więcej...</a><br /></td></tr>
+<tr class="separator:a378437a89cd810c652a92ae99a8ef610"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aec599af9c9757b685814944a129b4ac8"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPowierzchnia.html#aec599af9c9757b685814944a129b4ac8">Kasuj</a> () override</td></tr>
+<tr class="memdesc:aec599af9c9757b685814944a129b4ac8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Kasuje powierzchnię  <a href="classPowierzchnia.html#aec599af9c9757b685814944a129b4ac8">Więcej...</a><br /></td></tr>
+<tr class="separator:aec599af9c9757b685814944a129b4ac8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="inherit_header pub_methods_classObiekt3D"><td colspan="2" onclick="javascript:toggleInherit('pub_methods_classObiekt3D')"><img src="closed.png" alt="-"/>&#160;Metody publiczne dziedziczone z <a class="el" href="classObiekt3D.html">Obiekt3D</a></td></tr>
+<tr class="memitem:ac6c0d3a0e453023fae470fd681145892 inherit pub_methods_classObiekt3D"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classObiekt3D.html#ac6c0d3a0e453023fae470fd681145892">Obiekt3D</a> (const std::shared_ptr&lt; <a class="el" href="classdrawNS_1_1Draw3DAPI.html">drawNS::Draw3DAPI</a> &gt; &amp;api, const std::string &amp;kolor=&quot;black&quot;)</td></tr>
+<tr class="memdesc:ac6c0d3a0e453023fae470fd681145892 inherit pub_methods_classObiekt3D"><td class="mdescLeft">&#160;</td><td class="mdescRight">Konstruktor nowego obiektu klasy <a class="el" href="classObiekt3D.html" title="Klasa modeluje pojęcie obiektu 3D.">Obiekt3D</a> Utworzony obiekt ma domyślne orientacje we wszystkich kierunkach oraz środek w początku układu współrzędnych.  <a href="classObiekt3D.html#ac6c0d3a0e453023fae470fd681145892">Więcej...</a><br /></td></tr>
+<tr class="separator:ac6c0d3a0e453023fae470fd681145892 inherit pub_methods_classObiekt3D"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af73981cfba51ea9bfd0ac2f5c03b5811 inherit pub_methods_classObiekt3D"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classObiekt3D.html#af73981cfba51ea9bfd0ac2f5c03b5811">~Obiekt3D</a> ()</td></tr>
+<tr class="memdesc:af73981cfba51ea9bfd0ac2f5c03b5811 inherit pub_methods_classObiekt3D"><td class="mdescLeft">&#160;</td><td class="mdescRight">Destruktor obiektu <a class="el" href="classObiekt3D.html" title="Klasa modeluje pojęcie obiektu 3D.">Obiekt3D</a>.  <a href="classObiekt3D.html#af73981cfba51ea9bfd0ac2f5c03b5811">Więcej...</a><br /></td></tr>
+<tr class="separator:af73981cfba51ea9bfd0ac2f5c03b5811 inherit pub_methods_classObiekt3D"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a419abffcb9a52a1d360d1bb6fa608f18 inherit pub_methods_classObiekt3D"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classObiekt3D.html#a419abffcb9a52a1d360d1bb6fa608f18">ZmienPozycje</a> (const <a class="el" href="classWektor3D.html">Wektor3D</a> &amp;wektor_przesuniecia)</td></tr>
+<tr class="memdesc:a419abffcb9a52a1d360d1bb6fa608f18 inherit pub_methods_classObiekt3D"><td class="mdescLeft">&#160;</td><td class="mdescRight">Zmienia pozycje Obiektu3D poprzez zmianę położenia środka obiektu.  <a href="classObiekt3D.html#a419abffcb9a52a1d360d1bb6fa608f18">Więcej...</a><br /></td></tr>
+<tr class="separator:a419abffcb9a52a1d360d1bb6fa608f18 inherit pub_methods_classObiekt3D"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aee640a911a901c462190a52adf07d5c2 inherit pub_methods_classObiekt3D"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classObiekt3D.html#aee640a911a901c462190a52adf07d5c2">ZmienOrientacjeX</a> (double kat)</td></tr>
+<tr class="memdesc:aee640a911a901c462190a52adf07d5c2 inherit pub_methods_classObiekt3D"><td class="mdescLeft">&#160;</td><td class="mdescRight">Dokonaj zmiany macierzy obrotu w kierunku osi x o podany kąt.  <a href="classObiekt3D.html#aee640a911a901c462190a52adf07d5c2">Więcej...</a><br /></td></tr>
+<tr class="separator:aee640a911a901c462190a52adf07d5c2 inherit pub_methods_classObiekt3D"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a733ed3e22c2104db6bafbbae0b8597d7 inherit pub_methods_classObiekt3D"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classObiekt3D.html#a733ed3e22c2104db6bafbbae0b8597d7">ZmienOrientacjeY</a> (double kat)</td></tr>
+<tr class="memdesc:a733ed3e22c2104db6bafbbae0b8597d7 inherit pub_methods_classObiekt3D"><td class="mdescLeft">&#160;</td><td class="mdescRight">Dokonaj zmiany macierzy obrotu w kierunku osi y o podany kąt.  <a href="classObiekt3D.html#a733ed3e22c2104db6bafbbae0b8597d7">Więcej...</a><br /></td></tr>
+<tr class="separator:a733ed3e22c2104db6bafbbae0b8597d7 inherit pub_methods_classObiekt3D"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0dae65e6fe3de7ab6322299a7c9732c9 inherit pub_methods_classObiekt3D"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classObiekt3D.html#a0dae65e6fe3de7ab6322299a7c9732c9">ZmienOrientacjeZ</a> (double kat)</td></tr>
+<tr class="memdesc:a0dae65e6fe3de7ab6322299a7c9732c9 inherit pub_methods_classObiekt3D"><td class="mdescLeft">&#160;</td><td class="mdescRight">Dokonaj zmiany macierzy obrotu w kierunku osi z o podany kąt.  <a href="classObiekt3D.html#a0dae65e6fe3de7ab6322299a7c9732c9">Więcej...</a><br /></td></tr>
+<tr class="separator:a0dae65e6fe3de7ab6322299a7c9732c9 inherit pub_methods_classObiekt3D"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a918b8fc0cc0c3bf389192cd42685d524 inherit pub_methods_classObiekt3D"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classMacierzKw.html">MacierzKw</a>&lt; double, 3 &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classObiekt3D.html#a918b8fc0cc0c3bf389192cd42685d524">WspolnaOrientacja</a> () const</td></tr>
+<tr class="memdesc:a918b8fc0cc0c3bf389192cd42685d524 inherit pub_methods_classObiekt3D"><td class="mdescLeft">&#160;</td><td class="mdescRight">Składa 3 macierze elementarne na wspólną macierz obrotu.  <a href="classObiekt3D.html#a918b8fc0cc0c3bf389192cd42685d524">Więcej...</a><br /></td></tr>
+<tr class="separator:a918b8fc0cc0c3bf389192cd42685d524 inherit pub_methods_classObiekt3D"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a570c74ee26566210e728cbd058c9ce23 inherit pub_methods_classObiekt3D"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="classWektor3D.html">Wektor3D</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classObiekt3D.html#a570c74ee26566210e728cbd058c9ce23">ZwrocPozycje</a> () const</td></tr>
+<tr class="memdesc:a570c74ee26566210e728cbd058c9ce23 inherit pub_methods_classObiekt3D"><td class="mdescLeft">&#160;</td><td class="mdescRight">Zwraca wektor będący pozycją środka obiektu względem układu.  <a href="classObiekt3D.html#a570c74ee26566210e728cbd058c9ce23">Więcej...</a><br /></td></tr>
+<tr class="separator:a570c74ee26566210e728cbd058c9ce23 inherit pub_methods_classObiekt3D"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae1a7543f04a2b0881fa136404a24ec16 inherit pub_methods_classObiekt3D"><td class="memItemLeft" align="right" valign="top">const vector&lt; vector&lt; <a class="el" href="classWektor3D.html">Wektor3D</a> &gt; &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classObiekt3D.html#ae1a7543f04a2b0881fa136404a24ec16">ZwrocWierzcholki</a> () const</td></tr>
+<tr class="memdesc:ae1a7543f04a2b0881fa136404a24ec16 inherit pub_methods_classObiekt3D"><td class="mdescLeft">&#160;</td><td class="mdescRight">Zwraca dynamiczną tablicę zawierającą wierzchołki obiektu.  <a href="classObiekt3D.html#ae1a7543f04a2b0881fa136404a24ec16">Więcej...</a><br /></td></tr>
+<tr class="separator:ae1a7543f04a2b0881fa136404a24ec16 inherit pub_methods_classObiekt3D"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8e291a9f282ada9ebad23b66a5d3cd66 inherit pub_methods_classObiekt3D"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classObiekt3D.html#a8e291a9f282ada9ebad23b66a5d3cd66">ZmienKolor</a> (const std::string &amp;kolor)</td></tr>
+<tr class="memdesc:a8e291a9f282ada9ebad23b66a5d3cd66 inherit pub_methods_classObiekt3D"><td class="mdescLeft">&#160;</td><td class="mdescRight">Zmienia kolor obiektu.  <a href="classObiekt3D.html#a8e291a9f282ada9ebad23b66a5d3cd66">Więcej...</a><br /></td></tr>
+<tr class="separator:a8e291a9f282ada9ebad23b66a5d3cd66 inherit pub_methods_classObiekt3D"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pro-attribs"></a>
-Atrybuty chronione</h2></td></tr>
-<tr class="memitem:aaa056c25c8d891d972133a6bda5e57cc"><td class="memItemLeft" align="right" valign="top">vector&lt; vector&lt; <a class="el" href="classdrawNS_1_1Point3D.html">Point3D</a> &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPowierzchnia.html#aaa056c25c8d891d972133a6bda5e57cc">m_wierzcholki</a></td></tr>
-<tr class="memdesc:aaa056c25c8d891d972133a6bda5e57cc"><td class="mdescLeft">&#160;</td><td class="mdescRight">dynamiczna tablica tablic wierzchołków płaszczyzny  <a href="classPowierzchnia.html#aaa056c25c8d891d972133a6bda5e57cc">Więcej...</a><br /></td></tr>
-<tr class="separator:aaa056c25c8d891d972133a6bda5e57cc"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aa60a14aa0a21edb17b5a94c6fb1dbcf9"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPowierzchnia.html#aa60a14aa0a21edb17b5a94c6fb1dbcf9">m_kolor</a></td></tr>
-<tr class="memdesc:aa60a14aa0a21edb17b5a94c6fb1dbcf9"><td class="mdescLeft">&#160;</td><td class="mdescRight">nazwa koloru płaszczyzny  <a href="classPowierzchnia.html#aa60a14aa0a21edb17b5a94c6fb1dbcf9">Więcej...</a><br /></td></tr>
-<tr class="separator:aa60a14aa0a21edb17b5a94c6fb1dbcf9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pro-methods"></a>
+Metody chronione</h2></td></tr>
+<tr class="memitem:a041f5ed345d4046724b312212480ec42"><td class="memItemLeft" align="right" valign="top">vector&lt; vector&lt; <a class="el" href="classdrawNS_1_1Point3D.html">Point3D</a> &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPowierzchnia.html#a041f5ed345d4046724b312212480ec42">_Zbuduj</a> () const</td></tr>
+<tr class="memdesc:a041f5ed345d4046724b312212480ec42"><td class="mdescLeft">&#160;</td><td class="mdescRight">Buduje tablice punktów tworzących powierzchnię  <a href="classPowierzchnia.html#a041f5ed345d4046724b312212480ec42">Więcej...</a><br /></td></tr>
+<tr class="separator:a041f5ed345d4046724b312212480ec42"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="inherited"></a>
+Dodatkowe Dziedziczone Składowe</h2></td></tr>
+<tr class="inherit_header pro_attribs_classObiekt3D"><td colspan="2" onclick="javascript:toggleInherit('pro_attribs_classObiekt3D')"><img src="closed.png" alt="-"/>&#160;Atrybuty chronione dziedziczone z <a class="el" href="classObiekt3D.html">Obiekt3D</a></td></tr>
+<tr class="memitem:a31b6404103e48b17b62639e951b3bb82 inherit pro_attribs_classObiekt3D"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classMacierzOb.html">MacierzOb</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classObiekt3D.html#a31b6404103e48b17b62639e951b3bb82">m_orientacja_x</a> = <a class="el" href="classMacierzOb.html">MacierzOb</a>('x')</td></tr>
+<tr class="memdesc:a31b6404103e48b17b62639e951b3bb82 inherit pro_attribs_classObiekt3D"><td class="mdescLeft">&#160;</td><td class="mdescRight">macierz obrotu wokół osi x  <a href="classObiekt3D.html#a31b6404103e48b17b62639e951b3bb82">Więcej...</a><br /></td></tr>
+<tr class="separator:a31b6404103e48b17b62639e951b3bb82 inherit pro_attribs_classObiekt3D"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6bdfa16b412871188660b4aaa5968544 inherit pro_attribs_classObiekt3D"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classMacierzOb.html">MacierzOb</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classObiekt3D.html#a6bdfa16b412871188660b4aaa5968544">m_orientacja_y</a> = <a class="el" href="classMacierzOb.html">MacierzOb</a>('y')</td></tr>
+<tr class="memdesc:a6bdfa16b412871188660b4aaa5968544 inherit pro_attribs_classObiekt3D"><td class="mdescLeft">&#160;</td><td class="mdescRight">macierz obrotu wokół osi y  <a href="classObiekt3D.html#a6bdfa16b412871188660b4aaa5968544">Więcej...</a><br /></td></tr>
+<tr class="separator:a6bdfa16b412871188660b4aaa5968544 inherit pro_attribs_classObiekt3D"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a011afc67077ed3d71c0db5b210e3744d inherit pro_attribs_classObiekt3D"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classMacierzOb.html">MacierzOb</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classObiekt3D.html#a011afc67077ed3d71c0db5b210e3744d">m_orientacja_z</a> = <a class="el" href="classMacierzOb.html">MacierzOb</a>('z')</td></tr>
+<tr class="memdesc:a011afc67077ed3d71c0db5b210e3744d inherit pro_attribs_classObiekt3D"><td class="mdescLeft">&#160;</td><td class="mdescRight">macierz obrotu wokół osi z  <a href="classObiekt3D.html#a011afc67077ed3d71c0db5b210e3744d">Więcej...</a><br /></td></tr>
+<tr class="separator:a011afc67077ed3d71c0db5b210e3744d inherit pro_attribs_classObiekt3D"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3c20ef1dc092e5905aa67984116ff254 inherit pro_attribs_classObiekt3D"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classWektor3D.html">Wektor3D</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classObiekt3D.html#a3c20ef1dc092e5905aa67984116ff254">m_srodek</a></td></tr>
+<tr class="memdesc:a3c20ef1dc092e5905aa67984116ff254 inherit pro_attribs_classObiekt3D"><td class="mdescLeft">&#160;</td><td class="mdescRight">wektor środka obiektu względem układu  <a href="classObiekt3D.html#a3c20ef1dc092e5905aa67984116ff254">Więcej...</a><br /></td></tr>
+<tr class="separator:a3c20ef1dc092e5905aa67984116ff254 inherit pro_attribs_classObiekt3D"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae022210038fc9970886f06a443de4a64 inherit pro_attribs_classObiekt3D"><td class="memItemLeft" align="right" valign="top">vector&lt; vector&lt; <a class="el" href="classWektor3D.html">Wektor3D</a> &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classObiekt3D.html#ae022210038fc9970886f06a443de4a64">m_wierzcholki</a></td></tr>
+<tr class="memdesc:ae022210038fc9970886f06a443de4a64 inherit pro_attribs_classObiekt3D"><td class="mdescLeft">&#160;</td><td class="mdescRight">dynamiczna podwójna tablica wierzchołków zawierająca tablice wierzchołków podstaw obiektów  <a href="classObiekt3D.html#ae022210038fc9970886f06a443de4a64">Więcej...</a><br /></td></tr>
+<tr class="separator:ae022210038fc9970886f06a443de4a64 inherit pro_attribs_classObiekt3D"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7437ee1d3e3ce2f2bed18ab93b694f3d inherit pro_attribs_classObiekt3D"><td class="memItemLeft" align="right" valign="top">std::shared_ptr&lt; <a class="el" href="classdrawNS_1_1Draw3DAPI.html">drawNS::Draw3DAPI</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classObiekt3D.html#a7437ee1d3e3ce2f2bed18ab93b694f3d">m_api</a></td></tr>
+<tr class="memdesc:a7437ee1d3e3ce2f2bed18ab93b694f3d inherit pro_attribs_classObiekt3D"><td class="mdescLeft">&#160;</td><td class="mdescRight">wskaźnik na łącze do gnuplota  <a href="classObiekt3D.html#a7437ee1d3e3ce2f2bed18ab93b694f3d">Więcej...</a><br /></td></tr>
+<tr class="separator:a7437ee1d3e3ce2f2bed18ab93b694f3d inherit pro_attribs_classObiekt3D"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad62ee984a2f08b838aa2c48821256bcd inherit pro_attribs_classObiekt3D"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classObiekt3D.html#ad62ee984a2f08b838aa2c48821256bcd">m_kolor</a></td></tr>
+<tr class="memdesc:ad62ee984a2f08b838aa2c48821256bcd inherit pro_attribs_classObiekt3D"><td class="mdescLeft">&#160;</td><td class="mdescRight">nazwa koloru obiektu  <a href="classObiekt3D.html#ad62ee984a2f08b838aa2c48821256bcd">Więcej...</a><br /></td></tr>
+<tr class="separator:ad62ee984a2f08b838aa2c48821256bcd inherit pro_attribs_classObiekt3D"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac3ffae64095689776a9e0cc77f26d79d inherit pro_attribs_classObiekt3D"><td class="memItemLeft" align="right" valign="top">int *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classObiekt3D.html#ac3ffae64095689776a9e0cc77f26d79d">m_id_obiektu</a> = nullptr</td></tr>
+<tr class="memdesc:ac3ffae64095689776a9e0cc77f26d79d inherit pro_attribs_classObiekt3D"><td class="mdescLeft">&#160;</td><td class="mdescRight">wskaźnik na identyfikator obiektu w gnuplocie, domyślnie nullptr  <a href="classObiekt3D.html#ac3ffae64095689776a9e0cc77f26d79d">Więcej...</a><br /></td></tr>
+<tr class="separator:ac3ffae64095689776a9e0cc77f26d79d inherit pro_attribs_classObiekt3D"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Opis szczegółowy</h2>
 <div class="textblock"><p>Klasa modeluje pojęcie płaszczyzny w poziomie. </p>
 </div><h2 class="groupheader">Dokumentacja konstruktora i destruktora</h2>
 <a id="aa3423dacbe23d5110ed176a08fe69af1"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aa3423dacbe23d5110ed176a08fe69af1">&#9670;&nbsp;</a></span>Powierzchnia() <span class="overload">[1/2]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#aa3423dacbe23d5110ed176a08fe69af1">&#9670;&nbsp;</a></span>Powierzchnia() <span class="overload">[1/3]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -138,15 +199,24 @@ Atrybuty chronione</h2></td></tr>
 
 </div>
 </div>
-<a id="a7f3c53e4042739d7c1050cd1ac2e58c2"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a7f3c53e4042739d7c1050cd1ac2e58c2">&#9670;&nbsp;</a></span>Powierzchnia() <span class="overload">[2/2]</span></h2>
+<a id="a646c620d678acc20fd5db923297b9a89"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a646c620d678acc20fd5db923297b9a89">&#9670;&nbsp;</a></span>Powierzchnia() <span class="overload">[2/3]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
       <table class="memname">
         <tr>
           <td class="memname">Powierzchnia::Powierzchnia </td>
           <td>(</td>
+          <td class="paramtype">const std::shared_ptr&lt; <a class="el" href="classdrawNS_1_1Draw3DAPI.html">drawNS::Draw3DAPI</a> &gt; &amp;&#160;</td>
+          <td class="paramname"><em>api</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
           <td class="paramtype">double&#160;</td>
           <td class="paramname"><em>x_min</em>, </td>
         </tr>
@@ -192,6 +262,11 @@ Atrybuty chronione</h2></td></tr>
           <td></td><td></td>
         </tr>
       </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
 </div><div class="memdoc">
 
 <p>Konstruktor nowego obiektu klasy <a class="el" href="classPowierzchnia.html" title="Klasa modeluje pojęcie płaszczyzny w poziomie.">Powierzchnia</a>. </p>
@@ -203,6 +278,7 @@ Atrybuty chronione</h2></td></tr>
 </dl>
 <dl class="params"><dt>Parametry</dt><dd>
   <table class="params">
+    <tr><td class="paramname">api</td><td>łącze do gnuplota </td></tr>
     <tr><td class="paramname">x_min</td><td>minimalna wartość na osi x </td></tr>
     <tr><td class="paramname">x_max</td><td>maksymalna wartość na osi x </td></tr>
     <tr><td class="paramname">y_min</td><td>minimalna wartość na osi y </td></tr>
@@ -216,63 +292,138 @@ Atrybuty chronione</h2></td></tr>
 
 </div>
 </div>
-<h2 class="groupheader">Dokumentacja funkcji składowych</h2>
-<a id="a8ee28cf287c67f197a3f4328b24806c2"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a8ee28cf287c67f197a3f4328b24806c2">&#9670;&nbsp;</a></span>Rysuj()</h2>
+<a id="a8b6b85b3c67af319d0780affd6fccb9d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8b6b85b3c67af319d0780affd6fccb9d">&#9670;&nbsp;</a></span>Powierzchnia() <span class="overload">[3/3]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">int Powierzchnia::Rysuj </td>
+          <td class="memname">Powierzchnia::Powierzchnia </td>
           <td>(</td>
           <td class="paramtype">const std::shared_ptr&lt; <a class="el" href="classdrawNS_1_1Draw3DAPI.html">drawNS::Draw3DAPI</a> &gt; &amp;&#160;</td>
-          <td class="paramname"><em>api</em></td><td>)</td>
-          <td> const</td>
+          <td class="paramname"><em>api</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="classZbiornik.html">Zbiornik</a> &amp;&#160;</td>
+          <td class="paramname"><em>Z</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double&#160;</td>
+          <td class="paramname"><em>z</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double&#160;</td>
+          <td class="paramname"><em>odstep</em> = <code>1</code>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const std::string &amp;&#160;</td>
+          <td class="paramname"><em>kolor</em> = <code>&quot;black&quot;</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
         </tr>
       </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
 </div><div class="memdoc">
 
-<p>Rysuje płaszczyzne z wektorów wierzchołków. </p>
+<p>Konstruktor nowego obiektu klasy <a class="el" href="classPowierzchnia.html" title="Klasa modeluje pojęcie płaszczyzny w poziomie.">Powierzchnia</a> o wielkości zbiornika na odpowiedniej wysokości. </p>
+<dl class="exception"><dt>Wyjątki</dt><dd>
+  <table class="exception">
+    <tr><td class="paramname">std::invalid_argument</td><td>gdy wysokość powierzchni znajduje się poza wysokością zbiornika</td></tr>
+  </table>
+  </dd>
+</dl>
 <dl class="params"><dt>Parametry</dt><dd>
   <table class="params">
     <tr><td class="paramname">api</td><td>łącze do gnuplota </td></tr>
+    <tr><td class="paramname">Z</td><td>obiekt zbiornika w którym rysowana będzie powierzchnia </td></tr>
+    <tr><td class="paramname">z</td><td>wysokość na jakiej rysujemy powierzchnię </td></tr>
+    <tr><td class="paramname">odstep</td><td>odstęp między wierzchołkami </td></tr>
+    <tr><td class="paramname">kolor</td><td>kolor powierzchni </td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>Zwraca</dt><dd>int identyfikator obiektu </dd></dl>
 
 </div>
 </div>
-<a id="a08e097688fce48b1766436fe5c18d2de"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a08e097688fce48b1766436fe5c18d2de">&#9670;&nbsp;</a></span>ZmienKolor()</h2>
+<h2 class="groupheader">Dokumentacja funkcji składowych</h2>
+<a id="a041f5ed345d4046724b312212480ec42"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a041f5ed345d4046724b312212480ec42">&#9670;&nbsp;</a></span>_Zbuduj()</h2>
 
 <div class="memitem">
 <div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">void Powierzchnia::ZmienKolor </td>
+          <td class="memname">vector&lt; vector&lt; <a class="el" href="classdrawNS_1_1Point3D.html">Point3D</a> &gt; &gt; Powierzchnia::_Zbuduj </td>
           <td>(</td>
-          <td class="paramtype">const std::string &amp;&#160;</td>
-          <td class="paramname"><em>kolor</em></td><td>)</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Buduje tablice punktów tworzących powierzchnię </p>
+<dl class="section return"><dt>Zwraca</dt><dd>vector&lt;vector&lt;Point3D&gt;&gt; tablica punktów powierzchni </dd></dl>
+
+</div>
+</div>
+<a id="aec599af9c9757b685814944a129b4ac8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aec599af9c9757b685814944a129b4ac8">&#9670;&nbsp;</a></span>Kasuj()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Powierzchnia::Kasuj </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
           <td></td>
         </tr>
       </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">override</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
 </div><div class="memdoc">
 
-<p>Zmienia kolor powierzchni. </p>
-<dl class="params"><dt>Parametry</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">kolor</td><td>nazwa koloru </td></tr>
-  </table>
-  </dd>
-</dl>
+<p>Kasuje powierzchnię </p>
+
+<p>Implementuje <a class="el" href="classObiekt3D.html#a75c13f41a7b198b6ab15f04323b86a36">Obiekt3D</a>.</p>
 
 </div>
 </div>
-<h2 class="groupheader">Dokumentacja atrybutów składowych</h2>
-<a id="aa60a14aa0a21edb17b5a94c6fb1dbcf9"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aa60a14aa0a21edb17b5a94c6fb1dbcf9">&#9670;&nbsp;</a></span>m_kolor</h2>
+<a id="a378437a89cd810c652a92ae99a8ef610"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a378437a89cd810c652a92ae99a8ef610">&#9670;&nbsp;</a></span>Rysuj()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -281,41 +432,22 @@ Atrybuty chronione</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">std::string Powierzchnia::m_kolor</td>
+          <td class="memname">void Powierzchnia::Rysuj </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
         </tr>
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+<span class="mlabels"><span class="mlabel">override</span><span class="mlabel">virtual</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
 
-<p>nazwa koloru płaszczyzny </p>
+<p>Rysuje płaszczyzne z wektorów wierzchołków. </p>
 
-</div>
-</div>
-<a id="aaa056c25c8d891d972133a6bda5e57cc"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aaa056c25c8d891d972133a6bda5e57cc">&#9670;&nbsp;</a></span>m_wierzcholki</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">vector&lt;vector&lt;<a class="el" href="classdrawNS_1_1Point3D.html">Point3D</a>&gt; &gt; Powierzchnia::m_wierzcholki</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>dynamiczna tablica tablic wierzchołków płaszczyzny </p>
+<p>Implementuje <a class="el" href="classObiekt3D.html#ae252b015977e9a485fb4ba668fbea122">Obiekt3D</a>.</p>
 
 </div>
 </div>

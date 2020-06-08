@@ -20,7 +20,8 @@ void WyswietlMenuGlowne()
 
     cout << "z - przełącz się na innego drona\n";
 
-    cout << "m - wyswietl menu\n";
+    cout << "m - wyświetl menu\n";
+    cout << "l - wyświetl liczbę wektorów\n";
     cout << "k - koniec dzialania programu\n";
     cout << "=============MENU=============\n";
 }
@@ -36,6 +37,11 @@ void WyswietlMenuPrzeszkod()
 {
     cout << "Rodzaje przeszkód:\n";
     cout << "\t(" << RP_PROSTOPADLOSCIAN << ") Prostopadłościan\n";
+}
+
+void WyswietlLiczbeWektorow()
+{
+    cout << "Obecna liczba wektorow: " << Wektor3D::ZwrocLiczbeWektorow() << endl;
 }
 
 bool DronRuchWPrzod(KolekcjaObiektow &K)

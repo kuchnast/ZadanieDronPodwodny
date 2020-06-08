@@ -15,7 +15,7 @@ enum RodzajPrzeszkody
 };
 
 /**
- * @brief Funkcja wyświetla menu z możliwymi opcjami programu
+ * @brief Funkcja wyświetla menu programu z możliwymi opcjami
  * 
  */
 void WyswietlMenuGlowne();
@@ -23,6 +23,8 @@ void WyswietlMenuGlowne();
 void WyswietlMenuObiektow();
 
 void WyswietlMenuPrzeszkod();
+
+void WyswietlLiczbeWektorow();
 
 bool DronRuchWPrzod(KolekcjaObiektow &K);
 

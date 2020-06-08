@@ -34,6 +34,7 @@ bool InterfejsDrona::AnimujRuchWPrzod(const std::map<std::string, std::shared_pt
             if(P.second->CzyKolizja(*this))
             {
                 ZmienPozycje(-przemieszczenie / 100);
+                std::cout << "Kolizja z obiektem " << P.first << ".\n";
                 return true;
             }
         }
@@ -107,6 +108,7 @@ bool InterfejsDrona::AnimujRuchWPionie(const std::map<std::string, std::shared_p
             if (P.second->CzyKolizja(*this))
             {
                 ZmienPozycje(-(przemieszczenie_poziom / 100 + przemieszczenie_pion / 100));
+                std::cout << "Kolizja z obiektem " << P.first << ".\n";
                 czy_blad = true;
                 break;
             }

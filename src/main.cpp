@@ -23,6 +23,8 @@ using std::cout;
 using std::endl;
 using std::vector;
 
+//u 0 Dron_testowy d 0 -50 -50 -50 d1 z d1 d 1 50 50 50 p1 0 50 50 50
+
 int main()
 {
   try
@@ -31,7 +33,7 @@ int main()
     Zbiornik zbiornik(-100, 100, -100, 100, -100, 100);
     std::shared_ptr<drawNS::Draw3DAPI> api(new APIGnuPlot3D(zbiornik.PrzekazXMin(), zbiornik.PrzekazXMax(), zbiornik.PrzekazYMin(), zbiornik.PrzekazYMax(), zbiornik.PrzekazZMin(), zbiornik.PrzekazZMax(), -1));
     Dno dno(api, zbiornik, 20, "yellow");       //obiekt dna zbiornika
-    Tafla tafla(api, zbiornik, 20, 20, "blue"); //obiekt tafli z falami
+    Tafla tafla(api, zbiornik, 20, 5, "blue"); //obiekt tafli z falami
     KolekcjaObiektow kolekcja_obiektow(api);    
 
     kolekcja_obiektow.NowyDron("Dron_testowy", 15);
@@ -94,6 +96,12 @@ int main()
       case 'm':
       {
         WyswietlMenuGlowne();
+        break;
+      }
+
+      case 'l':
+      {
+        WyswietlLiczbeWektorow();
         break;
       }
 

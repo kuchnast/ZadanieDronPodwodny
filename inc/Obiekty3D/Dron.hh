@@ -41,7 +41,7 @@ public:
  */
     explicit Dron(double rozmiar, const std::shared_ptr<drawNS::Draw3DAPI> &api, const Wektor3D &srodek = Wektor3D(), const std::string &kolor_kadluba = "black", const std::string &kolor_srub = "black")
         : Obiekt3D(api),
-          Przeszkoda(Wektor3D(rozmiar * 2, rozmiar * 3, rozmiar)),
+          Przeszkoda(Wektor3D(rozmiar * 2, rozmiar * 2.25, rozmiar)),
           m_kadlub(rozmiar * 2, rozmiar * 2, rozmiar, api, kolor_kadluba),
           m_p_sruba(rozmiar / 2, rozmiar / 4, api, kolor_srub),
           m_l_sruba(rozmiar / 2, rozmiar / 4, api, kolor_srub)
@@ -87,6 +87,8 @@ public:
  * @param kolor nazwa koloru
  */
     void ZmienKolor(const std::string &kolor);
+
+    const MacierzKw<double, 3> & OrientacjaZ() const;
 };
 
 #endif

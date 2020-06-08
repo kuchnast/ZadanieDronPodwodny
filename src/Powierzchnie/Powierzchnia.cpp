@@ -32,7 +32,7 @@ void Powierzchnia::Rysuj()
         Kasuj();
 
     m_id_obiektu = new int;
-    *m_id_obiektu = m_api->draw_polyhedron(_Zbuduj(), m_kolor);
+    *m_id_obiektu = m_api->draw_surface(_Zbuduj(), m_kolor);
 }
 
 void Powierzchnia::Kasuj()
